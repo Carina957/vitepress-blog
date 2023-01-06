@@ -24,32 +24,8 @@ module.exports = {
     nav: [
       {
         text: 'Guide',
-        items: [
-          {
-            text: 'Git',
-            link: '/guide/git',
-          },
-          {
-            text: 'JavaScript',
-            link: '/guide/javascript',
-          },
-          {
-            text: 'TypeScript',
-            link: '/guide/typescript',
-          },
-          {
-            text: 'Vue',
-            link: '/guide/vue',
-          },
-          {
-            text: 'React',
-            link: '/guide/react',
-          },
-          {
-            text: 'CSS',
-            link: '/guide/css',
-          },
-        ],
+        link: '/guide/',
+        activeMatch: '/guide/',
       },
       { text: 'Notes', link: '/notes/', activeMatch: '/notes/' },
       {
