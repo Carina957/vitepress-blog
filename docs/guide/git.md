@@ -32,10 +32,10 @@ git config --local -l
 # 查看系统账号信息
 git config --system -l
 
-# 配置账号👤
+# 配置账号
 git config --global user.name 'xxx'
 
-# 配置邮箱📮
+# 配置邮箱
 git config --global user.email 'xxx@foxmail.com'
 
 # 重置 git 配置
@@ -76,7 +76,7 @@ git branch -r
 git branch dev
 
 # 以远程分支为基础新建一个分支，并切换到该分支
-git checkout -b feature/todo-12 origin/main
+git checkout -b feature/todo_12 origin/main
 
 # 新建一个分支，并与指定的远程分支建立追踪关系
 git branch --track feature/todo_13 origin/main
