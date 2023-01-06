@@ -22,7 +22,35 @@ module.exports = {
     logo: '/author_120x120.png',
 
     nav: [
-      { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
+      {
+        text: 'Guide',
+        items: [
+          {
+            text: 'Git',
+            link: '/guide/git',
+          },
+          {
+            text: 'JavaScript',
+            link: '/guide/javascript',
+          },
+          {
+            text: 'TypeScript',
+            link: '/guide/typescript',
+          },
+          {
+            text: 'Vue',
+            link: '/guide/vue',
+          },
+          {
+            text: 'React',
+            link: '/guide/react',
+          },
+          {
+            text: 'CSS',
+            link: '/guide/css',
+          },
+        ],
+      },
       { text: 'Notes', link: '/notes/', activeMatch: '/notes/' },
       {
         text: 'FrontEnd',
@@ -46,12 +74,24 @@ module.exports = {
           collapsible: true,
           items: [{ text: 'Getting Started', link: '/guide/' }],
         },
+        {
+          text: 'Record',
+          collapsible: true,
+          items: [
+            { text: 'Git', link: '/guide/git' },
+            { text: 'JavaScript', link: '/guide/javascript' },
+            { text: 'TypeScript', link: '/guide/typescript' },
+            { text: 'Vue', link: '/guide/vue' },
+            { text: 'React', link: '/guide/react' },
+            { text: 'CSS', link: '/guide/css' },
+          ],
+        },
       ],
       '/notes': [
         {
-          text: 'Introduction',
+          text: 'Travel',
           collapsible: true,
-          items: [{ text: 'Getting Started', link: '/guide/' }],
+          items: [{ text: 'Cycling', link: '/notes/cycling' }],
         },
       ],
     },
@@ -63,8 +103,8 @@ module.exports = {
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
-      { icon: 'twitter', link: 'https://twitter.com/vite_js' },
-      { icon: 'discord', link: 'https://chat.vitejs.dev' },
+      { icon: 'twitter', link: '' },
+      { icon: 'discord', link: '' },
     ],
 
     // docFooter: {
