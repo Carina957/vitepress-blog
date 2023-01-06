@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/getting-started
+      link: /guide/
     - theme: alt
       text: GitHub
       link: https://github.com/Carina957

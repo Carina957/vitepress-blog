@@ -3,12 +3,12 @@ module.exports = {
   title: "Chi's",
   description: 'Record life and codes.',
 
-  lastUpdated: true,
+  lastUpdated: false,
   cleanUrls: 'without-subfolders',
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/author_48x48.ico' }],
-    ['meta', { name: 'theme-color', content: '#646cff' }],
+    ['meta', { name: 'theme-color', content: '#42b883' }],
   ],
 
   markdown: {
