@@ -1,0 +1,3 @@
+# Notes
+
+Record simple life.

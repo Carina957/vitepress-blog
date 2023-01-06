@@ -1,0 +1,17 @@
+{
+  "name": "vitepress-blog",
+  "version": "1.0.0",
+  "description": "Chi's blog",
+  "main": "index.js",
+  "author": "Chi's",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.35"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs",
+    "deploy": "bash deploy.sh"
+  }
+}
