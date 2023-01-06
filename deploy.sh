@@ -10,7 +10,7 @@ yarn build
 cd docs/.vitepress/dist
 
 # 如果是发布到自定义域名
-# echo 'www.zhangyunchen.cc' > CNAME
+# echo 'www.customDomain.com' > CNAME
 
 git init
 git branch -m main
