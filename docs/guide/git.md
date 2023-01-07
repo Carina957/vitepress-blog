@@ -4,7 +4,7 @@ Git is a free and open source distributed version control system designed to han
 
 Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
 
-::: tip Translate
+:::tip Translate
 Git 是一个免费的开源分布式版本控制系统，旨在快速高效地处理从小型项目到大型项目的所有内容。 Git 易于学习，占用空间小，性能快如闪电。 它超越了 Subversion、CVS、Perforce 和 ClearCase 等 SCM 工具，具有廉价的本地分支、方便的临时区域和多个工作流等特性。
 :::
 
@@ -321,12 +321,6 @@ module.exports = {
   },
 }
 ```
-
-##### 使用示例
-
-- `git commit`
-- `git commit -m`
-- `npm run commit`
 
 ##### 博文参考
 
