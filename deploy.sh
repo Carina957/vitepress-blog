@@ -18,7 +18,10 @@ git add -A
 git commit -m 'deploy'
 
 # 如果你想要部署到 https://<USERNAME>.github.io
-# git push -f git@github.com:Carina957/Carina957.github.io.git main
-git push -f https://github.com/Carina957/Carina957.github.io.git main
+git push -f git@github.com:Carina957/Carina957.github.io.git main
+# git push -f https://github.com/Carina957/Carina957.github.io.git main
+
+# other branch
+# git push -f git@github.com:ustbhuangyi/vue-analysis.git master:gh-pages
 
 cd -
