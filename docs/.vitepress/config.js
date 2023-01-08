@@ -79,9 +79,9 @@ module.exports = {
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
-      { icon: 'twitter', link: '' },
-      { icon: 'discord', link: '' },
+      { icon: 'github', link: 'https://github.com/Carina957/vitepress-blog' },
+      { icon: 'twitter', link: 'https://twitter.com' },
+      { icon: 'discord', link: 'https://discord.com/invite/aYVNktYeEB' },
     ],
 
     // docFooter: {
