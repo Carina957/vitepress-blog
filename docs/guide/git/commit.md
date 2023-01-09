@@ -293,6 +293,6 @@ PR Close #34332
 
 - `eslint + husky + prettier + lint-staged + commitlint`
 
-#### 博文参考
+## 博文参考
 
 - [Angular commit 规范](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits)
