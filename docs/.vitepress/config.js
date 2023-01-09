@@ -49,12 +49,12 @@ module.exports = {
       '/guide': [
         {
           text: 'Introduction',
-          collapsible: true,
+          collapsible: false,
           items: [{ text: 'Getting Started', link: '/guide/' }],
         },
         {
           text: 'Git',
-          collapsible: true,
+          collapsible: false,
           items: [
             { text: '基础', link: '/guide/git/basic' },
             { text: '提交', link: '/guide/git/commit' },
@@ -62,7 +62,7 @@ module.exports = {
         },
         {
           text: 'JavaScript',
-          collapsible: true,
+          collapsible: false,
           items: [
             { text: '基础', link: '/guide/javascript/basic' },
             { text: '工具函数', link: '/guide/javascript/utils' },
@@ -70,28 +70,28 @@ module.exports = {
         },
         {
           text: 'TypeScript',
-          collapsible: true,
+          collapsible: false,
           items: [
             { text: '基础', link: '/guide/typescript/basic' },
           ]
         },
         {
           text: 'Vue',
-          collapsible: true,
+          collapsible: false,
           items: [
             { text: '基础', link: '/guide/vue/basic' },
           ]
         },
         {
           text: 'React',
-          collapsible: true,
+          collapsible: false,
           items: [
             { text: '基础', link: '/guide/react/basic' },
           ]
         },
         {
           text: 'CSS',
-          collapsible: true,
+          collapsible: false,
           items: [
             { text: '基础', link: '/guide/css/basic' },
           ]
