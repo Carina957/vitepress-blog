@@ -261,7 +261,7 @@ PR Close #34332
 
     启动后，将会自动生成.husky文件夹
 
-    ![husky demo](../images/git/husky_demo.png)
+    ![husky demo](./images/husky_demo.png)
 
     添加 `prepare` 指令
 
@@ -275,7 +275,7 @@ PR Close #34332
     pnpm install husky
     ```
 
-    ![husky install](../images/git//husky_install.png)
+    ![husky install](./images/husky_install.png)
 
     添加 `commitlint` 的 `hook` 到 `husky` 中
 
@@ -283,11 +283,11 @@ PR Close #34332
     npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
     ```
 
-    ![husky commit msg](../images/git/husky_commit-msg.png)
+    ![husky commit msg](./images/husky_commit-msg.png)
 
     测试
 
-    ![husky commit test](../images/git/husky_commit-test.png)
+    ![husky commit test](./images/husky_commit-test.png)
 
 #### 推荐的项目配置
 
