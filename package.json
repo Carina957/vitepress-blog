@@ -9,6 +9,11 @@
     "rimraf": "^3.0.2",
     "vitepress": "^1.0.0-alpha.35"
   },
+  "keywords": [
+    "vitepress",
+    "pnpm",
+    "blog"
+  ],
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
