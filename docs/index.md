@@ -22,7 +22,7 @@ features:
     details: JavaScript, TypeScript, Vue, React, VSCode, MacBookPro...
   - icon: 🎵
     title: A niche music lovers
-    details: Except Jay Chou 😝
+    details: Except Jay Chou 😝.
   - icon: 🎬
     title: A film lover
     details: Enjoy every movie.
