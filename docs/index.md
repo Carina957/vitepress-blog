@@ -21,7 +21,7 @@ features:
     title: A front-end development engineer
     details: JavaScript, TypeScript, Vue, React, VSCode, MacBookPro...
   - icon: 🎵
-    title: A minority music lover
+    title: A niche music lovers
     details: Except Jay Chou 😝
   - icon: 🎬
     title: A film lover
