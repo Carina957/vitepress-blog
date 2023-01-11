@@ -65,6 +65,7 @@ module.exports = {
           collapsible: false,
           items: [
             { text: '基础', link: '/guide/javascript/basic' },
+            { text: '拓展', link: '/guide/javascript/expand' },
             { text: '工具函数', link: '/guide/javascript/utils' },
           ]
         },
