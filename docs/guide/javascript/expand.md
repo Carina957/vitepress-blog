@@ -14,7 +14,7 @@ outline: deep
 
 ## forEach
 
-`forEach` 原则上是不能修改原数组的，但是因为 `JavaScript` 本身的原因。如果数组的某一项是引用类型， `forEach` 是可以˜修改原数组的
+`forEach` 原则上是不能修改原数组的，但是因为 `JavaScript` 本身的原因。如果数组的某一项是引用类型， `forEach` 是可以修改原数组的
 
 ```js
 const arr = [
