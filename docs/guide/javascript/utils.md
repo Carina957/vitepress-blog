@@ -75,6 +75,20 @@ function isNumber (n: number): boolean {
 }
 ```
 
+## isEmptyObj
+
+```js
+const isEmptyObj1 = obj => Reflect.ownKeys(obj).length === 0 && obj.constructor === Object
+```
+
+```js
+const isEmptyObj2 = obj => Object.keys(obj).length
+```
+
+```js
+const isEmptyObj3 = obj => JSON.stringify(obj) !== '{}'
+```
+
 ## 禁止浏览器右键和选中文字
 
 ```js
