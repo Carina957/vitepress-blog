@@ -41,3 +41,43 @@ console.log(arr) // [1, 'mike', { name: 'alva' }]
 ### `Object.freeze()` 存在的意义
 
 如果你有一个巨大的数组或 `Object` ，并且确信数据不会修改，使用 `Object.freeze()` 可以让性能大幅提升。在我的实际开发中，这种提升大约有5~10倍，倍数随着数据量递增,对于纯展示的大数据，都可以使用 `Object.freeze()` 提升性能。
+
+## 派发与广播——自行实现 `dispatch` 和 `broadcast` 方法
+
+### emitter.js
+
+```js
+function broadcast(componentName, eventName, params) {
+  this.$children.forEach(child => {
+    const name = child.$options.name;
+
+    if (name === componentName) {
+      child.$emit.apply(child, [eventName].concat(params));
+    } else {
+      broadcast.apply(child, [componentName, eventName].concat([params]));
+    }
+  });
+}
+export default {
+  methods: {
+    dispatch(componentName, eventName, params) {
+      let parent = this.$parent || this.$root;
+      let name = parent.$options.name;
+
+      while (parent && (!name || name !== componentName)) {
+        parent = parent.$parent;
+
+        if (parent) {
+          name = parent.$options.name;
+        }
+      }
+      if (parent) {
+        parent.$emit.apply(parent, [eventName].concat(params));
+      }
+    },
+    broadcast(componentName, eventName, params) {
+      broadcast.call(this, componentName, eventName, params);
+    }
+  }
+};
+```
