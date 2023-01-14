@@ -56,7 +56,7 @@ function broadcast(componentName, eventName, params) {
     } else {
       broadcast.apply(child, [componentName, eventName].concat([params]));
     }
-  });
+  })
 }
 export default {
   methods: {
@@ -79,5 +79,5 @@ export default {
       broadcast.call(this, componentName, eventName, params);
     }
   }
-};
+}
 ```
