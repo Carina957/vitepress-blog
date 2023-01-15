@@ -81,6 +81,7 @@ module.exports = {
           collapsible: false,
           items: [
             { text: '基础', link: '/guide/vue/basic' },
+            { text: '拓展', link: '/guide/vue/expand' },
           ]
         },
         {
