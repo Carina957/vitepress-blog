@@ -204,4 +204,4 @@ export { findComponentDownward }
 
 ## 博文参考
 
-- [Vue.js 组件精讲](https://juejin.cn/book/6844733759942557704, '掘金小册')
+- [Vue.js 组件精讲](https://juejin.cn/book/6844733759942557704)
