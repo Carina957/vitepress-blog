@@ -11,38 +11,38 @@ outline: deep
 `emitter.js` 源码：
 
 ```js
-function broadcast(componentName, eventName, params) {
+function broadcast (componentName, eventName, params) {
   this.$children.forEach(child => {
-    const name = child.$options.name;
+    const name = child.$options.name
 
     if (name === componentName) {
-      child.$emit.apply(child, [eventName].concat(params));
+      child.$emit.apply(child, [eventName].concat(params))
     } else {
-      broadcast.apply(child, [componentName, eventName].concat([params]));
+      broadcast.apply(child, [componentName, eventName].concat([params]))
     }
   })
 }
 export default {
   methods: {
     dispatch(componentName, eventName, params) {
-      let parent = this.$parent || this.$root;
-      let name = parent.$options.name;
+      let parent = this.$parent || this.$root
+      let name = parent.$options.name
 
       while (parent && (!name || name !== componentName)) {
-        parent = parent.$parent;
+        parent = parent.$parent
 
         if (parent) {
-          name = parent.$options.name;
+          name = parent.$options.name
         }
       }
       if (parent) {
-        parent.$emit.apply(parent, [eventName].concat(params));
+        parent.$emit.apply(parent, [eventName].concat(params))
       }
     },
     broadcast(componentName, eventName, params) {
-      broadcast.call(this, componentName, eventName, params);
-    }
-  }
+      broadcast.call(this, componentName, eventName, params)
+    },
+  },
 }
 ```
 
@@ -101,46 +101,44 @@ export { findComponentUpward }
   </div>
 </template>
 <script>
-  import componentB from './component-b.vue';
+import componentB from './component-b.vue'
 
-  export default {
-    name: 'componentA',
-    components: { componentB },
-    data () {
-      return {
-        name: 'Aresn'
-      }
-    },
-    methods: {
-      sayHello () {
-        console.log('Hello, Vue.js')
-      }
+export default {
+  name: 'componentA',
+  components: { componentB },
+  data() {
+    return {
+      name: 'Aresn',
     }
-  }
+  },
+  methods: {
+    sayHello() {
+      console.log('Hello, Vue.js')
+    },
+  },
+}
 </script>
 ```
 
 ```vue
 <!-- component-b.vue -->
 <template>
-  <div>
-    组件 B
-  </div>
+  <div>组件 B</div>
 </template>
 <script>
-  import { findComponentUpward } from '../utils/assist.js'
+import { findComponentUpward } from '../utils/assist.js'
 
-  export default {
-    name: 'componentB',
-    mounted () {
-      const comA = findComponentUpward(this, 'componentA')
+export default {
+  name: 'componentB',
+  mounted() {
+    const comA = findComponentUpward(this, 'componentA')
 
-      if (comA) {
-        console.log(comA.name) // Aresn
-        comA.sayHello() // Hello, Vue.js
-      }
+    if (comA) {
+      console.log(comA.name) // Aresn
+      comA.sayHello() // Hello, Vue.js
     }
-  }
+  },
+}
 </script>
 ```
 
@@ -156,7 +154,7 @@ export { findComponentUpward }
 
 ```js
 // 由一个组件，向上找到所有的指定组件
-function findComponentsUpward (context, componentName) {
+function findComponentsUpward(context, componentName) {
   let parents = []
   const parent = context.$parent
 
@@ -178,7 +176,7 @@ findComponentsUpward 的使用场景较少，一般只用在递归组件里面�
 
 ```js
 // 由一个组件，向下找到最近的指定组件
-function findComponentDownward (context, componentName) {
+function findComponentDownward(context, componentName) {
   const childrens = context.$children
   let children = null
 
@@ -198,6 +196,35 @@ function findComponentDownward (context, componentName) {
   return children
 }
 export { findComponentDownward }
+```
+
+#### 向下找到所有指定的组件——findComponentsDownward
+
+```js
+// 由一个组件，向下找到所有指定的组件
+function findComponentsDownward(context, componentName) {
+  return context.$children.reduce((components, child) => {
+    if (child.$options.name === componentName) components.push(child)
+    const foundChilds = findComponentsDownward(child, componentName)
+    return components.concat(foundChilds)
+  }, [])
+}
+export { findComponentsDownward }
+```
+
+#### 找到指定组件的兄弟组件——findBrothersComponents
+
+```js
+// 由一个组件，找到指定组件的兄弟组件
+function findBrothersComponents (context, componentName, exceptMe = true) {
+  let res = context.$parent.$children.filter(item => {
+    return item.$options.name === componentName
+  });
+  let index = res.findIndex(item => item._uid === context._uid)
+  if (exceptMe) res.splice(index, 1)
+  return res
+}
+export { findBrothersComponents }
 ```
 
 ## 博文参考
