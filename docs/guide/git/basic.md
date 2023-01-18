@@ -106,4 +106,7 @@ git reset --hard d12kansdk
 
 # 强制推送
 git push -f
+
+# 推送到远程服务器并关联本地分支
+git push -u origin master
 ```
