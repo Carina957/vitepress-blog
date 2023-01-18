@@ -69,16 +69,17 @@ function throttle(callback, delay = 2000) {
  * 判断是否是数字
  * @param {number} n
  * @returns {boolean}
-  */
+ */
 function isNumber (n: number): boolean {
-  return !isNaN(parseFloat(n)) && isFinite(n);
+  return !isNaN(parseFloat(n)) && isFinite(n)
 }
 ```
 
 ## isEmptyObj
 
 ```js
-const isEmptyObj1 = obj => Reflect.ownKeys(obj).length === 0 && obj.constructor === Object
+const isEmptyObj1 = obj =>
+  Reflect.ownKeys(obj).length === 0 && obj.constructor === Object
 ```
 
 ```js
@@ -100,10 +101,10 @@ function prohibit() {
 
 ## 一个完美的 toFixed()
 
-> toFixed函数可以满足一部分小数的四舍五入，但是因为浮点数不能精确地用二进制表示所有小数，所以 toFixed 四舍五入会在部分情况下出现异常。如：
+> toFixed 函数可以满足一部分小数的四舍五入，但是因为浮点数不能精确地用二进制表示所有小数，所以 toFixed 四舍五入会在部分情况下出现异常。如：
 >
 > ```js
-> 2.55.toFixed(1) // 返回2.5
+> ;(2.55).toFixed(1) // 返回2.5
 > ```
 
 ```js
@@ -113,56 +114,56 @@ function prohibit() {
  * @param {number} digits
  * @returns
  */
-function toFixed(num, digits = 0) {
+function toFixed (num, digits = 0) {
   let zeroStrNum = num.toString()
 
   // 处理科学计算情况
-  if(zeroStrNum.includes("e")){
-    const m = zeroStrNum.match(/\d(?:\.(\d*))?e([+-]\d+)/);
+  if (zeroStrNum.includes('e')) {
+    const m = zeroStrNum.match(/\d(?:\.(\d*))?e([+-]\d+)/)
     zeroStrNum = num.toFixed(Math.max(0, (m[1] || '').length - m[2]))
   }
 
   let isNegativeNum = false
   // 判断是否为负数
-  if(zeroStrNum.startsWith('-')){
+  if (zeroStrNum.startsWith('-')) {
     isNegativeNum = true
     zeroStrNum = zeroStrNum.slice(1)
   }
   // 获取小数点位置
   const dotIndex = zeroStrNum.indexOf('.')
   // 如果是整数/保留小数位数等于超过当前小数长度，则直接用toFixed返回
-  if(dotIndex === -1 || (zeroStrNum.length - (dotIndex + 1) <= digits)){
+  if (dotIndex === -1 || zeroStrNum.length - (dotIndex + 1) <= digits) {
     return num.toFixed(digits)
   }
 
   // 找到需要进行四舍五入的部分
-  let numArr = zeroStrNum.match(/\d/g) || [];
+  let numArr = zeroStrNum.match(/\d/g) || []
   numArr = numArr.slice(0, dotIndex + digits + 1)
 
   // 核心处理逻辑
   if (parseInt(numArr[numArr.length - 1], 10) > 4) {
     // 如果最后一位大于4，则往前遍历+1
     for (let i = numArr.length - 2; i >= 0; i--) {
-      numArr[i] = String(parseInt(numArr[i], 10) + 1);
+      numArr[i] = String(parseInt(numArr[i], 10) + 1)
       // 判断这位数字 +1 后会不会是 10
       if (numArr[i] === '10') {
         // 10的话处理一下变成 0，再次for循环，相当于给前面一个 +1
-        numArr[i] = '0';
+        numArr[i] = '0'
       } else {
         // 小于10的话，就打断循环，进位成功
-        break;
+        break
       }
     }
   }
   // 将小数点加入数据
-  numArr.splice(dotIndex, 0, ".")
+  numArr.splice(dotIndex, 0, '.')
 
   // 处理多余位数
   numArr.pop()
 
   // 如果事负数，添加负号
-  if(isNegativeNum){
-    numArr.unshift("-")
+  if (isNegativeNum) {
+    numArr.unshift('-')
   }
 
   return Number(numArr.join('')).toFixed(digits)
