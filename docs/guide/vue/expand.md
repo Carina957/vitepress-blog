@@ -221,6 +221,7 @@ function findBrothersComponents (context, componentName, exceptMe = true) {
     return item.$options.name === componentName
   })
   let index = res.findIndex(item => item._uid === context._uid)
+
   if (exceptMe) res.splice(index, 1)
   return res
 }
