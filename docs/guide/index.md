@@ -28,6 +28,8 @@
 
 ![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=flat&logo=javascript&logoColor=000000&labelColor=%23ECD83E&color=%23ECD83E)
 
+![TypeScript](https://img.shields.io/badge/-TypeScript-%235da6ee?style=flat&logo=typescript&logoColor=ffffff)
+
 ![React](https://img.shields.io/badge/-React-%2320232A?logoColor=61DAFB&style=flat&logo=react)
 
 ![Vue](https://img.shields.io/badge/-vue-%233eaf7c?logoColor=61DAFB&style=flat&logo=vue.js)
