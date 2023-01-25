@@ -11,16 +11,17 @@
 ![ID](https://img.shields.io/badge/🆔-Chi's/Carina957-%23323031?style=flat&labelColor=323031)
 
 ![wechat](https://img.shields.io/badge/-CHIS___xx-%23323031?style=flat&logo=wechat)
+
 <!-- [![dev.to](https://img.shields.io/badge/-lencx-%23323031?style=flat&logo=dev.to)](https://dev.to/lencx)
 [![reddit](https://img.shields.io/badge/-lencx-%23323031?style=flat&logo=reddit)](https://www.reddit.com/user/lencx) -->
 
 <b>Languages and Tools</b>
 
-<!-- <img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="25" style="display: inline-block; margin-right: 15px;">
+<!-- <img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="20" style="display: inline-block; margin-right: 15px;">
 
-<img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="25" style="display: inline-block; margin-right: 15px;">
+<img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="20" style="display: inline-block; margin-right: 15px;">
 
-<img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="25" style="display: inline-block; margin-right: 15px;"> -->
+<img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="20" style="display: inline-block; margin-right: 15px;"> -->
 
 ![HTML5](https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff)
 
@@ -39,6 +40,7 @@
 ![Git](https://img.shields.io/badge/-Git-%23ED5A47?style=flat&logo=git&logoColor=%23ffffff)
 
 ![VS Code](https://img.shields.io/badge/-VSCode-%230066B8?style=flat&logo=visual-studio-code)
+
 <!-- ![Node.js](https://img.shields.io/badge/-Node.js-%23579050?style=flat&logo=node.js&logoColor=ffffff)
 ![Sass](https://img.shields.io/badge/-Sass-%23CB6498?style=flat&logo=sass&logoColor=ffffff)
 ![WebAssembly](https://img.shields.io/badge/-WebAssembly-654FF0?style=flat&logo=webassembly&logoColor=ffffff)
