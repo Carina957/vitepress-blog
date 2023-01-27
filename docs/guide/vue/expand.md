@@ -160,6 +160,7 @@ function findComponentsUpward(context, componentName) {
 
   if (parent) {
     if (parent.$options.name === componentName) parents.push(parent)
+
     return parents.concat(findComponentsUpward(parent, componentName))
   } else {
     return []
