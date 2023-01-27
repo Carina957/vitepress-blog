@@ -112,7 +112,7 @@ function prohibit() {
  * 一个完美的 toFixed() 函数
  * @param {number} num
  * @param {number} digits
- * @returns
+ * @returns {number}
  */
 function toFixed (num, digits = 0) {
   let zeroStrNum = num.toString()
