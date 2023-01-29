@@ -4,7 +4,7 @@ outline: deep
 
 # 基础
 
-## Provide / Inject
+## Provide & Inject
 
 `provide` 和 `inject` 的绑定并不是响应式的，这是刻意为之的，然而，如果你传入了一个可监听的对象，那么其对象的属性还是可响应的。
 
