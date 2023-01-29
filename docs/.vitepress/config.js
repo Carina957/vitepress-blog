@@ -82,6 +82,7 @@ module.exports = {
           items: [
             { text: '基础', link: '/guide/vue/basic' },
             { text: '拓展', link: '/guide/vue/expand' },
+            { text: '组件', link: '/guide/vue/components' },
           ]
         },
         {
