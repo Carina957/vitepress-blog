@@ -15,7 +15,7 @@
     "blog"
   ],
   "scripts": {
-    "dev": "vitepress dev docs",
+    "dev": "vitepress dev docs --port=8173",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
     "deploy": "bash deploy.sh",
