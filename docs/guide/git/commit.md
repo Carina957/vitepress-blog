@@ -6,7 +6,7 @@ outline: deep
 
 ## 各种类型的规范
 
-- feat: A new feature(新增 `feature` )
+- feat: A new feature(新增 `feature`)
 - fix: A bug fix(修复 bug)
 - docs: Documentation only changes(仅文档更改,如 `README.md`)
 - refactor: A code change that neither fixes a bug nor adds a feature(代码重构，没有新增功能或修复 bug)
