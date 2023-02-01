@@ -93,6 +93,13 @@ module.exports = {
           ]
         },
         {
+          text: 'Webpack',
+          collapsible: false,
+          items: [
+            { text: '基础', link: '/webpack/basic' },
+          ]
+        },
+        {
           text: 'CSS',
           collapsible: false,
           items: [
