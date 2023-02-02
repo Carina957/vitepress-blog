@@ -24,12 +24,34 @@ outline: deep
 ## Key 的作用
 
 - key 的作用主要是为了高效的更新虚拟 DOM。另外 vue 中在使用相同标签 名元素的过渡切换时，也会使用到 key 属性，其目的也是为了让 vue 可以 区分它们。否则 vue 只会替换其内部属性而不会触发过渡效果
-- key 不能用 index 代替，index 在同一个页面会有重复的情况，违背了高效 渲染的初衷。
+- key 不能用 index 代替，index 在同一个页面会有重复的情况，违背了高效渲染的初衷。
 
 ## Vue 组件中 data 必须是函数
 
 - 在 `new Vue()` 中，data 是可以作为一个对象进行操作的，然而在 component 中，data 只能以函数的形式存在，不能直接将对象赋值给它。
 - 当 data 选项是一个函数的时候，每个实例可以维护一份被返回对象的独立的拷贝，这样各个实例中的 data 不会相互影响，是独立的。
+
+## 不要在 `created` 和 `watch` 中调用方法
+
+```vue
+<script>
+export default {
+  methods: {
+    handleChange (val) {
+      // do something
+    },
+  },
+  watch: {
+    property {
+      immediate: true,
+      handler () {
+        this.handleChange()
+      }
+    }
+  }
+}
+</script>
+```
 
 ## mitt
 
