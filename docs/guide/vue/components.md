@@ -57,7 +57,7 @@ export default {
             errors && (valid = false)
             if (++count === this.fields.length) {
               resolve(valid)
-              if (typeof callback === 'function') callback(valid)
+              (typeof callback === 'function') && callback(valid)
             }
           })
         })
