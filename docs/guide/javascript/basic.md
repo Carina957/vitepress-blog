@@ -4,13 +4,20 @@ outline: deep
 
 # 基础
 
-## 基本数据类型
+## 数据类型
+
+### 原始值
 
 - Number 数字
 - String 字符串
 - Boolean 布尔值
-- Null 空值
 - Undefined 未定义
+- Null 空值
+- BigInt 数字的原始值
+- Symbol 唯一并且不可变的原始值并且可以用来作为对象属性的键
+
+### Object
+
 - Object 对象
 
 ### null 和 undefined 的区别
