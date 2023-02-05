@@ -15,13 +15,16 @@ outline: deep
 
 ### null 和 undefined 的区别
 
+---
+
 #### 相同点
 
 1. 都是原始类型的值，且保存在栈中
 2. 进行条件判断时，两者都是 false
 
     ```js
-    console.log(undefined == null) //true ECMAScript 认为 `undefined` 是 `null` 派生出来的，所以定义他们值是相同的
+    // true ECMAScript 认为 `undefined` 是 `null` 派生出来的，所以定义他们值是相同的
+    console.log(undefined == null)
     ```
 
 #### 不同点
@@ -47,6 +50,8 @@ outline: deep
 
 #### 产生方式
 
+---
+
 ##### null
 
 1. 当访问一个不存的 DOM 节点时
@@ -60,6 +65,8 @@ outline: deep
     ```js
     console.log(Object.prototype.__proto__) // null
     ```
+
+> 当需要释放一个对象的时候可以将该对象赋值为 null ，进而来释放对象。
 
 ##### undefined
 
@@ -88,5 +95,3 @@ outline: deep
 
     console.log(handleChange()) // undefined
     ```
-
-> 当需要释放一个对象的时候可以将该对象赋值为 null ，进而来释放对象。
