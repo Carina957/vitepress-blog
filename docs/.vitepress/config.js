@@ -41,6 +41,10 @@ module.exports = {
             text: 'React',
             link: 'https://beta.reactjs.org/',
           },
+          {
+            text: 'TypeScript',
+            link: 'https://www.typescriptlang.org/zh/',
+          },
         ],
       },
     ],
