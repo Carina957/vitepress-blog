@@ -52,9 +52,9 @@ module.exports = {
     sidebar: {
       '/guide': [
         {
-          text: 'Introduction',
+          text: '开始', // Getting Started
           collapsible: false,
-          items: [{ text: 'Getting Started', link: '/guide/' }],
+          items: [{ text: '介绍', link: '/guide/' }], // Introduction
         },
         {
           text: 'Git',
