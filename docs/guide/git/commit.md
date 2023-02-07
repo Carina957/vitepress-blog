@@ -39,36 +39,36 @@ message 格式如下：
 
 - Header
 
-    > Header 部分只有一行，包括三个字段：type（必需）、scope（可选）和 subject（必需）
+  > Header 部分只有一行，包括三个字段：type（必需）、scope（可选）和 subject（必需）
 
-    type: 用于说明 commit 的类型。一般有一下几种：
+  type: 用于说明 commit 的类型。一般有一下几种：
 
-    ```sh
-    feat:        A new feature(新增feature)
-    fix:         A bug fix(修复bug)
-    docs:        Documentation only changes(仅文档更改,如README.md)
-    refactor:    A code change that neither fixes a bug nor adds a feature(代码重构，没有新增功能或修复bug)
-    perf:        A code change that improves performance(优化相关，如提升性能、用户体验等)
-    test:        Adding missing tests or correcting existing tests(测试用例，包括单元测试、集成测试)
-    build:       Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)(影响构建系统或外部依赖关系的更改（示例范围：gulp、broccoli、npm）)
-    chore:       Other changes that don\'t modify src or test files(其他不修改src或测试文件的更改)
-    improvement: An improvement to a current feature(对当前特性的改进)
-    style:       Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)(不影响代码含义的更改（空格、格式、缺少分号等）)
-    ci:          Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)(对ci配置文件和脚本的更改)
-    revert:      Reverts a previous commit(还原以前的提交)
-    ```
+  ```sh
+  feat:        A new feature(新增feature)
+  fix:         A bug fix(修复bug)
+  docs:        Documentation only changes(仅文档更改,如README.md)
+  refactor:    A code change that neither fixes a bug nor adds a feature(代码重构，没有新增功能或修复bug)
+  perf:        A code change that improves performance(优化相关，如提升性能、用户体验等)
+  test:        Adding missing tests or correcting existing tests(测试用例，包括单元测试、集成测试)
+  build:       Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)(影响构建系统或外部依赖关系的更改（示例范围：gulp、broccoli、npm）)
+  chore:       Other changes that don\'t modify src or test files(其他不修改src或测试文件的更改)
+  improvement: An improvement to a current feature(对当前特性的改进)
+  style:       Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)(不影响代码含义的更改（空格、格式、缺少分号等）)
+  ci:          Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)(对ci配置文件和脚本的更改)
+  revert:      Reverts a previous commit(还原以前的提交)
+  ```
 
-    scope: 用于说明 commit 影响的范围，比如: views, component, utils, config...
+  scope: 用于说明 commit 影响的范围，比如: views, component, utils, config...
 
-    subject: commit 目的的简短描述
+  subject: commit 目的的简短描述
 
 - Body（已配置成必需）
 
-> 对本次 commit 修改内容的具体描述，可以分为多行。
+  > 对本次 commit 修改内容的具体描述，可以分为多行。
 
 - Footer
 
-> 一些备注，通常是 BREAKING CHANGE （当前代码与上一个版本不兼容）或修复的 bug（关闭 issue）的链接。
+  > 一些备注，通常是 BREAKING CHANGE （当前代码与上一个版本不兼容）或修复的 bug（关闭 issue）的链接。
 
 ### [格式参考](https://github.com/angular/angular/commit/014a7137f474ee97ae95f35de85ab0e948a1a89b)
 
