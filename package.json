@@ -17,7 +17,7 @@
   "scripts": {
     "dev": "vitepress dev docs --port=8173",
     "build": "vitepress build docs",
-    "serve": "vitepress serve docs",
+    "serve": "vitepress serve docs --port=8173",
     "deploy": "bash deploy.sh",
     "clear": "rimraf node_modules&&pnpm install"
   }
