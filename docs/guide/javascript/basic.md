@@ -64,7 +64,7 @@ outline: deep
 1. 当访问一个不存的 DOM 节点时
 
     ```js
-    console.log(document.getElementById("#app")) //null
+    console.log(document.getElementById('#app')) //null
     ```
 
 2. Object 的原型链终点
