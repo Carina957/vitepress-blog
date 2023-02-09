@@ -178,15 +178,20 @@ module.exports = {
     },
 
     algolia: {
-      appId: 'YZ38NEQ0IF',
-      apikey: '6a488e314c2da4ee16c4fdff1abf3a0a',
-      indexName: 'dev_chis',
+      // appId: 'YZ38NEQ0IF',
+      // apikey: '6a488e314c2da4ee16c4fdff1abf3a0a',
+      // indexName: 'dev_chis',
+
       // indexName: 'vuejs_cn2',
       // appId: 'UURH1MHAF7',
       // apiKey: 'c23eb8e7895f42daeaf2bf6f63eb4bf6',
       // searchParameters: {
       //   facetFilters: ['version:v3']
-      // }
+      // },
+
+      appId: '4L9RSE98LX',
+      apikey: 'e7d88369a35a226f42f612999477f606',
+      indexName: 'carina957io',
     },
 
     localeLinks: {
