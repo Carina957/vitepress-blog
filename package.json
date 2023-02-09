@@ -20,5 +20,9 @@
     "serve": "vitepress serve docs --port=8173",
     "deploy": "bash deploy.sh",
     "clear": "rimraf node_modules&&pnpm install"
+  },
+  "dependencies": {
+    "@docsearch/css": "^3.3.3",
+    "@docsearch/js": "^3.3.3"
   }
 }
