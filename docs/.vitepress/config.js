@@ -71,14 +71,12 @@ module.exports = {
             { text: '基础', link: '/guide/javascript/basic' },
             { text: '拓展', link: '/guide/javascript/expand' },
             { text: '工具函数', link: '/guide/javascript/utils' },
-          ]
+          ],
         },
         {
           text: 'TypeScript',
           collapsible: false,
-          items: [
-            { text: '基础', link: '/guide/typescript/basic' },
-          ]
+          items: [{ text: '基础', link: '/guide/typescript/basic' }],
         },
         {
           text: 'Vue',
@@ -87,44 +85,34 @@ module.exports = {
             { text: '基础', link: '/guide/vue/basic' },
             { text: '拓展', link: '/guide/vue/expand' },
             { text: '组件', link: '/guide/vue/components' },
-          ]
+          ],
         },
         {
           text: 'React',
           collapsible: false,
-          items: [
-            { text: '基础', link: '/guide/react/basic' },
-          ]
+          items: [{ text: '基础', link: '/guide/react/basic' }],
         },
         {
           text: 'Webpack',
           collapsible: false,
-          items: [
-            { text: '基础', link: '/guide/webpack/basic' },
-          ]
+          items: [{ text: '基础', link: '/guide/webpack/basic' }],
         },
         {
           text: 'CSS',
           collapsible: false,
-          items: [
-            { text: '基础', link: '/guide/css/basic' },
-          ]
+          items: [{ text: '基础', link: '/guide/css/basic' }],
         },
       ],
       '/notes': [
         {
           text: '旅游',
           collapsible: true,
-          items: [
-            { text: '骑行', link: '/notes/travel/cycling' },
-          ],
+          items: [{ text: '骑行', link: '/notes/travel/cycling' }],
         },
         {
           text: '阅读',
           collapsible: true,
-          items: [
-            { text: '读后感', link: '/notes/read/reaction' },
-          ],
+          items: [{ text: '读后感', link: '/notes/read/reaction' }],
         },
       ],
     },
@@ -140,12 +128,12 @@ module.exports = {
       returnToTop: '返回顶部',
       deadLink: {
         before: '你打开了一个不存在的链接：',
-        after: '。'
+        after: '。',
       },
       deadLinkReport: {
         before: '不介意的话请提交到',
         link: '这里',
-        after: '，我们会跟进修复。'
+        after: '，我们会跟进修复。',
       },
       // ariaDarkMode: '切换深色模式',
       // ariaSkipToContent: '直接跳到内容',
@@ -156,7 +144,8 @@ module.exports = {
     },
 
     editLink: {
-      pattern: 'https://github.com/Carina957/vitepress-blog/edit/main/docs/:path',
+      pattern:
+        'https://github.com/Carina957/vitepress-blog/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页',
       // text: 'Edit this page on GitHub',
     },
@@ -190,8 +179,21 @@ module.exports = {
       // },
 
       appId: '4L9RSE98LX',
-      apikey: 'e7d88369a35a226f42f612999477f606',
+      // apikey: 'e7d88369a35a226f42f612999477f606',
+      apikey: '0e8806e938f2c8c4cbee3aea4e8d17aa',
       indexName: 'carina957io',
+      // container: '.search-box',
+      // searchParameters: {
+      //   facetFilters: [
+      //     'lang:zh-CN',
+      //     'type:content',
+      //     'type:lvl1',
+      //     'type:lvl2',
+      //     'type:lvl3',
+      //     'type:lvl4',
+      //     'type:lvl5',
+      //   ],
+      // },
     },
 
     localeLinks: {
