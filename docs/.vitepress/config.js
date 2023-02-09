@@ -90,7 +90,10 @@ module.exports = {
         {
           text: 'React',
           collapsible: false,
-          items: [{ text: '基础', link: '/guide/react/basic' }],
+          items: [
+            { text: '基础', link: '/guide/react/basic' },
+            { text: '拓展', link: '/guide/react/expand' },
+          ],
         },
         {
           text: 'Webpack',
@@ -167,10 +170,6 @@ module.exports = {
     },
 
     algolia: {
-      // appId: 'YZ38NEQ0IF',
-      // apiKey: '6a488e314c2da4ee16c4fdff1abf3a0a',
-      // indexName: 'dev_chis',
-
       // indexName: 'vuejs_cn2',
       // appId: 'UURH1MHAF7',
       // apiKey: 'c23eb8e7895f42daeaf2bf6f63eb4bf6',
