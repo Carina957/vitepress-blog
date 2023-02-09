@@ -180,20 +180,9 @@ module.exports = {
 
       appId: '4L9RSE98LX',
       // apikey: 'e7d88369a35a226f42f612999477f606',
-      apikey: '0e8806e938f2c8c4cbee3aea4e8d17aa',
+      apikey: 'afeff9433e6037489688be24b45d025c',
+      // apikey: '0e8806e938f2c8c4cbee3aea4e8d17aa',
       indexName: 'carina957io',
-      // container: '.search-box',
-      // searchParameters: {
-      //   facetFilters: [
-      //     'lang:zh-CN',
-      //     'type:content',
-      //     'type:lvl1',
-      //     'type:lvl2',
-      //     'type:lvl3',
-      //     'type:lvl4',
-      //     'type:lvl5',
-      //   ],
-      // },
     },
 
     localeLinks: {
