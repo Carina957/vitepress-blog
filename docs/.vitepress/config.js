@@ -180,8 +180,8 @@ module.exports = {
 
       indexName: 'carina957io',
       appId: '4L9RSE98LX',
-      // apikey: 'e7d88369a35a226f42f612999477f606',
-      // apikey: 'afeff9433e6037489688be24b45d025c',
+      // apiKey: 'e7d88369a35a226f42f612999477f606',
+      // apiKey: 'afeff9433e6037489688be24b45d025c',
       apiKey: '0e8806e938f2c8c4cbee3aea4e8d17aa',
     },
 
