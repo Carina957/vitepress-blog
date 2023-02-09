@@ -168,7 +168,7 @@ module.exports = {
 
     algolia: {
       // appId: 'YZ38NEQ0IF',
-      // apikey: '6a488e314c2da4ee16c4fdff1abf3a0a',
+      // apiKey: '6a488e314c2da4ee16c4fdff1abf3a0a',
       // indexName: 'dev_chis',
 
       // indexName: 'vuejs_cn2',
@@ -178,11 +178,11 @@ module.exports = {
       //   facetFilters: ['version:v3']
       // },
 
+      indexName: 'carina957io',
       appId: '4L9RSE98LX',
       // apikey: 'e7d88369a35a226f42f612999477f606',
-      apikey: 'afeff9433e6037489688be24b45d025c',
-      // apikey: '0e8806e938f2c8c4cbee3aea4e8d17aa',
-      indexName: 'carina957io',
+      // apikey: 'afeff9433e6037489688be24b45d025c',
+      apiKey: '0e8806e938f2c8c4cbee3aea4e8d17aa',
     },
 
     localeLinks: {
