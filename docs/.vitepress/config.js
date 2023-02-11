@@ -105,6 +105,14 @@ module.exports = {
           collapsible: false,
           items: [{ text: '基础', link: '/guide/css/basic' }],
         },
+        {
+          text: 'InterView',
+          collapsible: false,
+          collapsed: false,
+          items: [
+            { text: '面试', link: '/guide/interview/index' },
+          ]
+        }
       ],
       '/notes': [
         {
