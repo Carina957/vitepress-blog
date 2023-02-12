@@ -87,23 +87,96 @@ doSomeInstancuing.prop = 'some value'
 
 当你访问 `doSomeInstancing` 的一个属性，浏览器首先查找 `doSomeInstancing` 是否有这个属性。如果 `doSomeInstancing` 没有这个属性，然后浏览器就会在 `doSomeInstancing` 的 `__proto__` 中查找这个属性 (也就是 `doSomething.prototype`). 如果 `doSomeInstancing` 的 `__proto__` 有这个属性，那么 `doSomeInstancing` 的 `__proto__` 上的这个属性就会被使用。否则，如果 `doSomeInstancing` 的 `__proto__` 没有这个属性，浏览器就会去查找 `doSomeInstancing` 的 `__proto__` 的 `__proto__` ，看它是否有这个属性。默认情况下，所有函数的原型属性的 `__proto__` 就是 `window.Object.prototype`. 所以 `doSomeInstancing` 的 `__proto__` 的 `__proto__` (也就是 `doSomething.prototype` 的 `__proto__` (也就是 Object.prototype)) 会被查找是否有这个属性。如果没有在它里面找到这个属性，然后就会在 `doSomeInstancing` 的 `__proto__` 的 `__proto__` 的 `__proto__` `里面查找。然而这有一个问题：doSomeInstancing` 的 `__proto__` 的 `__proto__` 的 `__proto__` 不存在。最后，原型链上面的所有的 `__proto__` 都被找完了，浏览器所有已经声明了的 `__proto__` 上都不存在这个属性，然后就得出结论，这个属性是 `undefined`.
 
-## 总结
+### 总结
 
-- new关键字做了哪几件事
+- new 关键字做了哪几件事
   1. 创建一个空对象 `let obj = {}`
   2. 改变 `this` 指向 (`bind` 、 `call` 、 `apply`)
   3. 添加属性
   4. 返回这个对象 `return obj`
 - 构造函数/对象模板：专门用来反复创建相同结构对象的专门方法。
-- 继承：使用现有类型，创建出新的类型，新类型可以使用现有类型的属性和方法，也可以
-拓展出现有类型没有的属性和方法。
-- 原型链：一个对象的隐式指向创建该对象的构造函数的原型对象，以此形成的链叫原型
-链。
+- 继承：使用现有类型，创建出新的类型，新类型可以使用现有类型的属性和方法，也可以拓展出现有类型没有的属性和方法。
+- 原型链：一个对象的隐式指向创建该对象的构造函数的原型对象，以此形成的链叫原型链。
 - 原型链的作用：用来实现继承的。
 - 隐式原型： `__proto__` 任何对象都有隐式原型，并且一个对象的隐式原型指向创建该对象的构造函数的原型对象。
 - `constructor`: 每个实例对象都从原型中继承了一个 `constructor` 属性，该属性指向了用于构造此实例对象的构造函数。
 - 每个实例对象（`object`）都有一个私有属性（称之为 `__proto__` ）指向它的构造函数的原型对象（ `prototype` ）。该原型对象也有一个自己的原型对象（ `__proto__` ），层层向上直到一个对象的原型对象为 `null` 。根据定义， `null` 没有原型，并作为这个原型链中的最后一个环节。
 
-## 参考
+### 参考
 
 - [MDN](https://developer.mozilla.org/zh-CN/)
+
+## vue2 和 vue3 的区别
+
+### vue2 和 vue3 双向数据绑定原理发生了改变
+
+- vue2 的双向数据绑定是利用了 es5 的一个 `API Object.definepropert()` 对数据进行劫持结合发布订阅模式来实现的。
+- vue3 中使用了 es6 的 `proxy API` 对数据进行处理。相比与 vue2 ，使用 `proxy API` 优势有：
+  1. defineProperty 只能监听某个属性，不能对全对象进行监听；可以省去 for in 、闭包等内容来提升效率（直接绑定整个对象即可）；
+  2. 可以监听数组，不用再去单独的对数组做特异性操作，vue3 可以检测到数组内部数据的变化。
+
+### vue3 支持碎片(Fragments)
+
+### Composition API
+
+vue2 与 vue3 最大的区别是 vue2 使用选项类型 api ，对比 vue3 合成型 api 。旧得选项型 api 在代码里分割了不同得属性： `data` 、 `computed` 、 `methods` 等；新得合成型 api 能让我们使用方法来分割，相比于旧的 api 使用属性来分组，这样代码会更加简便和整洁。
+
+### 建立数据 data
+
+vue2 是把数据放入 data 中，vue3 就需要使用一个新的 `setup()` 方法，此方法在组件初始化构造得时候触发。使用一下三个步骤来简=建立反应性数据：
+
+1. 从 vue 引入 `reactive` ；
+2. 使用 `reactive()` 方法来声明数据为响应性数据；
+3. 使用 `setup()` 方法来返回我们得响应性数据，从而 `template` 可以获取这些响应性数据。
+
+### 生命周期
+
+| vue2            | vue3            |
+| :-------------- | :-------------- |
+| beforeCreate    | setup()         |
+| Created         | setup()         |
+| beforeMount     | onBeforeMount   |
+| mounted         | onMounted       |
+| beforeUpdate    | onBeforeUpdate  |
+| updated         | onUpdated       |
+| beforeDestroyed | onBeforeUnmount |
+| destroyed       | onUnmounted     |
+| activated       | onActivated     |
+| deactivated     | onDeactivated   |
+
+### 父子传参不同， `setup()` 函数特性
+
+1. `setup()` 函数接收两个参数：`props` 、 `context` (包含 `attrs` 、 `slots` 、 `emit` )
+2. `setup` 函数是处于生命周期 `beforeCreated` 和 `created` 俩个钩子函数之前
+3. 执行 `setup` 时，组件实例尚未被创建（在 `setup()` 内部， `this` 不会是该活跃实例得引用，即不指向 vue 实例，vue 为了避免我们错误得使用，直接将 `setup` 函数中得 `this` 修改成了 `undefined` ）
+4. 与模板一起使用时，需要返回一个对象
+5. 因为 `setup` 函数中， `props` 是响应式得，当传入新的 prop 时，它将会被更新，所以不能使用 es6 解构，因为它会消除 prop 得响应性，如需解构 prop，可以通过使用 setup 函数中得 toRefs 来完成此操作。
+6. 父传子，用 `props` ,子传父用事件 `Emitting Events` 。在 vue2 中，会调用 `this.$emit` 然后传入事件名和对象；在 vue3 中得 `setup()` 中得第二个参数 `content` 对象中就有 `emit` ，那么我们只要在 `setup()` 接收第二个参数中使用分解对象法取出 `emit` 就可以在 `setup` 方法中随意使用了。
+7. 在 `setup()` 内使用响应式数据时，需要通过 `.value` 获取
+8. 从 `setup()` 中返回得对象上得 `property` 返回并可以在模板中被访问时，它将自动展开为内部值。不需要在模板中追加 `.value` 。
+9. `setup` 函数只能是同步的不能是异步的。
+
+### `vue3 Proxy` 原理
+
+`Proxy` 可以理解成， `在目标对象之前架设一层 "拦截"` ，当外界对该对象访问的时候，都必须经过这层拦截，而 `Proxy` 就充当了这种机制，类似于代理的含义，它可以 `对外界访问对象之前进行过滤和改写该对象` 。
+
+#### `Proxy` 基本语法
+
+```js
+// 被代理之后返回的对象 = new Proxy(被代理对象，要代理对象的操作)
+const obj = new Proxy(target, handler)
+```
+
+1. get(target, propKey, receiver)
+2. set(target, propKey, value, receiver)
+3. has(target, propKey)
+4. construct(target, args)
+5. apply(target, object, args)
+
+### `Object.defineProperty` 的缺点
+
+1. 深度监听需要一次性递归 (遍历每个对象的每个属性，如果对象嵌套很深的话，需要使用递归调用。)
+2. 无法监听新增属性/删除属性(Vue.set Vue.delete，未在 data 中定义的属性会报 undefined)
+3. 无法原生监听数组，需要特殊处理
+
+因此 `vue3` 中之后就改用 `Proxy` 来更好的解决如上面的问题，为 `data` 对象代理 `get` 、 `set` 、 `deleteProperty` 三个方法。
