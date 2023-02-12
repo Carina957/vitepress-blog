@@ -9,7 +9,7 @@ outline: deep
 在 `javascript` 中，函数可以有属性。每个函数都有一个特殊的属性叫作原型（ `prototype` ），正如下面所展示的。
 
 ```js
-function doSomething () {
+function doSomething() {
   console.log('doSomething')
 }
 
@@ -180,3 +180,25 @@ const obj = new Proxy(target, handler)
 3. 无法原生监听数组，需要特殊处理
 
 因此 `vue3` 中之后就改用 `Proxy` 来更好的解决如上面的问题，为 `data` 对象代理 `get` 、 `set` 、 `deleteProperty` 三个方法。
+
+### Reflect 对象
+
+`Reflect` 对象原型就是 `Object`
+
+1. 将 `object` 对象的一些明显属性语言内部的方法（如 `Object.defineProperty` ）放到 `reflect` 对象上，就能从 `reflect` 对象上拿到语言内部的方法。
+2. 在使用对象的 `Object.defineProperty(obj, name, {})` 时，如果出现异常的话，会抛出一个错误，需要使用 `try catch` 去捕获，但是使用 `Reflect.defineProperty(obj, name, desc)` 则会返回 `false`。
+
+Reflect 有 13 个属性，这里我们只用到前 4 个：
+
+1. **`Reflect.get`(目标对象，属性名，上下文对象) - 读取对象属性**
+2. **`Reflect.set`(目标属性，属性名，属性值，上下文对象）- 设置对象属性**
+3. **`Reflect.deleteProperty`(目标对象，属性名）- 删除对象属性**
+4. **`Reflect.ownKeys`(目标对象）- 返回由目标对象自身的属性（只处理本身-非原型的属性）组成的数组**
+5. `Reflect.apply`(目标函数，调用目标函数时绑定的 `this` 对象，参数列表) – 通过指定的参数列表调用目标函数
+6. `Reflect.has`(目标对象，属性名) – 检测对象上是否有此属性
+7. `Reflect.constructor`(被运行的目标函数,参数数组，生成的实列对象是谁的实列）（如果没有最后一个参数，默认生成的实列对象就和 `target` 构造函数是一样的）
+8. `Reflect.definedPrototype`(目标对象，属性名，描述符) – 定义对象属性，返回一个逻辑值
+9. `Reflect.isExtensible`(目标对象) – 用于检查一个对象是否可扩展（添加新属性或方法）
+10. `Reflect.preventExtensions`(目标对象) – 阻止新属性添加到目标对象中
+11. `Reflect.getOwnPropertyDescriptor`(目标对象，属性）- 返回对象中的属性描述符
+12. `Reflect.getPrototypeOf`(目标对象) – 返回一个对象原型
