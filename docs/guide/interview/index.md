@@ -156,11 +156,11 @@ vue2 是把数据放入 data 中，vue3 就需要使用一个新的 `setup()` �
 8. 从 `setup()` 中返回得对象上得 `property` 返回并可以在模板中被访问时，它将自动展开为内部值。不需要在模板中追加 `.value` 。
 9. `setup` 函数只能是同步的不能是异步的。
 
-### `Proxy` 原理(vue3)
+## `Proxy` 原理(vue3)
 
 `Proxy` 可以理解成， `在目标对象之前架设一层 "拦截"` ，当外界对该对象访问的时候，都必须经过这层拦截，而 `Proxy` 就充当了这种机制，类似于代理的含义，它可以 `对外界访问对象之前进行过滤和改写该对象` 。
 
-#### `Proxy` 基本语法
+### `Proxy` 基本语法
 
 ```js
 // 被代理之后返回的对象 = new Proxy(被代理对象，要代理对象的操作)
@@ -173,7 +173,7 @@ const obj = new Proxy(target, handler)
 4. construct(target, args)
 5. apply(target, object, args)
 
-#### `Proxy` 实现数据监听
+### `Proxy` 实现数据监听
 
 ```js
 // 创建响应式
@@ -240,14 +240,14 @@ const data = {
 
 `Object.definePropety` 的深度监听是一次性就全部监听的，而 `proxy` 的深度监听是在 `get` 的时候才去递归的，是一个惰性的，很慢的过程，这就是 `proxy` 性能的优化。
 
-#### `Proxy` 优缺点
+### `Proxy` 优缺点
 
 - 规避了 `Object.definedProperty` 的问题
 - `proxy` 无法兼容所有浏览器，无法进行 `polyfill`
 
 > `polyfill` ( `polyfiller` )，指的是一个代码块。这个代码块向开发者提供了一种技术， 这种技术可以让浏览器提供原生支持，抹平不同浏览器对 API 兼容性的差异。
 
-### `Object.defineProperty` 的缺点
+## `Object.defineProperty` 的缺点
 
 1. 深度监听需要一次性递归 (遍历每个对象的每个属性，如果对象嵌套很深的话，需要使用递归调用。)
 2. 无法监听新增属性/删除属性(Vue.set Vue.delete，未在 data 中定义的属性会报 undefined)
@@ -255,7 +255,7 @@ const data = {
 
 因此 `vue3` 中之后就改用 `Proxy` 来更好的解决如上面的问题，为 `data` 对象代理 `get` 、 `set` 、 `deleteProperty` 三个方法。
 
-### Reflect 对象
+## Reflect 对象
 
 `Reflect` 对象原型就是 `Object`
 
