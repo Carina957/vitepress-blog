@@ -259,7 +259,7 @@ const data = {
 
 `Reflect` 对象原型就是 `Object`
 
-1. 将 `object` 对象的一些明显属性语言内部的方法（如 `Object.defineProperty` ）放到 `reflect` 对象上，就能从 `reflect` 对象上拿到语言内部的方法。
+1. 将 `object` 对象的一些明显属性语言内部的方法（如 `Object.defineProperty` ）放到 `Reflect` 对象上，就能从 `Reflect` 对象上拿到语言内部的方法。
 2. 在使用对象的 `Object.defineProperty(obj, name, {})` 时，如果出现异常的话，会抛出一个错误，需要使用 `try catch` 去捕获，但是使用 `Reflect.defineProperty(obj, name, desc)` 则会返回 `false`。
 
 Reflect 有 13 个属性，这里我们只用到前 4 个：
