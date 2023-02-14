@@ -232,6 +232,27 @@ function findBrothersComponents (context, componentName, exceptMe = true) {
 export { findBrothersComponents }
 ```
 
+## vue/cli Prettier.config.js
+
+```js
+module.exports = {
+  printWidth: 80,
+  tabWidth: 2,
+  useTabs: false,
+  semi: false,
+  singleQuote: true,
+  arrowParens: 'avoid',
+  quoteProps: 'as-needed',
+  jsxSingleQuote: false,
+  trailingComma: 'es5',
+  bracketSpacing: true,
+  htmlWhitespaceSensitivity: 'ignore', // ignore css
+  vueIndentScriptAndStyle: false,
+  endOfLine: 'lf',
+  bracketSameLine: false,
+}
+```
+
 ## 参考
 
 - [Vue.js 组件精讲](https://juejin.cn/book/6844733759942557704)
