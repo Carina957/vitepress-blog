@@ -102,3 +102,21 @@ outline: deep
 
     console.log(handleChange()) // undefined
     ```
+## jsconfig.json
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "baseUrl": "./",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "assets/*": ["src/assets/*"],
+      "@/*": ["src/*"]
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*"]
+}
+```
