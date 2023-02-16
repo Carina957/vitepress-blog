@@ -17,7 +17,12 @@ outline: deep
 ## npm
 
 ```sh
-npm ls -g --depth 0 # 查看全局安装的模块
-npm i dayjs -S # 安装到 `devDependencies` 中
-npm i dayjs -D # 安装到 `dependencies` 中
+# 查看全局安装的模块
+npm ls -g --depth 0
+
+# 安装到 `devDependencies` 中
+npm i dayjs -S
+
+# 安装到 `dependencies` 中
+npm i dayjs -D
 ```
