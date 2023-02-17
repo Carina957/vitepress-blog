@@ -29,3 +29,27 @@ interface State {
   deviceIdList: any[];
 }
 ```
+
+### type
+
+```ts
+type Props = FormComponentProps & {
+  loading: boolean;
+  dispatch: Dispatch;
+  deviceInstance: any;
+  location: Location;
+}
+
+tpye State = {
+  data: any;
+  searchParam: any;
+  addVisible: boolean;
+  currentItem: Partial<DeviceInstance>;
+  processVisible: boolean;
+  importLoading: boolean;
+  action: string;
+  deviceCount: any;
+  productList: DeviceProduct[];
+  deviceIdList: any[];
+}
+```
