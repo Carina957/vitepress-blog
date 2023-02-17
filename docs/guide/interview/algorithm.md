@@ -38,7 +38,7 @@ const permute = arr => {
 }
 ```
 
-## 回溯
+### 回溯
 
 ```js
 const permute = nums => {
