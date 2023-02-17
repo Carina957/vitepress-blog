@@ -2,9 +2,11 @@
 outline: deep
 ---
 
-# 全排列
+# 算法
 
-## 递归
+## 全排列
+
+### 递归
 
 ```js
 const permute = arr => {
