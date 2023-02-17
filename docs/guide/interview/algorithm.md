@@ -47,13 +47,11 @@ const permute = nums => {
   const backtrack = path => {
     if (path.length === nums.length) {
       permArr.push(path)
-
       return
     }
 
     nums.forEach(n => {
       if (path.includes(n)) return
-
       backtrack(path.concat(n))
     })
   }
