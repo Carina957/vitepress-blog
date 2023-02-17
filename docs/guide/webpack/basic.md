@@ -20,9 +20,16 @@ outline: deep
 # 查看全局安装的模块
 npm ls -g --depth 0
 
+# 查看全局安装的模块的详细信息(name, description, version number, github address, official website.)
+npm ls -l -g --depth 0
+
 # 安装到 `devDependencies` 中
 npm i dayjs -S
 
 # 安装到 `dependencies` 中
 npm i dayjs -D
 ```
+
+![npm-list](./images//npm-list.png)
+
+![npm-list-info](./images/npm-list-info.png)
