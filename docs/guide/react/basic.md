@@ -78,3 +78,63 @@ render () {
   )
 }
 ```
+
+## Hooks
+
+### useEffect
+
+Effect Hook 可以让你在函数组件中执行副作用操作
+
+```jsx
+import React, { useState, useEffect } from 'react'
+
+function Example () {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    document.title = `You clicked ${count} times.`
+  })
+
+  return (
+    <div>
+      <p>You clicked {count} times.</p>
+      <button onClick={() => setCount(count + 1)}>Click Me!</button>
+    </div>
+  )
+}
+```
+
+:::tip
+useEffect Hook 看做 `componentDidMount` ，`componentDidUpdate` 和 `componentWillUnmount` 这三个函数的组合。
+:::
+
+如果你的 `effect` 返回一个函数，React 将会在执行清除操作时调用它
+
+```jsx
+import React, { useState, useEffect } from 'react'
+
+function FriendStatus (props) {
+  const [isOnline, setIsOnline] = useState(null)
+
+  useEffect(() => {
+    function handleStatusChange (status) {
+      setIsOnline(status.isOnline)
+    }
+
+    ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange)
+
+    return function cleanup () {
+      ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange)
+    }
+  })
+
+  if (isOnline === null) {
+    return 'Loading...'
+  }
+  return isOnline ? 'Online' : 'Offline'
+}
+```
+
+:::tip
+并不是必须为 `effect` 中返回的函数命名。这里我们将其命名为 `cleanup` 是为了表明此函数的目的，但其实也可以返回一个箭头函数或者给起一个别的名字。
+:::
