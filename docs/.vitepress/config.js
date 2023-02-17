@@ -111,8 +111,9 @@ module.exports = {
           collapsed: false,
           items: [
             { text: '面试', link: '/guide/interview/index' },
+            { text: '算法', link: '/guide/interview/algorithm' }
           ]
-        }
+        },
       ],
       '/notes': [
         {
