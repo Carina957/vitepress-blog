@@ -150,7 +150,7 @@ vue2 是把数据放入 data 中，vue3 就需要使用一个新的 `setup()` �
 2. `setup` 函数是处于生命周期 `beforeCreated` 和 `created` 俩个钩子函数之前
 3. 执行 `setup` 时，组件实例尚未被创建（在 `setup()` 内部， `this` 不会是该活跃实例得引用，即不指向 vue 实例，vue 为了避免我们错误得使用，直接将 `setup` 函数中得 `this` 修改成了 `undefined` ）
 4. 与模板一起使用时，需要返回一个对象
-5. 因为 `setup` 函数中， `props` 是响应式得，当传入新的 prop 时，它将会被更新，所以不能使用 es6 解构，因为它会消除 prop 得响应性，如需解构 prop，可以通过使用 setup 函数中得 toRefs 来完成此操作。
+5. 因为 `setup` 函数中， `props` 是响应式得，当传入新的 `prop` 时，它将会被更新，所以不能使用 es6 解构，因为它会消除 `prop` 得响应性，如需解构 `prop`，可以通过使用 `setup` 函数中得 `toRefs` 来完成此操作。
 6. 父传子，用 `props` ,子传父用事件 `Emitting Events` 。在 vue2 中，会调用 `this.$emit` 然后传入事件名和对象；在 vue3 中得 `setup()` 中得第二个参数 `content` 对象中就有 `emit` ，那么我们只要在 `setup()` 接收第二个参数中使用分解对象法取出 `emit` 就可以在 `setup` 方法中随意使用了。
 7. 在 `setup()` 内使用响应式数据时，需要通过 `.value` 获取
 8. 从 `setup()` 中返回得对象上得 `property` 返回并可以在模板中被访问时，它将自动展开为内部值。不需要在模板中追加 `.value` 。
