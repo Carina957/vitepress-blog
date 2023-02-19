@@ -245,7 +245,7 @@ const data = {
 - 规避了 `Object.definedProperty` 的问题
 - `proxy` 无法兼容所有浏览器，无法进行 `polyfill`
 
-> `polyfill` ( `polyfiller` )，指的是一个代码块。这个代码块向开发者提供了一种技术， 这种技术可以让浏览器提供原生支持，抹平不同浏览器对 API 兼容性的差异。
+> `polyfill` ( `polyfiller` )，指的是一个代码块。这个代码块向开发者提供了一种技术， 这种技术可以让浏览器提供原生支持，抹平不同浏览器对 `API` 兼容性的差异。
 
 ## `Object.defineProperty` 的缺点
 
