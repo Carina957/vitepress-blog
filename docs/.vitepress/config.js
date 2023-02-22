@@ -101,6 +101,11 @@ module.exports = {
           items: [{ text: '基础', link: '/guide/webpack/basic' }],
         },
         {
+          text: 'Node',
+          collapsible: false,
+          items: [{ text: '基础', link: '/guide/node/basic' }],
+        },
+        {
           text: 'CSS',
           collapsible: false,
           items: [{ text: '基础', link: '/guide/css/basic' }],
