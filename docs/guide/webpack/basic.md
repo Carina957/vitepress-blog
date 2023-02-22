@@ -13,23 +13,3 @@ outline: deep
 `Vue` 中运用 `import` 的懒加载语句以及 `webpack` 的魔法注释，在项目进行 `webpack` 打包的时候，对不同模块进行代码分割，在首屏加载时，用到哪个模块再加载哪个模块，实现懒加载进行页面的优化
 
 ![webpackChunkName](./images/webpackChunkName.png)
-
-## npm
-
-```sh
-# 查看全局安装的模块
-npm ls -g --depth 0
-
-# 查看全局安装的模块的详细信息(name, description, version number, github address, official website.)
-npm ls -l -g --depth 0
-
-# 安装到 `devDependencies` 中
-npm i dayjs -S
-
-# 安装到 `dependencies` 中
-npm i dayjs -D
-```
-
-![npm-list](./images//npm-list.png)
-
-![npm-list-info](./images/npm-list-info.png)
