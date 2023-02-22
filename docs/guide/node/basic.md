@@ -26,6 +26,12 @@ source .bash_profile
 
 之后，你就可以正常使用 `volta`
 
+::: details 当你在终端运行 `volta` or `volta -h`:
+
+```sh
+$ volta
+```
+
 ```text
 Volta 1.1.1
 The JavaScript Launcher ⚡
@@ -53,6 +59,44 @@ SUBCOMMANDS:
     setup          Enables Volta for the current user / shell
     run            Run a command with custom Node, npm, pnpm, and/or Yarn versions
 ```
+
+:::
+
+::: details 当你在终端运行 `volta pin node@16`:
+
+```text
+success: pinned node@16.19.1 (with npm@8.19.3) in package.json
+```
+
+此时，你的 `package.json` 文件里就会多出一行配置：
+
+```json
+"volta": {
+  "node": "16.19.1"
+}
+```
+
+:::
+
+::: details 此外，你还可以运行 `volta ls` 查看 `volta` 已经安装的模块：
+
+```text
+⚡️ Currently active tools:
+
+    Node: v16.19.1 (current @ /Users/xuhao/Downloads/front-end/vitepress/vitepress-blog/
+    package.json)
+    Yarn: v4.0.0-rc.39 (default)
+    Tool binaries available:
+        nrm (default)
+        pnpm, pnpx (default)
+        rimraf (current @ /Users/xuhao/Downloads/front-end/vitepress/vitepress-blog/
+    package.json)
+        yrm (default)
+
+See options for more detailed reports by running `volta list --help`.
+```
+
+:::
 
 ## npm
 
