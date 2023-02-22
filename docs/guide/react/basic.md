@@ -154,7 +154,7 @@ function FriendStatus (props) {
 }
 ```
 
-:::tip
+::: tip
 并不是必须为 `effect` 中返回的函数命名。这里我们将其命名为 `cleanup` 是为了表明此函数的目的，但其实也可以返回一个箭头函数或者给起一个别的名字。
 :::
 
@@ -164,16 +164,26 @@ Add VitePress and Vue as dev dependencies for the project.
 
 ::: code-group
 
+```sh [npm]
 $ npm install -D vitepress vue
+```
+
+```sh [yarn]
 $ yarn add -D vitepress vue
+```
+
+```sh [pnpm]
 $ pnpm add -D vitepress vue
+```
+
 :::
 
 ::: details Getting missing peer deps warnings?
-@docsearch/js has certain issues with its peer dependencies. If you see some commands failing due to them, you can try this workaround for now:
+`@docsearch/js` has certain issues with its peer dependencies. If you see some commands failing due to them, you can try this workaround for now:
 
-If using PNPM, add this in your package.json:
+If using PNPM, add this in your `package.json`:
 
+```json
 "pnpm": {
   "peerDependencyRules": {
     "ignoreMissing": [
@@ -181,4 +191,6 @@ If using PNPM, add this in your package.json:
     ]
   }
 }
+```
+
 :::
