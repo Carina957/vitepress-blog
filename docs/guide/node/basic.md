@@ -9,11 +9,11 @@ outline: deep
 ::: code-group
 
 ```sh [curl]
-curl https://get.volta.sh | bash
+$ curl https://get.volta.sh | bash
 ```
 
 ```sh [brew]
-brew install volta
+$ brew install volta
 ```
 
 :::
