@@ -22,6 +22,6 @@ git commit -m 'deploy'
 git push -f https://github.com/Carina957/Carina957.github.io.git main
 
 # other branch
-# git push -f git@github.com:ustbhuangyi/vue-analysis.git master:gh-pages
+# git push -f git@github.com:Carina957/Carina957.github.io.git main:gh-pages
 
 cd -
