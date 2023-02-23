@@ -171,3 +171,46 @@ function toFixed (num, digits = 0) {
 
 toFixed(1.255, 2) // 1.26
 ```
+
+## JavaScript 浮点数缺陷解决办法
+
+### 数据展示
+
+```js
+function strip(num, precision = 12) {
+  return +parseFloat(num.toPrecision(precision))
+}
+```
+
+### 数据运算
+
+```js
+/**
+ * 精确加法
+ */
+function add(num1, num2) {
+  const num1Digits = (num1.toString().split('.')[1] || '').length
+  const num2Digits = (num2.toString().split('.')[1] || '').length
+  const baseNum = Math.pow(10, Math.max(num1Digits, num2Digits))
+  return (num1 * baseNum + num2 * baseNum) / baseNum
+}
+```
+
+### 综合解决办法
+
+引入 npm 包 [number-precision](https://github.com/nefe/number-precision)
+
+```sh
+$ npm i numer-precision -S
+```
+
+#### Methods
+
+```js
+NP.strip(num) // strip a number to nearest right number
+NP.plus(num1, num2, num3, ...) // addition, num + num2 + num3, two numbers is required at least.
+NP.minus(num1, num2, num3, ...) // subtraction, num1 - num2 - num3
+NP.times(num1, num2, num3, ...) // multiplication, num1 * num2 * num3
+NP.divide(num1, num2, num3, ...) // division, num1 / num2 / num3
+NP.round(num, ratio) // round a number based on ratio
+```
