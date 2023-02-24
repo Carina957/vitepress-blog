@@ -214,3 +214,20 @@ NP.times(num1, num2, num3, ...) // multiplication, num1 * num2 * num3
 NP.divide(num1, num2, num3, ...) // division, num1 / num2 / num3
 NP.round(num, ratio) // round a number based on ratio
 ```
+
+## MergeOptions
+
+```ts
+function mergeOptions (root: {}, opts: {}) {
+  const rootClone = { ..root }
+
+  for (const k in root) {
+    if (opts.hasOwnProperty(k)) {
+      rootClone[k] = k === 'query' ?
+        { ...rootClone[k], ...opts[k] } : opts[k]
+    }
+  }
+
+  return rootClone
+}
+```
