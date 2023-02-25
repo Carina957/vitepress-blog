@@ -218,7 +218,7 @@ NP.round(num, ratio) // round a number based on ratio
 ## MergeOptions
 
 ```ts
-function mergeOptions (root: {}, opts: {}) {
+function mergeOptions (root: {}, opts: {}): void {
   const rootClone = { ...root }
 
   for (const k in root) {
