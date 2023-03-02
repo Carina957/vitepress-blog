@@ -71,7 +71,7 @@ const element = (
 
 ## React 动态表单
 
-::: details 使用 `函数式组件(React.FC)` 写法时：
+::: details 使用`函数式组件(React.FC)`写法时：
 
 ```tsx
 import { Form, Input, Radio, Icon, message } from 'antd'
@@ -228,7 +228,7 @@ export default Form.create<Props>()(SaveDate)
 
 :::
 
-::: details 当你使用 `类组件(class)` 时：
+::: details 当你使用`类组件(class)`时：
 
 ```jsx
 import { Form, Input, Icon, Button } from 'antd'
@@ -341,3 +341,8 @@ ReactDOM.render(<WrappedDynamicFieldSet />, mountNode)
 ```
 
 :::
+
+### 参考
+
+- [Ant-design (3.x)](https://3x.ant.design/components/form-cn/#components-form-demo-dynamic-form-item)
+- [Ant-design (5.2.3)](https://ant.design/components/form-cn#components-form-demo-dynamic-form-item)
