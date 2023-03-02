@@ -71,6 +71,8 @@ const element = (
 
 ## React 动态表单
 
+::: details 使用 `函数式组件(React.FC)` 写法时：
+
 ```tsx
 import { Form, Input, Radio, Icon, message } from 'antd'
 import { FormComponentProps } from 'antd/es/form'
@@ -223,3 +225,119 @@ const SaveData: React.FC<Props> = props => {
 
 export default Form.create<Props>()(SaveDate)
 ```
+
+:::
+
+::: details 当你使用 `类组件(class)` 时：
+
+```jsx
+import { Form, Input, Icon, Button } from 'antd'
+
+let id = 0
+
+class DynamicFieldSet extends React.Component {
+  remove = k => {
+    const { form } = this.props
+    const keys = form.getFieldValue('keys')
+
+    if (keys.length === 1) return
+
+    form.setFieldsValue({
+      keys: keys.filter(key => key !== k)
+    })
+  }
+
+  add = () => {
+    const { form } = this.props
+    const keys = form.getFieldValue('keys')
+    const nextKeys = keys.concat(id++)
+
+    form.setFieldsValue({
+      keys: nextKeys,
+    })
+  }
+
+  handleSubmit = e => {
+    e.preventDefault()
+
+    this.props.form.validateFields((err, values) => {
+      if (!err) {
+        const { keys, names } = values
+        console.log('Received values of form:', values)
+        console.log('Merged values: ', keys.map(key => names[key]))
+      }
+    })
+  }
+
+  render () {
+    const { getFieldDecrator, getFieldValue } = this.props.form
+    const formItemLayout = {
+      labelCol: {
+        xs: { span: 24 },
+        sm: { span: 4 },
+      },
+      wrapperCol: {
+        xs: { span: 24 },
+        sm: { span: 4 }，
+      },
+    }
+    const formItemLayoutWithOutLabel = {
+      wrapperCol: {
+        xs: { span: 24, offset: 0 },
+        sm: { span: 20, offset: 4 },
+      },
+    }
+    getFieldDecrator('keys', { initialValue: [] })
+    const keys = getFieldValue('keys')
+    const formItems = keys.map((k, index) => {
+      <Form.Item
+        {...(index) === 0 ? formItemLayout : formItemLayoutWithOutLable}
+        label={index !== 0 ? 'Passengers' : ''}
+        required={false}
+        key={k}
+      >
+        {getFieldDecorator(`names[${k}]`, {
+          validateTrigger: ['change', 'onBlur'],
+          rules: [
+            {
+              required: true,
+              whitespace: true,
+              message: "Please input passenger's name or delete this field.",
+            },
+          ],
+        })(<Input placehodler="passagenger name" style={{ width: '60%', marginRight: 8 }} />)}
+        {keys.length > 1 ? (
+          <Icon
+            className="dynamic-delete-button"
+            type="minus-circle-o"
+            onClick={() => this.remove(k)}
+          ></Icon>
+        ) : null}
+      </Form.Item>
+    })
+
+    return (
+      <Form onSubmit={this.handleSubmit}>
+        {formItems}
+        <Form.Item {...formItemLayoutWithOutLabel}>
+          <Button type="dashed" onClick={this.add} style={{ width: '60%' }}>
+            <Icon type="plus" /> Add field
+          </Button>
+        </Form.Item>
+        <Form.Item {...formItemLayoutWithOutLabel}>
+          <Button
+            type="primary"
+            htmlType="submit"
+          >Submit</Button>
+        </Form.Item>
+      </Form.Item>
+    )
+  }
+}
+
+const WrappedDynamicFieldSet = Form.create({ name: 'dynamic_form_item' })(DynamicFieldSet)
+
+ReactDOM.render(<WrappedDynamicFieldSet />, mountNode)
+```
+
+:::
