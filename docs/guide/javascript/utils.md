@@ -70,7 +70,7 @@ function throttle(callback, delay = 2000) {
  * @param {number} n
  * @returns {boolean}
  */
-function isNumber (n: number): boolean {
+function isNumber(n: number): boolean {
   return !isNaN(parseFloat(n)) && isFinite(n)
 }
 ```
@@ -114,7 +114,7 @@ function prohibit() {
  * @param {number} digits
  * @returns {number}
  */
-function toFixed (num, digits = 0) {
+function toFixed(num, digits = 0) {
   let zeroStrNum = num.toString()
 
   // 处理科学计算情况
@@ -218,16 +218,93 @@ NP.round(num, ratio) // round a number based on ratio
 ## MergeOptions
 
 ```ts
-function mergeOptions (root: {}, opts: {}): void {
+function mergeOptions(root: {}, opts: {}): void {
   const rootClone = { ...root }
 
   for (const k in root) {
     if (opts.hasOwnProperty(k)) {
-      rootClone[k] = k === 'query' ?
-        { ...rootClone[k], ...opts[k] } : opts[k]
+      rootClone[k] = k === 'query' ? { ...rootClone[k], ...opts[k] } : opts[k]
     }
   }
 
   return rootClone
 }
 ```
+
+## Judge Type
+
+::: details 一些基础的类型判断
+
+```ts
+// 邮箱
+export const isEmail = (s: string) =>
+  /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/.test(s)
+
+// 手机号码
+export const isMobile = (s: string) => /^1[0-9]{10}$/.test(s)
+
+// 电话号码
+export const isPhone = (s: string) => /^([0-9]{3,4}-)?[0-9]{7,8}$/.test(s)
+
+// 是否URL地址
+export const isURL = (s: string) => /^http[s]?:\/\/.*/.test(s)
+
+// 是否字符串
+export const isString = (o: any) =>
+  Object.prototype.toString.call(o).slice(8, -1) === 'String'
+
+// 是否数字
+export const isNumber = (o: any) =>
+  Object.prototype.toString.call(o).slice(8, -1) === 'Number'
+
+// 是否boolean
+export const isBoolean = (o: any) =>
+  Object.prototype.toString.call(o).slice(8, -1) === 'Boolean'
+
+// 是否函数
+export const isFunction = (o: any) =>
+  Object.prototype.toString.call(o).slice(8, -1) === 'Function'
+
+// 是否为null
+export const isNull = (o: any) =>
+  Object.prototype.toString.call(o).slice(8, -1) === 'Null'
+
+// 是否undefined
+export const isUndefined = (o: any) =>
+  Object.prototype.toString.call(o).slice(8, -1) === 'Undefined'
+
+// 是否对象
+export const isObj = (o: any) =>
+  Object.prototype.toString.call(o).slice(8, -1) === 'Object'
+
+// 是否数组
+export const isArray = (o: any) =>
+  Object.prototype.toString.call(o).slice(8, -1) === 'Array'
+
+// 是否时间
+export const isDate = (o: any) =>
+  Object.prototype.toString.call(o).slice(8, -1) === 'Date'
+
+// 是否正则
+export const isRegExp = (o: any) =>
+  Object.prototype.toString.call(o).slice(8, -1) === 'RegExp'
+
+// 是否错误对象
+export const isError = (o: any) =>
+  Object.prototype.toString.call(o).slice(8, -1) === 'Error'
+
+// 是否Symbol函数
+export const isSymbol = (o: any) =>
+  Object.prototype.toString.call(o).slice(8, -1) === 'Symbol'
+
+// 是否Promise对象
+export const isPromise = (o: any) =>
+  Object.prototype.toString.call(o).slice(8, -1) === 'Promise'
+
+// 是否Set对象
+export const isSet = o => {
+  return Object.prototype.toString.call(o).slice(8, -1) === 'Set'
+}
+```
+
+:::
