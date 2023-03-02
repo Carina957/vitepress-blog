@@ -220,4 +220,6 @@ const SaveData: React.FC<Props> = props => {
     }
   })
 }
+
+export default Form.create<Props>()(SaveDate)
 ```
