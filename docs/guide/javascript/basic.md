@@ -36,8 +36,8 @@ outline: deep
 
 #### 不同点
 
-1. null 是 js 的关键字，表示空值；undefined 不是 js 的关键字，它是一个全局变量，表示未定义。
-2. null 是 Object 的一个特殊值，如果一个 Object 为 null，表示这个对象不是有效对象，null 是一个不存在的对象的占位符；undefined 是 Global 的一个属性。
+1. null 是 js 的关键字，表示空值；`undefined` 不是 js 的关键字，它是一个全局变量，表示未定义。
+2. null 是 `Object` 的一个特殊值，如果一个 `Object` 为 null，表示这个对象不是有效对象，null 是一个不存在的对象的占位符；`undefined` 是 `Global` 的一个属性。
 3. 类型不一样：
 
     ```js
