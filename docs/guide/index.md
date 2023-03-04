@@ -17,12 +17,6 @@
 
 <b>Languages and Tools</b>
 
-<!-- <img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="20" style="display: inline-block; margin-right: 15px;">
-
-<img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="20" style="display: inline-block; margin-right: 15px;">
-
-<img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="20" style="display: inline-block; margin-right: 15px;"> -->
-
 ![HTML5](https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff)
 
 ![CSS3](https://img.shields.io/badge/-CSS3-%23197CBE?style=flat&logo=css3)
@@ -47,3 +41,9 @@
 ![WebAssembly](https://img.shields.io/badge/-WebAssembly-654FF0?style=flat&logo=webassembly&logoColor=ffffff)
 ![Sketch](https://img.shields.io/badge/-Sketch-%23FDAD00?style=flat&logo=sketch&logoColor=ffffff)
 ![Rust](https://img.shields.io/badge/-Rust-%23DEA584?style=flat&logo=rust&logoColor=000000) -->
+
+<!-- <img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="20" style="display: inline-block; margin-right: 15px;">
+
+<img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="20" style="display: inline-block; margin-right: 15px;">
+
+<img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="20" style="display: inline-block; margin-right: 15px;"> -->
