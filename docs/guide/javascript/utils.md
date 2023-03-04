@@ -110,8 +110,8 @@ function prohibit() {
 ```js
 /**
  * 一个完美的 toFixed() 函数
- * @param {number} num
- * @param {number} digits
+ * @param {number} num 数字
+ * @param {number} digits 位数
  * @returns {number}
  */
 function toFixed(num, digits = 0) {
