@@ -315,7 +315,7 @@ export const isSet = o => {
 import store from '@/store'
 
 /**
- * check permission.
+ * check permission
  * @param {Array} value
  * @returns {Boolean}
  */
