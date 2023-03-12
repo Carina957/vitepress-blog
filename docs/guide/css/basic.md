@@ -33,32 +33,64 @@ outline: deep
 
 ## 浏览器滚动条
 
-```css
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+### mixin.scss
+
+```scss
+// 通用滚动条
+@mixin scrollbar {
+  /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #f5f5f5;
+  }
+
+  /*定义滚动条轨道 内阴影+圆角*/
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    background-color: #f5f5f5;
+  }
+
+  /*定义滑块 内阴影+圆角*/
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #a9a9a9;
+  }
 }
 
-/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  background-color: #f5f5f5;
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #99a9bf;
+    border-radius: 20px;
+  }
 }
 
-/*定义滚动条轨道 内阴影+圆角*/
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  background-color: #f5f5f5;
+// 通用清除浮动
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
+```
 
-/*定义滑块 内阴影+圆角*/
-::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #a9a9a9;
-}
+### usage
+
+```scss
+@import '～assets/style/mixin.scss'
+
+@include scrollbar;
 ```
 
 ## 文字溢出显示省略号
