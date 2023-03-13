@@ -60,14 +60,3 @@ outline: deep
   background-color: #a9a9a9;
 }
 ```
-
-## super centered(超居中)
-
-```css
-.flex-center {
-  place-items: center;
-  // ||
-  /* justify-items: center;
-  align-items: center; */
-}
-```
