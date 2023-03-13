@@ -7,7 +7,7 @@
   "license": "MIT",
   "devDependencies": {
     "rimraf": "^3.0.2",
-    "vitepress": "^1.0.0-alpha.35"
+    "vitepress": "1.0.0-alpha.56"
   },
   "keywords": [
     "vitepress",
@@ -24,6 +24,13 @@
   "dependencies": {
     "@docsearch/css": "^3.3.3",
     "@docsearch/js": "^3.3.3"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
   },
   "volta": {
     "node": "16.19.1"

@@ -6,7 +6,8 @@ module.exports = {
   lastUpdated: false,
   // srcDir: 'src', // 更改默认目录
   scrollOffset: 'header',
-  cleanUrls: 'without-subfolders',
+  // cleanUrls: 'without-subfolders',
+  clearUrls: true,
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/author_48x48.ico' }],
@@ -14,9 +15,10 @@ module.exports = {
   ],
 
   markdown: {
-    headers: {
-      level: [0, 0],
-    },
+    headers: false
+    // headers: {
+    //   level: [0, 0],
+    // },
   },
 
   themeConfig: {
@@ -53,12 +55,12 @@ module.exports = {
       '/guide': [
         {
           text: '开始', // Getting Started
-          collapsible: false,
+          collapsed: true,
           items: [{ text: '介绍', link: '/guide/' }], // Introduction
         },
         {
           text: 'Git',
-          collapsible: false,
+          collapsed: false,
           items: [
             { text: '基础', link: '/guide/git/basic' },
             { text: '提交', link: '/guide/git/commit' },
@@ -66,7 +68,7 @@ module.exports = {
         },
         {
           text: 'JavaScript',
-          collapsible: false,
+          collapsed: false,
           items: [
             { text: '基础', link: '/guide/javascript/basic' },
             { text: '拓展', link: '/guide/javascript/expand' },
@@ -75,12 +77,12 @@ module.exports = {
         },
         {
           text: 'TypeScript',
-          collapsible: false,
+          collapsed: false,
           items: [{ text: '基础', link: '/guide/typescript/basic' }],
         },
         {
           text: 'Vue',
-          collapsible: false,
+          collapsed: false,
           items: [
             { text: '基础', link: '/guide/vue/basic' },
             { text: '拓展', link: '/guide/vue/expand' },
@@ -90,7 +92,7 @@ module.exports = {
         },
         {
           text: 'React',
-          collapsible: false,
+          collapsed: false,
           items: [
             { text: '基础', link: '/guide/react/basic' },
             { text: '拓展', link: '/guide/react/expand' },
@@ -98,22 +100,21 @@ module.exports = {
         },
         {
           text: 'Webpack',
-          collapsible: false,
+          collapsed: false,
           items: [{ text: '基础', link: '/guide/webpack/basic' }],
         },
         {
           text: 'Node',
-          collapsible: false,
+          collapsed: false,
           items: [{ text: '基础', link: '/guide/node/basic' }],
         },
         {
           text: 'CSS',
-          collapsible: false,
+          collapsed: true,
           items: [{ text: '基础', link: '/guide/css/basic' }],
         },
         {
           text: 'InterView',
-          collapsible: false,
           collapsed: false,
           items: [
             { text: '面试', link: '/guide/interview/index' },
@@ -124,12 +125,12 @@ module.exports = {
       '/notes': [
         {
           text: '旅游',
-          collapsible: true,
+          collapsed: false,
           items: [{ text: '骑行', link: '/notes/travel/cycling' }],
         },
         {
           text: '阅读',
-          collapsible: true,
+          collapsed: false,
           items: [{ text: '读后感', link: '/notes/read/reaction' }],
         },
       ],
