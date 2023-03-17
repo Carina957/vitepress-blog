@@ -112,8 +112,42 @@ $ npm i dayjs -S
 
 # 安装到 `dependencies` 中
 $ npm i dayjs -D
+
+# 查看 `npm` 配置
+$ npm config list
+
+# 查看 `npm` 全部配置
+$ npm config ls -l
 ```
 
 ![npm-list](./images//npm-list.png)
 
 ![npm-list-info](./images/npm-list-info.png)
+
+### --legacy-peer-deps
+
+npm 的 `--legacy-peer-deps` 命令是用于在安装依赖包时启用旧版对等依赖解析算法的选项。
+
+在 npm 7 中，对等依赖解析算法发生了变化，它会忽略与实际依赖不兼容的依赖项。这可能会导致安装失败或不兼容的依赖项被安装。为了解决这个问题，`--legacy-peer-deps` 选项被引入，它允许使用旧版对等依赖解析算法，以避免安装中断或不兼容的依赖项。
+
+可以通过以下命令启用 `--legacy-peer-deps` 选项：
+
+```sh
+$ npm install --legacy-peer-deps
+```
+
+除此之外，还可以在 npm 配置文件中设置该选项，以使其在所有安装命令中自动启用：
+
+```sh
+$ npm config set legacy-peer-deps true
+```
+
+需要注意的是，`--legacy-peer-deps` 它会告诉 npm 完全忽略对等依赖性。从长远来看，这会增加你的依赖解析。
+
+### --force
+
+`--force` 命令是指忽略所有警告强制安装包，这样做可能会造成不可预测的后果，往往用于解决某些包在安装时出现的问题。
+
+通常，我们希望使用该 `--force` 标志，因为这会告诉 npm 在发现冲突的依赖项时尝试设置不同的对等依赖项。
+
+使用 force 仍然不是那么好，因为它会在你的 `node_modules` 文件夹中占用更多的磁盘空间——例如获取不同的版本并将它们存储在本地！
