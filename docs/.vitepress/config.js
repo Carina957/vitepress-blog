@@ -133,6 +133,10 @@ module.exports = {
           collapsed: false,
           items: [{ text: '读后感', link: '/notes/read/reaction' }],
         },
+        {
+          text: 'Reproduction',
+          link: '/notes/reproduction/index'
+        }
       ],
     },
 
