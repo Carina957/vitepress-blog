@@ -142,6 +142,12 @@ $ npm install --legacy-peer-deps
 $ npm config set legacy-peer-deps true
 ```
 
+如果您想 `--legacy-peer-deps` 默认为所有 npm 安装设置标志，则可以考虑更新 `.npmrc` 文件。
+
+```text
+legacy-peer-deps=true
+```
+
 需要注意的是，`--legacy-peer-deps` 它会告诉 npm 完全忽略对等依赖性。从长远来看，这会增加你的依赖解析。
 
 ### --force
