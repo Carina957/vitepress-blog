@@ -62,7 +62,7 @@ ni --frozen
 
 :::
 
-## `nr` - run
+### `nr` - run
 
 ```sh
 nr dev --port=3000
