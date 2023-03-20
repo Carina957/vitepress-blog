@@ -157,21 +157,3 @@ legacy-peer-deps=true
 通常，我们希望使用该 `--force` 标志，因为这会告诉 npm 在发现冲突的依赖项时尝试设置不同的对等依赖项。
 
 使用 force 仍然不是那么好，因为它会在你的 `node_modules` 文件夹中占用更多的磁盘空间——例如获取不同的版本并将它们存储在本地！
-
-## 查看设备信息
-
-```sh
-npx envinfo --system --binaries --browsers
-
-# System:
-#   OS: Windows 10 10.0.19044
-#   CPU: (12) x64 Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
-#   Memory: 1.13 GB / 7.89 GB
-# Binaries:
-#   Node: 16.19.0 - C:\Program Files\nodejs\node.EXE
-#   Yarn: 1.22.19 - C:\Program Files\nodejs\yarn.CMD
-#   npm: 8.19.3 - C:\Program Files\nodejs\npm.CMD
-# Browsers:
-#   Edge: Spartan (44.19041.1266.0), Chromium (111.0.1661.41)
-#   Internet Explorer: 11.0.19041.1202
-```
