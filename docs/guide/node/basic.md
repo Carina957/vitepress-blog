@@ -52,7 +52,7 @@ ni -g eslint
 # yarn add global eslint
 # pnpm add eslint -g
 
-ni --frozen
+ni --frozen / nci
 # npm ci
 # yarn install --frozen-lockfile (Yarn 1)
 # yarn install --immutable (Yarn Berry)
