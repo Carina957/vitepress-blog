@@ -46,9 +46,7 @@ git config --global user.email 'xxx@foxmail.com'
 git config --global --unset https.proxy
 ```
 
-## 常用指令
-
-- 仓库
+## 管理仓库
 
 ```sh
 # 查看远程仓库
@@ -61,11 +59,17 @@ git remote rm origin
 git remote add origin git@github.com:xxx
 ```
 
-- 分支
+## 分支
 
 ```sh
 # 修改全局默认分支
 git config --global init.defaultBranch main
+
+# 重置全局默认分支配置
+git config --global --unset init.defaultBranch
+
+# 修改当前分支
+git branch -M main
 
 # 列出所有分支
 git branch -a

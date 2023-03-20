@@ -70,6 +70,18 @@ message 格式如下：
 
   > 一些备注，通常是 BREAKING CHANGE （当前代码与上一个版本不兼容）或修复的 bug（关闭 issue）的链接。
 
+### 格式实现「zsh」
+
+```sh
+# 一个单引号(或者双引号)，此时按下回车键
+git commit -m 'feat: update git.md
+
+quote>Update bash about git commit
+quote>'
+
+# 按下回车键确认即可
+```
+
 ### [格式参考](https://github.com/angular/angular/commit/014a7137f474ee97ae95f35de85ab0e948a1a89b)
 
 ```sh

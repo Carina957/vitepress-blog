@@ -4,6 +4,99 @@ outline: deep
 
 # Node
 
+## ni
+
+[**ni**](https://github.com/antfu/ni) - use the right package manager.
+
+```sh
+$ npm i -g @antfu/ni
+```
+
+[npm](https://docs.npmjs.com/cli/v6/commands/npm) · [yarn](https://yarnpkg.com) · [pnpm](https://pnpm.js.org/en/) · [bun](https://bun.sh/)
+
+### `ni` - install
+
+```sh
+ni
+
+# npm install
+# yarn install
+# pnpm install
+# bun install
+
+nun @types/node
+
+# npm uninstall @types/node
+# yarn remove @types/node
+# pnpm remove @types/node
+```
+
+::: details others
+
+```sh
+ni vite
+
+# npm install vite
+# yarn add vite
+# pnpm add vite
+
+ni @types/node -D
+
+# npm i -D @types/node
+# yarn add -D @types/node
+# pnpm add -D @types/node
+
+ni -g eslint
+
+# npm install -g eslint
+# yarn add global eslint
+# pnpm add eslint -g
+
+ni --frozen
+# npm ci
+# yarn install --frozen-lockfile (Yarn 1)
+# yarn install --immutable (Yarn Berry)
+# pnpm install --frozen-lockfile
+# bun install --no-save
+```
+
+:::
+
+### `nr` - run
+
+```sh
+nr dev --port=3000
+
+# npm run dev --port=3000
+# yarn run dev --port=3000
+# pnpm run dev --port=3000
+# bun run dev --port=3000
+
+nr
+# interactively select the script to run
+
+nr -
+# rerun the last command
+```
+
+### Config
+
+```ini
+; ~/.nirc
+; fallback when no lock found
+defaultAgent=npm # default "prompt"
+; for global installs
+globalAgent=npm
+```
+
+```bash
+# ~/.bashrc
+# custom configuration file path
+export NI_CONFIG_FILE="$HOME/.config/ni/nirc"
+```
+
+<br>
+
 ## volta
 
 ::: code-group
