@@ -268,3 +268,36 @@ npx envinfo --system --binaries --browsers
 #   Edge: Spartan (44.19041.1266.0), Chromium (111.0.1661.41)
 #   Internet Explorer: 11.0.19041.1202
 ```
+
+## windows cmd alias
+
+### 创建脚本文件
+
+目录：`C:\Users\admin\cmd_alias.bat`
+
+```sh
+@REM GIT
+@doskey ph=git push
+@doskey fe=git fetch
+@doskey pl=git pull
+@doskey ga=git add .
+@doskey gc=git commit -m
+@doskey gbd=git branch -d
+@doskey gbD=git branch -D
+@doskey gbdr=git branch -dr
+
+@REM PATH
+@doskey i=cd D:\i
+```
+
+### 增加到注册表
+
+`window + R` 输入 `regedit`
+
+```text
+HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\AutoRun
+and/or
+HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun
+```
+
+找到上述目录下的文件，没有就自己创建，将脚本文件的路径改为该项的字符值即可。
