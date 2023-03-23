@@ -333,3 +333,28 @@ export default function checkPermission(value) {
   }
 }
 ```
+
+## objToUrl
+
+```js
+const obj = {
+  name: 'Chi\'s',
+  age: 60,
+  hobby: 'ride'
+}
+const params = new URLSearchParams(param).toString()
+// name=Chi%27s&age=60&hobby=ride
+```
+
+```js
+function objToUrl(obj) {
+  let tempArr = []
+  for (const key in obj) {
+    if (Object.hasOwnProperty.call(obj, key)) {
+      const value = obj[key];
+      tempArr.push(`${key}=${value}`)
+    }
+  }
+  return tempArr.join('&')
+}
+```
