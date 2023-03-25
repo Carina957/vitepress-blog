@@ -115,6 +115,7 @@ git branch -D feature/todo_12
 
 # 删除远程分支
 git push origin --delete feature/todo_12
+git push origin :feature/todo_12
 git branch -dr origin/feature/todo_12
 
 # 回滚项目版本
