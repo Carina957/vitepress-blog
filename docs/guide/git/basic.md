@@ -130,3 +130,10 @@ git push -f
 # 推送到远程服务器并关联本地分支
 git push -u origin master
 ```
+
+## End_of_line
+
+```sh
+# 查看项目的行尾序列
+git ls-files --eol [path]
+```
