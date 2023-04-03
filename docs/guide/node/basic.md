@@ -191,6 +191,21 @@ See options for more detailed reports by running `volta list --help`.
 
 :::
 
+## nvm
+
+```sh
+# 查看远程服务器上所有的可用版本
+nvm ls available
+
+nvm current
+
+nvm install 18.15.0
+
+nvm use 18.15.0
+
+nvm ls
+```
+
 ## npm
 
 ```sh
