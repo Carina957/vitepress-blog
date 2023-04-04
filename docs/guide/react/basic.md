@@ -22,14 +22,11 @@ react 中的组件分为两大类，一类是函数式组件，一类是类组�
 ### 函数式组件
 
 ```js
-function Welcome (props) {
+function Welcome(props) {
   return <h1>Hi, {props.name}</h1>
 }
 
-ReactDOM.render(
-  <Welcome name="Chi's" />,
-  document.getElementById('app')
-)
+ReactDOM.render(<Welcome name="Chi's" />, document.getElementById('app'))
 ```
 
 该函数是一个有效的 React 组件，因为它接收唯一带有数据的 `props` (代表属性)对象与并返回一个 React 元素。 `props` 是所有属性的集合，属性类似于函数中的参数。
@@ -39,19 +36,16 @@ ReactDOM.render(
 
 ```jsx
 class Welcome extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
   }
 
-  render () {
+  render() {
     return <h1>Hi, there 👋 {this.props.name}</h1>
   }
 }
 
-ReactDOM.render(
-  <Welcome name="Chi's" />,
-  document.getElementById('app')
-)
+ReactDOM.render(<Welcome name="Chi's" />, document.getElementById('app'))
 ```
 
 ### props
@@ -107,7 +101,7 @@ Effect Hook 可以让你在函数组件中执行副作用操作
 ```jsx
 import React, { useState, useEffect } from 'react'
 
-function Example () {
+function Example() {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
@@ -132,17 +126,17 @@ useEffect Hook 看做 `componentDidMount` ，`componentDidUpdate` 和 `component
 ```jsx
 import React, { useState, useEffect } from 'react'
 
-function FriendStatus (props) {
+function FriendStatus(props) {
   const [isOnline, setIsOnline] = useState(null)
 
   useEffect(() => {
-    function handleStatusChange (status) {
+    function handleStatusChange(status) {
       setIsOnline(status.isOnline)
     }
 
     ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange)
 
-    return function cleanup () {
+    return function cleanup() {
       ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange)
     }
   })

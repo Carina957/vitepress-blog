@@ -29,7 +29,7 @@ const element = (
   ```jsx
   const element = (
     <div>
-      <h1 className='greeting'>Hi there 👋</h1>
+      <h1 className="greeting">Hi there 👋</h1>
     </div>
   )
 
@@ -200,9 +200,9 @@ const SaveData: React.FC<Props> = props => {
           )}
         </Form.Item>
       )}
-      <Icon 
-        type="minus-circle-o" 
-        style={{ fontSize: 18 }} 
+      <Icon
+        type="minus-circle-o"
+        style={{ fontSize: 18 }}
         onClick={() => removeParams(k)}
       ></Icon>
     </Form.Item>

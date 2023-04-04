@@ -78,7 +78,7 @@ outline: deep
 // 通用清除浮动
 @mixin clearfix {
   &:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
@@ -88,9 +88,7 @@ outline: deep
 ### usage
 
 ```scss
-@import '～assets/style/mixin.scss'
-
-@include scrollbar;
+@import '～assets/style/mixin.scss' @include scrollbar;
 ```
 
 ## 文字溢出显示省略号

@@ -15,7 +15,7 @@ module.exports = {
   ],
 
   markdown: {
-    headers: false
+    headers: false,
     // headers: {
     //   level: [0, 0],
     // },
@@ -87,7 +87,7 @@ module.exports = {
             { text: '基础', link: '/guide/vue/basic' },
             { text: '拓展', link: '/guide/vue/expand' },
             { text: '组件', link: '/guide/vue/components' },
-            { text: '自定义指令', link: '/guide/vue/directives' }
+            { text: '自定义指令', link: '/guide/vue/directives' },
           ],
         },
         {
@@ -118,8 +118,8 @@ module.exports = {
           collapsed: false,
           items: [
             { text: '面试', link: '/guide/interview/index' },
-            { text: '算法', link: '/guide/interview/algorithm' }
-          ]
+            { text: '算法', link: '/guide/interview/algorithm' },
+          ],
         },
       ],
       '/notes': [
@@ -135,8 +135,8 @@ module.exports = {
         },
         {
           text: 'Reproduction',
-          link: '/notes/reproduction/index'
-        }
+          link: '/notes/reproduction/index',
+        },
       ],
     },
 

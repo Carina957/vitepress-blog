@@ -24,17 +24,17 @@ export default {
     model: Object,
     rules: Object,
   },
-  provide () {
+  provide() {
     return {
       form: this,
     }
   },
-  data () {
+  data() {
     return {
       fields: [],
     }
   },
-  created () {
+  created() {
     this.$on('on-form-item-add', field => {
       if (field) this.fields.push(field)
     })
@@ -45,24 +45,26 @@ export default {
   },
   methods: {
     // 重置表单
-    resetFields () {
+    resetFields() {
       this.fields.forEach(field => field.resetField())
     },
-    validate (callback) {
+    validate(callback) {
       return new Promise(resolve => {
-        let valid = true, count = 0
+        let valid = true,
+          count = 0
 
         this.fields.forEach(field => {
           field.validate('', errors => {
             errors && (valid = false)
             if (++count === this.fields.length) {
               resolve(valid)
-              (typeof callback === 'function') && callback(valid)
+
+              typeof callback === 'function' && callback(valid)
             }
           })
         })
       })
-    }
+    },
   },
 }
 </script>
@@ -73,16 +75,14 @@ export default {
 ```vue
 <template>
   <div>
-    <label
-      v-if="label"
-      :class="{ 'i-form-item-label-required': required }"
-    >{{ label }}</label>
+    <label v-if="label" :class="{ 'i-form-item-label-required': required }">
+      {{ label }}
+    </label>
     <div>
       <slot></slot>
-      <div
-        v-if="validateState === 'error'"
-        class="i-form-item-message"
-      >{{ validateMessage }}</div>
+      <div v-if="validateState === 'error'" class="i-form-item-message">
+        {{ validateMessage }}
+      </div>
     </div>
   </div>
 </template>
@@ -225,27 +225,27 @@ import Emitter from '@/mixins/emitter.js'
 
 export default {
   name: 'iInput',
-  mixins: [ Emitter ],
+  mixins: [Emitter],
   props: {
     value: {
       type: String,
       default: '',
     },
   },
-  data () {
+  data() {
     return {
       currentValue: this.value,
     }
   },
   methods: {
-    handleInput (event) {
+    handleInput(event) {
       const value = event.target.value
 
       this.currentValue = value
       this.$emit('input', value)
       this.dispatch('iFormItem', 'on-form-change', value)
     },
-    handleBlur () {
+    handleBlur() {
       this.dispatch('iFormItem', 'on-form-blur', this.currentValue)
     },
   },
@@ -256,7 +256,7 @@ export default {
 ### Emitter.js
 
 ```js
-function broadcast (componentName, eventName, params) {
+function broadcast(componentName, eventName, params) {
   this.$children.forEach(child => {
     // 获取子级的组件名
     const name = child.$options.name
@@ -271,7 +271,7 @@ function broadcast (componentName, eventName, params) {
 
 export default {
   methods: {
-    dispatch (componentName, eventName, params) {
+    dispatch(componentName, eventName, params) {
       let parent = this.$options || this.$root,
         name = parent.$options.name
 
@@ -283,9 +283,9 @@ export default {
 
       parent && parent.$emit.apply(parent, [eventName].concat(params))
     },
-    broadcast (componentName, eventName, params) {
+    broadcast(componentName, eventName, params) {
       broadcast.call(this, componentName, eventName, params)
-    }
-  }
+    },
+  },
 }
 ```

@@ -100,21 +100,21 @@ emitter.all.clear() // 取消监听所有事件
 import request from '@/utils/request'
 
 export default {
-  provide () {
+  provide() {
     return {
       app: this,
     }
   },
-  data () {
+  data() {
     return {
       userInfo: null,
     }
   },
-  mounted () {
+  mounted() {
     this.getUserInfo()
   },
   methods: {
-    async getUserInfo () {
+    async getUserInfo() {
       const { userInfo } = await request('/user/info')
 
       this.userInfo = userInfo
@@ -137,12 +137,12 @@ import request from '@/utils/request'
 export default {
   inject: ['app'],
   methods: {
-    async updateUserInfo () {
+    async updateUserInfo() {
       const { code } = await request('user/update')
 
-      (code === 1) && this.app.getUserInfo()
-    }
-  }
+      code === 1 && this.app.getUserInfo()
+    },
+  },
 }
 </script>
 ```

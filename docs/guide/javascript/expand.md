@@ -21,8 +21,8 @@ const arr = [
   1,
   'mike',
   {
-    name: 'jack'
-  }
+    name: 'jack',
+  },
 ]
 
 arr.forEach(item => {
@@ -40,4 +40,4 @@ console.log(arr) // [1, 'mike', { name: 'alva' }]
 
 ### Object.freeze() 存在的意义
 
-如果你有一个巨大的数组或 `Object` ，并且确信数据不会修改，使用 `Object.freeze()` 可以让性能大幅提升。在我的实际开发中，这种提升大约有5~10倍，倍数随着数据量递增,对于纯展示的大数据，都可以使用 `Object.freeze()` 提升性能。
+如果你有一个巨大的数组或 `Object` ，并且确信数据不会修改，使用 `Object.freeze()` 可以让性能大幅提升。在我的实际开发中，这种提升大约有 5~10 倍，倍数随着数据量递增,对于纯展示的大数据，都可以使用 `Object.freeze()` 提升性能。

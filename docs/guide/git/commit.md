@@ -130,9 +130,9 @@ PR Close #34332
 
 2. 配置提交信息模板
 
-    ```sh
-    git config commit.template .gitmessage.txt
-    ```
+   ```sh
+   git config commit.template .gitmessage.txt
+   ```
 
 3. 执行 `git commit`
 
@@ -271,7 +271,7 @@ PR Close #34332
     npx install husky
     ```
 
-    启动后，将会自动生成.husky文件夹
+    启动后，将会自动生成.husky 文件夹
 
     ![husky demo](./images/husky_demo.png)
 
