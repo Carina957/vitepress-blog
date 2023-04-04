@@ -5,8 +5,26 @@
   "main": "index.js",
   "author": "Chi's",
   "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev docs --port=8173",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs --port=8173",
+    "deploy": "bash deploy.sh",
+    "clear": "rimraf node_modules&&pnpm install",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:prettier": "prettier --write --loglevel warn \"docs/**/*.{js,json,css,less,scss,vue,html,md}\""
+  },
+  "dependencies": {
+    "@docsearch/css": "^3.3.3",
+    "@docsearch/js": "^3.3.3"
+  },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.38.3",
+    "eslint": "^8.37.0",
+    "prettier": "^2.8.7",
     "rimraf": "^3.0.2",
+    "typescript": "^5.0.3",
     "vitepress": "1.0.0-alpha.56"
   },
   "keywords": [
@@ -14,17 +32,6 @@
     "pnpm",
     "blog"
   ],
-  "scripts": {
-    "dev": "vitepress dev docs --port=8173",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs --port=8173",
-    "deploy": "bash deploy.sh",
-    "clear": "rimraf node_modules&&pnpm install"
-  },
-  "dependencies": {
-    "@docsearch/css": "^3.3.3",
-    "@docsearch/js": "^3.3.3"
-  },
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [

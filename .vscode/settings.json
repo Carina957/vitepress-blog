@@ -1,0 +1,12 @@
+{
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.useEditorConfig": false,
+  "prettier.enable": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.eslint": true
+  // }
+}
