@@ -358,3 +358,11 @@ function objToUrl(obj) {
   return tempArr.join('&')
 }
 ```
+
+## clearFields
+
+```js
+const clearFields = queryForm => Object.keys(queryForm).forEach(field => queryForm[field] = '')
+
+const _clearFields = queryForm => Object.assign(queryForm, Object.fromEntries(Object.keys(queryForm).map(k => [k, ''])))
+```
