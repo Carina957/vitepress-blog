@@ -338,9 +338,9 @@ export default function checkPermission(value) {
 
 ```js
 const obj = {
-  name: 'Chi\'s',
+  name: "Chi's",
   age: 60,
-  hobby: 'ride'
+  hobby: 'ride',
 }
 const params = new URLSearchParams(param).toString()
 // name=Chi%27s&age=60&hobby=ride
@@ -351,7 +351,7 @@ function objToUrl(obj) {
   let tempArr = []
   for (const key in obj) {
     if (Object.hasOwnProperty.call(obj, key)) {
-      const value = obj[key];
+      const value = obj[key]
       tempArr.push(`${key}=${value}`)
     }
   }
@@ -362,7 +362,12 @@ function objToUrl(obj) {
 ## clearFields
 
 ```js
-const clearFields = queryForm => Object.keys(queryForm).forEach(field => queryForm[field] = '')
+const clearFields = queryForm =>
+  Object.keys(queryForm).forEach(field => (queryForm[field] = ''))
 
-const _clearFields = queryForm => Object.assign(queryForm, Object.fromEntries(Object.keys(queryForm).map(k => [k, ''])))
+const _clearFields = queryForm =>
+  Object.assign(
+    queryForm,
+    Object.fromEntries(Object.keys(queryForm).map(k => [k, '']))
+  )
 ```
