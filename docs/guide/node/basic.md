@@ -316,3 +316,33 @@ HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun
 ```
 
 找到上述目录下的文件，没有就自己创建，将脚本文件的路径改为该项的字符值即可。
+
+## windows git bash aliases
+
+文件所在路径: `D:\Git\Git\etc\profile.d\aliases.sh`
+
+```sh
+# Some good standards, which are not used if the user
+# creates his/her own .bashrc/.bash_profile
+
+# --show-control-chars: help showing Korean or accented characters
+alias ls='ls -F --color=auto --show-control-chars'
+alias ll='ls -l'
+alias i='cd D:\i'
+alias ph='git push'
+alias fe='git fetch'
+alias pl='git pull'
+alias ga='git add .'
+alias gb='git branch'ga
+alias gc='git commit -m'
+alias gcf='git config --global --list'
+alias cc='rimraf node_modules'
+alias c='clear'
+alias sourceconfig='source /d/git/git/etc/profile.d/aliases.sh'
+```
+
+生效 `git bash`
+
+```sh
+source /d/git/git/etc/profile.d/aliases.sh
+```
