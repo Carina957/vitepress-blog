@@ -131,6 +131,13 @@ git push -f
 git push -u origin master
 ```
 
+## commit
+
+```sh
+# 修改最后一次提交
+git commit --amend
+```
+
 ## End_of_line
 
 ```sh
