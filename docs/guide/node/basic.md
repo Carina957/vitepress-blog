@@ -228,7 +228,7 @@ $ npm config list
 $ npm config ls -l
 ```
 
-![npm-list](./images//npm-list.png)
+![npm-list](./images/npm-list.png)
 
 ![npm-list-info](./images/npm-list-info.png)
 
