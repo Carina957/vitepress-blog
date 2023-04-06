@@ -319,13 +319,15 @@ HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun
 
 ## windows git bash aliases
 
-文件所在路径: `D:\Git\Git\etc\profile.d\aliases.sh`
+文件所在路径:
+
+- `D:\Git\Git\etc\bash.bashrc` (在 vscode 默认终端中 alias 生效)
+- `D:\Git\Git\etc\profile.d\aliases.sh`
+- `D:\Git\Git\etc\.bashrc`
+- `D:\Git\Git\etc\.gitconfig`
 
 ```sh
-# Some good standards, which are not used if the user
-# creates his/her own .bashrc/.bash_profile
-
-# --show-control-chars: help showing Korean or accented characters
+# My Custom aliases
 alias ls='ls -F --color=auto --show-control-chars'
 alias ll='ls -l'
 alias i='cd D:\i'
@@ -333,12 +335,11 @@ alias ph='git push'
 alias fe='git fetch'
 alias pl='git pull'
 alias ga='git add .'
-alias gb='git branch'ga
+alias gb='git branch'
 alias gc='git commit -m'
 alias gcf='git config --global --list'
 alias cc='rimraf node_modules'
 alias c='clear'
-alias sourceconfig='source /d/git/git/etc/profile.d/aliases.sh'
 ```
 
 生效 `git bash`
