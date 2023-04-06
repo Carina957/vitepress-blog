@@ -361,6 +361,8 @@ function objToUrl(obj) {
 
 ## clearFields
 
+清除表单提交
+
 ```js
 const clearFields = queryForm =>
   Object.keys(queryForm).forEach(field => (queryForm[field] = ''))
