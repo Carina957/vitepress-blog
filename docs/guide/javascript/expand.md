@@ -45,15 +45,6 @@ for (const item of arr) {
   // /for of/ { id: 3, name: 'alex' }
 }
 
-for (const key in obj) {
-  if (Object.hasOwnProperty.call(obj, key)) {
-    const element = obj[key]
-    console.log(/for in obj/, key, element)
-    // /for in obj/ id 1
-    // /for in obj/ name alva
-  }
-}
-
 for (const [key, value] of Object.entries(obj)) {
   console.log(/for in Object.entries(obj)/, key, value)
   // /for in Object.entries(obj)/ id 1
@@ -67,6 +58,15 @@ for (const key in arr) {
     // /for in arr/ 0 { id: 1, name: 'alva' }
     // /for in arr/ 1 { id: 2, name: 'axel' }
     // /for in arr/ 2 { id: 3, name: 'alex' }
+  }
+}
+
+for (const key in obj) {
+  if (Object.hasOwnProperty.call(obj, key)) {
+    const element = obj[key]
+    console.log(/for in obj/, key, element)
+    // /for in obj/ id 1
+    // /for in obj/ name alva
   }
 }
 ```
