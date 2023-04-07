@@ -373,3 +373,19 @@ const _clearFields = queryForm =>
     Object.fromEntries(Object.keys(queryForm).map(k => [k, '']))
   )
 ```
+
+## 数组对象去重
+
+```js
+const dedupe = (arr, key) => {
+  if (typeof key !== 'string') return arr
+  if (arr.constructor !== Array) return arr
+
+  let hash = {}
+  const sortArr = arr.reduce((pre, cur) => {
+    hash[cur[key]] ? '' : (hash[cur[key]] = true && pre.push(cur))
+    return pre
+  }, [])
+  return sortArr
+}
+```
