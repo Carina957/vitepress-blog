@@ -12,6 +12,65 @@ outline: deep
 
 建议第二种，因为 `arr` 被重新赋值后，如果之前的数组没有被引用，则会被 `JavaScript` 垃圾回收机制回收。
 
+## forin 和 forof
+
+- `for in` 可遍历对象和数组
+- `for of` 只能遍历数组
+
+```js
+const arr = [
+  {
+    id: 1,
+    name: 'alva',
+  },
+  {
+    id: 2,
+    name: 'axel',
+  },
+  {
+    id: 3,
+    name: 'alex',
+  },
+]
+
+const obj = {
+  id: 1,
+  name: 'alva',
+}
+
+for (const item of arr) {
+  console.log(/for of/, item)
+  // /for of/ { id: 1, name: 'alva' }
+  // /for of/ { id: 2, name: 'axel' }
+  // /for of/ { id: 3, name: 'alex' }
+}
+
+for (const key in obj) {
+  if (Object.hasOwnProperty.call(obj, key)) {
+    const element = obj[key]
+    console.log(/for in obj/, key, element)
+    // /for in obj/ id 1
+    // /for in obj/ name alva
+  }
+}
+
+for (const [key, value] of Object.entries(obj)) {
+  console.log(/for in Object.entries(obj)/, key, value)
+  // /for in Object.entries(obj)/ id 1
+  // /for in Object.entries(obj)/ name alva
+}
+
+for (const key in arr) {
+  if (Object.hasOwnProperty.call(arr, key)) {
+    const element = arr[key]
+    console.log(/for in arr/, key, element)
+    // /for in arr/ 0 { id: 1, name: 'alva' }
+    // /for in arr/ 1 { id: 2, name: 'axel' }
+    // /for in arr/ 2 { id: 3, name: 'alex' }
+  }
+}
+```
+
 ## forEach
 
 `forEach` 原则上是不能修改原数组的，但是因为 `JavaScript` 本身的原因。如果数组的某一项是引用类型， `forEach` 是可以修改原数组的
