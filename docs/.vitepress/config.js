@@ -114,6 +114,11 @@ module.exports = {
           items: [{ text: '基础', link: '/guide/css/basic' }],
         },
         {
+          text: 'Vscode',
+          collapsed: false,
+          items: [{ text: '配置', link: 'guide/vscode/config' }],
+        },
+        {
           text: 'InterView',
           collapsed: false,
           items: [
