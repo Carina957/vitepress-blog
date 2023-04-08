@@ -99,6 +99,21 @@ console.log(arr) // [1, 'mike', { name: 'alva' }]
 
 ### typeof
 
+typeof 是一个操作符，其右侧跟一个一元表达式，并返回这个表达式的数据类型。返回的结果用该类型的字符串(全小写字母)形式表示，包括以下 7 种：number、boolean、symbol、string、object、undefined、function 等。
+
+```js
+typeof '' // string 有效
+typeof 1 // number 有效
+typeof Symbol() // symbol 有效
+typeof true //boolean 有效
+typeof undefined //undefined 有效
+typeof null //object 无效
+typeof [] //object 无效
+typeof new Function() // function 有效
+typeof new Date() //object 无效
+typeof new RegExp() //object 无效
+```
+
 有些时候，typeof 操作符会返回一些令人迷惑但技术上却正确的值：
 
 - 对于基本类型，除 null 以外，均可以返回正确的结果。
@@ -106,9 +121,7 @@ console.log(arr) // [1, 'mike', { name: 'alva' }]
 - 对于 null ，返回 object 类型。
 - 对于 function 返回 function 类型。
 
-```js
-typeof undefined
-```
+其中，null 有属于自己的数据类型 Null ， 引用类型中的 数组、日期、正则 也都有属于自己的具体类型，而 typeof 对于这些类型的处理，只返回了处于其原型链最顶端的 Object 类型，没有错，但不是我们想要的结果。
 
 ### instanceof
 
@@ -153,11 +166,33 @@ const instanceof = (A,B) => {
 
 ![constructor-demo4](./images/constructor-demo4.png)
 
-为什么变成了 Object ？
+为什么变成了 Object ?
 
 因为 prototype 被重新赋值的是一个 { }， { } 是 new Object() 的字面量，因此 new Object() 会将 Object 原型上的 constructor 传递给 { }，也就是 Object 本身。
 
 因此，为了规范开发，在重写对象原型时一般都需要重新给 constructor 赋值，以保证对象实例的类型不被篡改。
+
+### toString
+
+toString() 是 Object 的原型方法，调用该方法，默认返回当前对象的 [[Class]] 。这是一个内部属性，其格式为 [object Xxx] ，其中 Xxx 就是对象的类型。
+
+对于 Object 对象，直接调用 toString() 就能返回 [object Object] 。而对于其他对象，则需要通过 call / apply 来调用才能返回正确的类型信息。
+
+```js
+Object.prototype.toString.call('') // [object String]
+Object.prototype.toString.call(1) // [object Number]
+Object.prototype.toString.call(true) // [object Boolean]
+Object.prototype.toString.call(Symbol()) //[object Symbol]
+Object.prototype.toString.call(undefined) // [object Undefined]
+Object.prototype.toString.call(null) // [object Null]
+Object.prototype.toString.call(new Function()) // [object Function]
+Object.prototype.toString.call(new Date()) // [object Date]
+Object.prototype.toString.call([]) // [object Array]
+Object.prototype.toString.call(new RegExp()) // [object RegExp]
+Object.prototype.toString.call(new Error()) // [object Error]
+Object.prototype.toString.call(document) // [object HTMLDocument]
+Object.prototype.toString.call(window) //[object Window]
+```
 
 ### 数据类型判断的工具类
 
@@ -175,7 +210,7 @@ const getVariableType = obj =>
 const isType = type => obj =>
   Object.prototype.toString.call(obj) === `[object ${type}]`
 
-isType('Array', [1, 2, 3])
+isType('Array')([1, 2, 3])
 ```
 
 ## 冻结对象
