@@ -40,18 +40,15 @@ const obj = {
   name: 'alva',
 }
 
-for (const item of arr) {
-  console.log(/for of/, item)
-  // /for of/ { id: 1, name: 'alva' }
-  // /for of/ { id: 2, name: 'axel' }
-  // /for of/ { id: 3, name: 'alex' }
-}
+for (const item of arr) console.log(/for of/, item)
+// /for of/ { id: 1, name: 'alva' }
+// /for of/ { id: 2, name: 'axel' }
+// /for of/ { id: 3, name: 'alex' }
 
-for (const [key, value] of Object.entries(obj)) {
+for (const [key, value] of Object.entries(obj))
   console.log(/for in Object.entries(obj)/, key, value)
-  // /for in Object.entries(obj)/ id 1
-  // /for in Object.entries(obj)/ name alva
-}
+// /for in Object.entries(obj)/ id 1
+// /for in Object.entries(obj)/ name alva
 
 for (const key in arr) {
   if (Object.hasOwnProperty.call(arr, key)) {
@@ -101,17 +98,17 @@ console.log(arr) // [1, 'mike', { name: 'alva' }]
 
 typeof 是一个操作符，其右侧跟一个一元表达式，并返回这个表达式的数据类型。返回的结果用该类型的字符串(全小写字母)形式表示，包括以下 7 种：number、boolean、symbol、string、object、undefined、function 等。
 
-```js
+```jsx
 typeof '' // string 有效
 typeof 1 // number 有效
 typeof Symbol() // symbol 有效
-typeof true //boolean 有效
-typeof undefined //undefined 有效
-typeof null //object 无效
-typeof [] //object 无效
+typeof true // boolean 有效
+typeof undefined // undefined 有效
+typeof null // object 无效
+typeof [] // object 无效
 typeof new Function() // function 有效
-typeof new Date() //object 无效
-typeof new RegExp() //object 无效
+typeof new Date() // object 无效
+typeof new RegExp() // object 无效
 ```
 
 有些时候，typeof 操作符会返回一些令人迷惑但技术上却正确的值：
@@ -127,7 +124,7 @@ typeof new RegExp() //object 无效
 
 instanceof 是用来判断 A 是否为 B 的实例，表达式为：A instanceof B，如果 A 是 B 的实例，则返回 true，否则返回 false。 在这里需要特别注意的是：instanceof 检测的是原型，我们用一段伪代码来模拟其内部执行过程：
 
-```js
+```jsx
 const instanceof = (A,B) => {
   const L = A.__proto__
   const R = B.prototype
@@ -178,11 +175,11 @@ toString() 是 Object 的原型方法，调用该方法，默认返回当前对�
 
 对于 Object 对象，直接调用 toString() 就能返回 [object Object] 。而对于其他对象，则需要通过 call / apply 来调用才能返回正确的类型信息。
 
-```js
+```jsx
 Object.prototype.toString.call('') // [object String]
 Object.prototype.toString.call(1) // [object Number]
 Object.prototype.toString.call(true) // [object Boolean]
-Object.prototype.toString.call(Symbol()) //[object Symbol]
+Object.prototype.toString.call(Symbol()) // [object Symbol]
 Object.prototype.toString.call(undefined) // [object Undefined]
 Object.prototype.toString.call(null) // [object Null]
 Object.prototype.toString.call(new Function()) // [object Function]
@@ -191,24 +188,27 @@ Object.prototype.toString.call([]) // [object Array]
 Object.prototype.toString.call(new RegExp()) // [object RegExp]
 Object.prototype.toString.call(new Error()) // [object Error]
 Object.prototype.toString.call(document) // [object HTMLDocument]
-Object.prototype.toString.call(window) //[object Window]
+Object.prototype.toString.call(window) // [object Window]
 ```
 
 ### 数据类型判断的工具类
 
 ```js
-const getVariableType = var =>
-  Object.prototype.toString.call(var).slice(8, -1).toLowerCase()
+function getVariableType(obj) {
+  return Object.prototype.toString.call(obj).slice(8, -1).toLowerCase()
+}
 ```
 
 ```js
-const getVariableType = obj =>
-  Object.prototype.toString.call(obj).match(/\[object (.*)\]/)[1]
+function getVariableType(obj) {
+  return Object.prototype.toString.call(obj).match(/\[object (.*)\]/)[1]
+}
 ```
 
 ```js
-const isType = type => obj =>
-  Object.prototype.toString.call(obj) === `[object ${type}]`
+function isType(type) {
+  return obj => Object.prototype.toString.call(obj) === `[object ${type}]`
+}
 
 isType('Array')([1, 2, 3])
 ```

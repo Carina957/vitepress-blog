@@ -111,7 +111,7 @@ PR Close #34332
 
 1. 创建 `commit` 提交信息模板文件 `.gitmessage.txt`
 
-   ```text
+   ```js
    # headr: <type>(<scope>): <subject>
    # - type: feat, fix, docs, style, refactor, test, chore
    # - scope: can be empty

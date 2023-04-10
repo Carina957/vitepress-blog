@@ -125,7 +125,7 @@ source .bash_profile
 $ volta
 ```
 
-```text
+```erl
 Volta 1.1.1
 The JavaScript Launcher ⚡
 
@@ -157,7 +157,7 @@ SUBCOMMANDS:
 
 ::: details 当你在终端运行 `volta pin node@16`:
 
-```text
+```sh
 success: pinned node@16.19.1 (with npm@8.19.3) in package.json
 ```
 
@@ -173,7 +173,7 @@ success: pinned node@16.19.1 (with npm@8.19.3) in package.json
 
 ::: details 此外，你还可以运行 `volta ls` 查看 `volta` 已经安装的模块：
 
-```text
+```sh
 ⚡️ Currently active tools:
 
     Node: v16.19.1 (current @ /Users/xuhao/Downloads/front-end/vitepress/vitepress-blog/
@@ -252,7 +252,7 @@ $ npm config set legacy-peer-deps true
 
 如果您想 `--legacy-peer-deps` 默认为所有 npm 安装设置标志，则可以考虑更新 `.npmrc` 文件。
 
-```text
+```sh
 legacy-peer-deps=true
 ```
 
@@ -309,7 +309,7 @@ npx envinfo --system --binaries --browsers
 
 `window + R` 输入 `regedit`
 
-```text
+```sh
 HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\AutoRun
 and/or
 HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun

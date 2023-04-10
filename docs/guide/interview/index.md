@@ -18,7 +18,7 @@ console.log(doSomething.prototype)
 
 正如上面所看到的， `doSomething` 函数有一个默认的原型属性，它在控制台上面呈现了出来。运行这段代码之后，控制台上面应该出现了像这样的一个对象。
 
-```text
+```js
 {
   constructor: ƒ doSomething(),
   __proto__: {
@@ -41,7 +41,7 @@ doSomething.prototype.foo = 'bar'
 
 结果：
 
-```text
+```js
 {
   foo: 'bar'
   constructor: ƒ doSomething(),
@@ -60,13 +60,14 @@ doSomething.prototype.foo = 'bar'
 然后，我们可以使用 `new` 运算符来在现在的这个原型基础之上，创建一个 `doSomething` 的实例。正确使用 `new` 运算符的方法就是在正常调用函数时，在函数名的前面加上一个 `new` 前缀。通过这种方法，在调用函数前加一个 `new` ，它就会返回一个这个函数的实例化对象。然后，就可以在这个对象上面添加一些属性。
 
 ```js
-const doSomeInstancing = new doSomething()
+const doSomeInstancing = new DoSomething()
+
 doSomeInstancuing.prop = 'some value'
 ```
 
 结果：
 
-```text
+```js
 {
   prop: "some value",
   __proto__: {
@@ -178,7 +179,7 @@ const obj = new Proxy(target, handler)
 ```js
 // 创建响应式
 function reactive(target = {}) {
-  if (typeof target !== 'object' || typeof target == null) return target // 不是对象或数组直接返回
+  if (typeof target !== 'object' || target === 'null') return target // 不是对象或数组直接返回
 
   // 代理配置
   const proxyConf = {
