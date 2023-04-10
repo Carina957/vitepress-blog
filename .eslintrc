@@ -1,3 +1,12 @@
 {
-  // "extends": "@antfu"
+  // "extends": "@antfu",
+  "rules": {
+    "func-style": [
+      "warn",
+      "declaration",
+      {
+        "allowArrowFunctions": true
+      }
+    ]
+  }
 }
