@@ -54,89 +54,98 @@ module.exports = {
     sidebar: {
       '/guide': [
         {
-          text: '开始', // Getting Started
+          text: 'Getting Started', // Getting Started
           collapsed: true,
-          items: [{ text: '介绍', link: '/guide/' }], // Introduction
+          items: [{ text: 'Introduction', link: '/guide/' }], // Introduction
         },
         {
           text: 'Git',
           collapsed: false,
           items: [
-            { text: '基础', link: '/guide/git/basic' },
-            { text: '提交', link: '/guide/git/commit' },
+            { text: 'basic', link: '/guide/git/basic' },
+            { text: 'commit', link: '/guide/git/commit' },
           ],
         },
         {
           text: 'JavaScript',
           collapsed: false,
           items: [
-            { text: '基础', link: '/guide/javascript/basic' },
-            { text: '拓展', link: '/guide/javascript/expand' },
-            { text: '工具函数', link: '/guide/javascript/utils' },
+            { text: 'basic', link: '/guide/javascript/basic' },
+            { text: 'expand', link: '/guide/javascript/expand' },
+            { text: 'utils', link: '/guide/javascript/utils' },
           ],
         },
         {
           text: 'TypeScript',
           collapsed: false,
-          items: [{ text: '基础', link: '/guide/typescript/basic' }],
+          items: [{ text: 'basic', link: '/guide/typescript/basic' }],
         },
         {
           text: 'Vue',
           collapsed: false,
           items: [
-            { text: '基础', link: '/guide/vue/basic' },
-            { text: '拓展', link: '/guide/vue/expand' },
-            { text: '组件', link: '/guide/vue/components' },
-            { text: '自定义指令', link: '/guide/vue/directives' },
+            { text: 'basic', link: '/guide/vue/basic' },
+            { text: 'expand', link: '/guide/vue/expand' },
+            { text: 'components', link: '/guide/vue/components' },
+            { text: 'directives', link: '/guide/vue/directives' },
           ],
         },
         {
           text: 'React',
           collapsed: false,
           items: [
-            { text: '基础', link: '/guide/react/basic' },
-            { text: '拓展', link: '/guide/react/expand' },
+            { text: 'basic', link: '/guide/react/basic' },
+            { text: 'expand', link: '/guide/react/expand' },
           ],
         },
         {
           text: 'Webpack',
           collapsed: false,
-          items: [{ text: '基础', link: '/guide/webpack/basic' }],
+          items: [{ text: 'basic', link: '/guide/webpack/basic' }],
         },
         {
           text: 'Node',
           collapsed: false,
-          items: [{ text: '基础', link: '/guide/node/basic' }],
+          items: [{ text: 'basic', link: '/guide/node/basic' }],
         },
         {
           text: 'CSS',
           collapsed: true,
-          items: [{ text: '基础', link: '/guide/css/basic' }],
+          items: [{ text: 'basic', link: '/guide/css/basic' }],
         },
         {
           text: 'Vscode',
           collapsed: false,
-          items: [{ text: '配置', link: 'guide/vscode/config' }],
+          items: [{ text: 'config', link: 'guide/vscode/config' }],
+        },
+        {
+          text: 'Markdown',
+          collapsed: false,
+          items: [{ text: 'Basic', link: 'guide/markdown/Basic' }],
         },
         {
           text: 'InterView',
           collapsed: false,
           items: [
-            { text: '面试', link: '/guide/interview/index' },
-            { text: '算法', link: '/guide/interview/algorithm' },
+            { text: 'interview', link: '/guide/interview/index' },
+            { text: 'algorithm', link: '/guide/interview/algorithm' },
+            {
+              text: 'Enter the URL to see what happens to the page?',
+              link: '/guide/interview/enter-url-happens',
+            },
           ],
         },
       ],
       '/notes': [
         {
-          text: '旅游',
+          text: 'travel',
           collapsed: false,
-          items: [{ text: '骑行', link: '/notes/travel/cycling' }],
+          items: [{ text: 'cycling', link: '/notes/travel/cycling' }],
         },
         {
-          text: '阅读',
+          text: 'read',
           collapsed: false,
-          items: [{ text: '读后感', link: '/notes/read/reaction' }],
+          items: [{ text: 'reaction', link: '/notes/read/reaction' }],
         },
         {
           text: 'Reproduction',
