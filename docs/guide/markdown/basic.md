@@ -15,7 +15,7 @@ outline: deep
 | C                | cpp, c                  | shBrushCpp.js         | -           |
 | C#               | c#, c-sharp, csharp     | shBrushCSharp.js      | -           |
 | CSS              | css                     | shBrushCss.js         | -           |
-| Delphi           | delphi , pascal , pas   | shBrushDelphi.js      | -           |
+| Delphi           | delphi, pascal, pas     | shBrushDelphi.js      | -           |
 | diff&patch       | diff, patch             | shBrushDiff.js        | git diff    |
 | Erlang           | erl, erlang             | shBrushErlang.js      | -           |
 | Groovy           | groovy                  | shBrushGroovy.js      | -           |
@@ -27,7 +27,7 @@ outline: deep
 | PHP              | php                     | shBrushPhp.js         | -           |
 | text             | text, plain             | shBrushPlain.js       | 普通文本    |
 | Python           | py, python              | shBrushPython.js      | -           |
-| Ruby             | ruby , rails , ror , rb | shBrushRuby.js        | -           |
+| Ruby             | ruby, rails, ror, rb    | shBrushRuby.js        | -           |
 | SASS&SCSS        | sass, scss              | shBrushSass.js        | -           |
 | Scala            | scale                   | shBrushScala.js       | -           |
 | SQL              | sql                     | shBrushSql.js         | -           |
