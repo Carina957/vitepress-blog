@@ -78,7 +78,10 @@ module.exports = {
         {
           text: 'TypeScript',
           collapsed: false,
-          items: [{ text: 'basic', link: '/guide/typescript/basic' }],
+          items: [
+            { text: 'basic', link: '/guide/typescript/basic' },
+            { text: 'utils', link: '/guide/typescript/utils' },
+          ],
         },
         {
           text: 'Vue',
