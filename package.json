@@ -17,15 +17,15 @@
   },
   "dependencies": {
     "@docsearch/css": "^3.3.3",
-    "@docsearch/js": "^3.3.3"
+    "@docsearch/js": "^3.3.3",
+    "vitepress": "1.0.0-alpha.65"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.3",
-    "eslint": "^8.37.0",
+    "@antfu/eslint-config": "^0.38.4",
+    "eslint": "^8.38.0",
     "prettier": "^2.8.7",
-    "rimraf": "^3.0.2",
-    "typescript": "^5.0.3",
-    "vitepress": "1.0.0-alpha.56"
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.4"
   },
   "keywords": [
     "vitepress",
