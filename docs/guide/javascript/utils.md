@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# 工具函数 🔧
+# Utils 🔧
 
 ## debounce
 
