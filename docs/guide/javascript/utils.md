@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Utils 🔧
+# Utils
 
 ## debounce
 
