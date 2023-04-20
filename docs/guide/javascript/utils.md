@@ -389,3 +389,74 @@ const dedupe = (arr, key) => {
   return sortArr
 }
 ```
+
+## uni-app 请求封装
+
+```js
+class Request {
+  static request(url, data, method = 'POST', contentType, isLoading = true) {
+    const params = {
+      url: BASE_URL + url,
+      data,
+      method,
+      header: {
+        'content-type': contentType || 'application/json',
+      },
+      dataType: 'json',
+      responseType: 'text',
+      cors_mode: 'cors',
+    }
+    const TOKEN = uni.getStorageSync('wisdom-progress-weapp__token')
+    TOKEN && (params.header.Authorization = TOKEN)
+
+    isLoading &&
+      uni.showLoading({
+        title: '加载中...',
+      })
+
+    return new Promise((resolve, reject) => {
+      uni.request({
+        ...params,
+        success: res => {
+          if (res.statusCode && res.statusCode === 200) {
+            resolve(res)
+          } else {
+            uni.hideLoading()
+            uni.showToast({
+              title: '请求错误: ' + res.errMsg,
+              icon: 'none',
+            })
+          }
+        },
+        fail(err) {
+          uni.hideLoading()
+          uni.showToast({
+            title: '请求错误: ' + err.errMsg,
+            icon: 'none',
+          })
+          reject(err)
+        },
+        complete() {
+          isLoading && uni.hideLoading()
+        },
+      })
+    })
+  }
+
+  static get(url, data) {
+    return this.request(url, data, 'GET')
+  }
+
+  static post(url, data) {
+    return this.request(url, data, 'POST')
+  }
+
+  static delete(url, data) {
+    return this.request(url, data, 'DELETE')
+  }
+
+  static put(url, data) {
+    return this.request(url, data, 'PUT')
+  }
+}
+```
