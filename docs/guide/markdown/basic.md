@@ -4,7 +4,7 @@ outline: deep
 
 # Basic
 
-## markdown 代码块支持的语言
+## Markdown 代码块支持的语言
 
 | name             | keywords                | call                  | explanation |
 | :--------------- | :---------------------- | :-------------------- | :---------- |
