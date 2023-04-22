@@ -154,6 +154,10 @@ module.exports = {
           text: 'Reproduction',
           link: '/notes/reproduction/index',
         },
+        {
+          text: 'Speech',
+          link: '/notes/speech/index'
+        }
       ],
     },
 
