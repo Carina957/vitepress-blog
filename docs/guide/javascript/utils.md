@@ -390,6 +390,25 @@ const dedupe = (arr, key) => {
 }
 ```
 
+## 对象过滤空值
+
+```js
+const filterNullValues = obj => {
+  for (const key in obj) {
+    if (Object.hasOwnProperty.call(obj, key)) {
+      if (
+        params[key] === undefined ||
+        params[key] === null ||
+        params[key] === ''
+      )
+        delete params[key]
+    }
+  }
+
+  return obj
+}
+```
+
 ## uni-app 请求封装
 
 ```js
