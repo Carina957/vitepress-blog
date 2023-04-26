@@ -32,17 +32,15 @@ outline: deep
 
 一个再复杂的组件，都是由三部分组成的：`prop`、`event`、`slot`，它们构成了 Vue.js 组件的 API。如果你开发的是一个通用组件，那一定要事先设计好这三部分，因为组件一旦发布，后面再修改 API 就很困难了，使用者都是希望不断新增功能，修复 bug，而不是经常变更接口。
 
-### 让代码更加简洁、逻辑更加清晰的组件
-
-也就是 **业务组件**
+### 让代码更加简洁、逻辑更加清晰的组件——业务组件
 
 下面结合具体的代码简单的做一下剖析：
 
-#### 页面结构
+页面结构：
 
 ![项目目录](https://raw.githubusercontent.com/Carina957/PicGoCDN/main/path.png)
 
-<details><summary>LiveStreaming</summary>
+::: details LiveStreaming.vue
 
 ```vue
 <template>
@@ -196,11 +194,9 @@ export default {
 </script>
 ```
 
-</details>
+:::
 
-<br>
-
-<details><summary>PlayContainer.vue</summary>
+::: details PlayContainer.vue
 
 ```vue
 <template>
@@ -222,9 +218,9 @@ export default {
 </script>
 ```
 
-</details>
+:::
 
-- Index.vue
+::: details Index.vue
 
 ```vue
 <template>
@@ -386,9 +382,11 @@ export default {
 </script>
 ```
 
+:::
+
 ### 根据需求对组件的基础组件进行二次封装
 
-- Dialog.vue
+::: details Dialog.vue
 
 ```vue
 <template>
@@ -442,7 +440,9 @@ export default {
 </script>
 ```
 
-<details><summary>Table.vue</summary>
+:::
+
+::: details Table.vue
 
 ```vue
 <template>
@@ -548,9 +548,9 @@ export default {
 </script>
 ```
 
-</details>
+:::
 
-<details><summary>MineFab</summary>
+::: details MineFab.vue
 
 ```vue
 <template>
@@ -592,4 +592,4 @@ export default {
 </script>
 ```
 
-</details>
+:::
