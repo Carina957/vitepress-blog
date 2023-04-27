@@ -344,14 +344,6 @@ export default {
     ...mapGetters(['deviceList'])
   },
   methods: {
-    handleSplit(id = 1) {
-      this.playIndex = id
-      const idArr = Array.from(new Array(id), (...arg) => arg[1])
-
-      for (const id of idArr) {
-        this.playVideo(this.deviceList[id], id)
-      }
-    },
     playVideo(info, index = 0, hasVideo = true) {
       this.playerList[index].player = null
 
@@ -571,21 +563,6 @@ export default {
     params: {
       type: Object,
       default: () => {},
-    },
-  },
-  methods: {
-    handleFabClick() {
-      const isLogin = uni.getStorageSync('LOGIN_TOKEN')
-      const PARAMS = objToUrl(this.params)
-      const path = !!isLogin
-        ? this.path
-          ? this.path
-          : '/pages/fill-progress/fill-progress'
-        : '/pages/login/login'
-
-      uni.navigateTo({
-        url: path + '?' + PARAMS,
-      })
     },
   },
 }
