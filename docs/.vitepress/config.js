@@ -155,9 +155,9 @@ module.exports = {
           link: '/notes/reproduction/index',
         },
         {
-          text: 'Speech',
-          link: '/notes/speech/index'
-        }
+          text: 'Share',
+          link: '/notes/share/index',
+        },
       ],
     },
 
