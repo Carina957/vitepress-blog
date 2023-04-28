@@ -148,7 +148,7 @@ module.exports = {
         {
           text: 'read',
           collapsed: false,
-          items: [{ text: 'reaction', link: '/notes/read/reaction' }],
+          items: [{ text: 'dragon-raja', link: '/notes/read/dragon-raja' }],
         },
         {
           text: 'Reproduction',
