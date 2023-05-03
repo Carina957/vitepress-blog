@@ -88,7 +88,11 @@ outline: deep
 ### usage
 
 ```scss
-@import '～assets/style/mixin.scss' @include scrollbar;
+@import '～assets/style/mixin.scss';
+
+.app-container {
+  @include scrollbar;
+}
 ```
 
 ## 文字溢出显示省略号
