@@ -359,6 +359,19 @@ function objToUrl(obj) {
 }
 ```
 
+## urlToObj
+
+```js
+function urlToObj(str) {
+  str = decodeURIComponent(str)
+    .match(/([^?]+)$/)[0]
+    .replace(/&/g, '","')
+    .replace(/=/g, '":"')
+
+  return JSON.parse('{"' + str + '"}')
+}
+```
+
 ## clearFields
 
 清除表单提交
