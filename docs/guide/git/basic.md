@@ -44,6 +44,9 @@ git config --global user.email 'xxx@foxmail.com'
 
 # 重置 git 配置
 git config --global --unset https.proxy
+
+# 检查环境变量(解决 ssl 链接重置)
+env|grep -i proxy
 ```
 
 ## 管理仓库
