@@ -148,7 +148,13 @@ module.exports = {
         {
           text: 'read',
           collapsed: false,
-          items: [{ text: 'dragon-raja', link: '/notes/read/dragon-raja' }],
+          items: [
+            { text: 'dragon-raja', link: '/notes/read/dragon-raja' },
+            {
+              text: 'good-sentence-excerpt',
+              link: '/notes/read/good-sentence-excerpt',
+            },
+          ],
         },
         {
           text: 'others',
