@@ -357,6 +357,13 @@ function objToUrl(obj) {
   }
   return tempArr.join('&')
 }
+
+function objToUrl(obj) {
+  let tempStr = ''
+  Object.entries(obj).forEach(([key, value]) => (tempStr += `${key}=${value}&`))
+
+  return tempStr.slice(0, tempStr.length - 1)
+}
 ```
 
 ## urlToObj
