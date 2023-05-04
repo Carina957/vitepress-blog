@@ -7,7 +7,7 @@ titleTemplate: Record life and codes.
 hero:
   name: Chi's
   text: Record life and codes.
-  tagline: Freedom, adoration, simple.
+  tagline: Freedom, simple.
   actions:
     - theme: brand
       text: Get Started
@@ -19,14 +19,14 @@ hero:
 features:
   - icon: 💻
     title: A front-end development engineer
-    details: JavaScript, TypeScript, Vue, React, VSCode, MacBookPro...
+    details: JavaScript, TypeScript, Vue, React, VSCode, Git, Node, MacBookPro...
   - icon: 🎵
     title: A niche music lovers
-    details: Except Jay Chou 😝.
+    details: Like pure music.
   - icon: 🎬
     title: A film lover
     details: Enjoy every movie.
   - icon: 🚴‍♂️
-    title: A cyclist
+    title: A cycling enthusiasts
     details: This year's wish is to ride Qiandao Lake.
 ---
