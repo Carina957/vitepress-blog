@@ -151,12 +151,12 @@ module.exports = {
           items: [{ text: 'dragon-raja', link: '/notes/read/dragon-raja' }],
         },
         {
-          text: 'Reproduction',
-          link: '/notes/reproduction/index',
-        },
-        {
-          text: 'Share',
-          link: '/notes/share/index',
+          text: 'others',
+          collapsed: false,
+          items: [
+            { text: 'Reproduction', link: '/notes/others/reproduction' },
+            { text: 'Share', link: '/notes/others/share' },
+          ],
         },
       ],
     },
