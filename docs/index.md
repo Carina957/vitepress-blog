@@ -7,7 +7,7 @@ titleTemplate: Record life and codes.
 hero:
   name: Chi's
   text: Record life and codes.
-  tagline: Freedom, simple.
+  tagline: Freedom, Paranoid, For loneliness.
   actions:
     - theme: brand
       text: Get Started
