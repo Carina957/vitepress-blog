@@ -177,9 +177,7 @@ toFixed(1.255, 2) // 1.26
 ### 数据展示
 
 ```js
-function strip(num, precision = 12) {
-  return +parseFloat(num.toPrecision(precision))
-}
+const strip = (num, precision = 12) => +parseFloat(num.toPrecision(precision))
 ```
 
 ### 数据运算
