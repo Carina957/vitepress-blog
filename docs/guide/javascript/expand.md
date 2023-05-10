@@ -213,6 +213,10 @@ function isType(type) {
 isType('Array')([1, 2, 3])
 ```
 
+### Reference
+
+- [判断 JS 数据类型的四种方法](https://www.cnblogs.com/onepixel/p/5126046.html)
+
 ## 冻结对象
 
 ### Object.freeze()
@@ -222,3 +226,37 @@ isType('Array')([1, 2, 3])
 ### Object.freeze() 存在的意义
 
 如果你有一个巨大的数组或 `Object` ，并且确信数据不会修改，使用 `Object.freeze()` 可以让性能大幅提升。在我的实际开发中，这种提升大约有 5~10 倍，倍数随着数据量递增,对于纯展示的大数据，都可以使用 `Object.freeze()` 提升性能。
+
+## Window.open() <Badge type="tip" text="mdn" />
+
+`Window` 接口的 `open()` 方法，是用指定的名称将指定的资源加载到浏览器上下文（窗口 `window` ，内嵌框架 `iframe` 或者标签 `tab` ）。如果没有指定名称，则一个新的窗口会被打开并且指定的资源会被加载进这个窗口的浏览器上下文中。
+
+::: tip 语法
+
+**strUrl**: 要在新打开的窗口中加载的 URL。
+
+**strWindowName**: 新窗口的名称(并不是新窗口的标题,相当于 `<a>` / `<form>` 的 `target`)。
+
+**strWindowFeatures**: 一个可选参数，列出新窗口的特征 (大小，位置，滚动条等) 作为一个 `DOMString`。
+:::
+
+<!-- [git](../git/basic#revert) -->
+
+```js
+let windowObjectReference = window.open(strUrl, strWindowName, [
+  strWindowFeatures,
+])
+
+// example
+window.open(
+  'https://www.google.com',
+  'MY_GOOGLE',
+  'top=150,left=150,width=300,height=150,scrollbars=no,menubar=no,status=no'
+)
+```
+
+### Reference
+
+- [Window.open() | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/open)
+
+<!-- 您可以点击 <button onClick="window.open('https://www.google.com', 'MY_GOOGLE', 'top=150,left=150,width=300,height=150,scrollbars=no,menubar=no,status=no')">Try</button> -->
