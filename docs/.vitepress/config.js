@@ -218,22 +218,19 @@ module.exports = {
 
     search: {
       provider: 'algolia',
-      options: {
-        indexName: 'carina957io',
-        appId: '4L9RSE98LX',
-        apiKey: '0e8806e938f2c8c4cbee3aea4e8d17aa',
-      },
+      options: {},
     },
 
     algolia: {
+      indexName: 'carina957io',
+      appId: '4L9RSE98LX',
+      apiKey: '0e8806e938f2c8c4cbee3aea4e8d17aa',
       // indexName: 'vuejs_cn2',
       // appId: 'UURH1MHAF7',
       // apiKey: 'c23eb8e7895f42daeaf2bf6f63eb4bf6',
       // searchParameters: {
       //   facetFilters: ['version:v3']
       // },
-      // apiKey: 'e7d88369a35a226f42f612999477f606',
-      // apiKey: 'afeff9433e6037489688be24b45d025c',
     },
 
     localeLinks: {
