@@ -92,6 +92,49 @@ arr.forEach(item => {
 console.log(arr) // [1, 'mike', { name: 'alva' }]
 ```
 
+## 判断对象是否有某个属性
+
+### hasOwnProperty(实例属性)
+
+1. 返回一个布尔值，指示对象自身属性是否有指定的属性
+2. 原型链上的不会被访问到，和 in 不同，会忽略到从原型链上继承到的属性
+3. 即使属性的值是 `null`，`undefined`，只要属性存在，`hasOwnProperty` 依旧会返回 `true`
+4. 注意：这个方法没有被保护，也就是说方法可以自定定义一个这样的方法，来让他的返回值永远是 `true` 或者 `false`
+
+**usage**:
+
+```js
+object.hasOwnProperty(key: string)
+// or
+Object.hasOwnProperty.call(object: object, key: string)
+```
+
+### in 方法(实例属性，继承属性)
+
+1. 如果指定的属性在指定的对象或其原型链中，则 in 运算符返回 true
+2. 使用 delete 删除的属性返回 false
+3. 值为 undefined 的属性是可以的
+
+**usage**:
+
+```js
+!!('key' in object)
+```
+
+### Reflect.has()
+
+1. 和 in 方法完全一样,但是第一个参数不是对象会报错
+2. 这个方法更加形象
+3. 原型链上的方法同样可以会返回 true
+
+**usage**:
+
+```js
+Reflect.has(object, 'key')
+// or
+Reflect.ownKeys(object).includes('key')
+```
+
 ## 数据类型判断
 
 ### typeof
