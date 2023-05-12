@@ -111,9 +111,9 @@ Object.hasOwnProperty.call(object: object, key: string)
 
 ### in 方法(实例属性，继承属性)
 
-1. 如果指定的属性在指定的对象或其原型链中，则 in 运算符返回 true
-2. 使用 delete 删除的属性返回 false
-3. 值为 undefined 的属性是可以的
+1. 如果指定的属性在指定的对象或其原型链中，则 `in` 运算符返回 `true`
+2. 使用 `delete` 删除的属性返回 `false`
+3. 值为 `undefined` 的属性是可以的
 
 **usage**:
 
