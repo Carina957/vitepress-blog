@@ -495,7 +495,7 @@ class Request {
 }
 ```
 
-### 版本号排序
+## 版本号排序
 
 ```js
 function versionNumberSort(arr) {
@@ -517,4 +517,39 @@ function versionNumberSort(arr) {
     }
   })
 }
+```
+
+## DOM Drag
+
+```js
+// 拖拽功能
+const drag = (el: HTMLElement) => {
+  el.onmousedown = function (ev) {
+    const e = ev || window.event
+    const eX = e.clientX
+    const eY = e.clientY
+    const disX = eX - el.offsetLeft
+    const disY = eY - el.offsetTop
+
+    document.onmousemove = function (ev) {
+      const e = ev || window.event
+      const windowWidth = document.documentElement.clientWidth
+      const windowHeight = document.documentElement.clientHeight
+      let l = e.clientX - disX
+      let t = e.clientY - disY
+
+      l = range(l, 0, windowWidth - el.offsetWidth)
+      t = range(t, 0, windowHeight - el.offsetHeight)
+      el.style.left = l + 'px'
+      el.style.top = t + 'px'
+    }
+  }
+
+  document.onmouseup = function () {
+    document.onmousemove = null
+  }
+}
+
+// 判断边界问题
+const range = (loc, min, max) => (loc > max ? max : loc < min ? min : loc)
 ```
