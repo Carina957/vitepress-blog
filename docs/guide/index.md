@@ -4,16 +4,11 @@
 
 > 𝘓𝘪𝘧𝘦’𝘴 𝘢𝘵𝘵𝘪𝘵𝘶𝘥𝘦 𝘵𝘰 𝘺𝘰𝘶 𝘥𝘦𝘱𝘦𝘯𝘥𝘴 𝘰𝘯 𝘺𝘰𝘶𝘳 𝘢𝘵𝘵𝘪𝘵𝘶𝘥𝘦 𝘵𝘰 𝘪𝘵.
 
-<!-- ![profile views](https://komarev.com/ghpvc/?username=lencx&style=plastic) -->
-
 <b>Info</b>
 
 ![ID](https://img.shields.io/badge/🆔-Chi's/Carina957-%23323031?style=flat&labelColor=323031)
 
 ![wechat](https://img.shields.io/badge/-CHIS___xx-%23323031?style=flat&logo=wechat)
-
-<!-- [![dev.to](https://img.shields.io/badge/-lencx-%23323031?style=flat&logo=dev.to)](https://dev.to/lencx)
-[![reddit](https://img.shields.io/badge/-lencx-%23323031?style=flat&logo=reddit)](https://www.reddit.com/user/lencx) -->
 
 <b>Languages and Tools</b>
 
