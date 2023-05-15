@@ -27,7 +27,7 @@
 
 ![React](https://img.shields.io/badge/-React-%2320232A?logoColor=61DAFB&style=flat&logo=react)
 
-![Vue](https://img.shields.io/badge/-vue-%233eaf7c?logoColor=61DAFB&style=flat&logo=vue.js)
+![Vue](https://img.shields.io/badge/-vue-%23caecdd?style=flat&logo=vue.js)
 
 ![Shell](https://img.shields.io/badge/-Shell-%2389E051?style=flat&logo=powershell&logoColor=ffffff)
 
@@ -37,13 +37,14 @@
 
 ![Node.js](https://img.shields.io/badge/-Node.js-%23579050?style=flat&logo=node.js&logoColor=ffffff)
 
-<!-- ![Sass](https://img.shields.io/badge/-Sass-%23CB6498?style=flat&logo=sass&logoColor=ffffff)
-![WebAssembly](https://img.shields.io/badge/-WebAssembly-654FF0?style=flat&logo=webassembly&logoColor=ffffff)
-![Sketch](https://img.shields.io/badge/-Sketch-%23FDAD00?style=flat&logo=sketch&logoColor=ffffff)
-![Rust](https://img.shields.io/badge/-Rust-%23DEA584?style=flat&logo=rust&logoColor=000000) -->
+![Sass](https://img.shields.io/badge/-Sass-%23CB6498?style=flat&logo=sass&logoColor=ffffff)
 
-<!-- <img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="20" style="display: inline-block; margin-right: 15px;">
+![vite](https://img.shields.io/badge/-Vite-%23bcc0ff?style=flat&logo=vite)
 
-<img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="20" style="display: inline-block; margin-right: 15px;">
+![unocss](https://img.shields.io/badge/-Unocss-%23ccc?style=flat&logo=unocss&cacheSeconds=3600)
 
-<img src="https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff" height="20" style="display: inline-block; margin-right: 15px;"> -->
+<b>About</b>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9de6bd17-76f8-4fac-864b-23fbda42ad4b/deploy-status)](https://app.netlify.com/sites/chis-blog/deploys)
+
+![license](https://img.shields.io/badge/license-MIT-green)
