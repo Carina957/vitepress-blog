@@ -524,14 +524,14 @@ function versionNumberSort(arr) {
 ```js
 // 拖拽功能
 const drag = (el: HTMLElement) => {
-  el.onmousedown = function (ev) {
+  el.onmousedown = ev => {
     const e = ev || window.event
     const eX = e.clientX
     const eY = e.clientY
     const disX = eX - el.offsetLeft
     const disY = eY - el.offsetTop
 
-    document.onmousemove = function (ev) {
+    document.onmousemove = ev => {
       const e = ev || window.event
       const windowWidth = document.documentElement.clientWidth
       const windowHeight = document.documentElement.clientHeight
@@ -545,7 +545,7 @@ const drag = (el: HTMLElement) => {
     }
   }
 
-  document.onmouseup = function () {
+  document.onmouseup = _ => {
     document.onmousemove = null
   }
 }
