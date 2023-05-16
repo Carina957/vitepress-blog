@@ -1,29 +1,39 @@
 module.exports = {
-  lang: 'zh-CN',
   title: "Chi's",
+  lang: 'zh-CN',
   description: 'Record life and codes.',
-
-  lastUpdated: false,
-  // srcDir: 'src', // 更改默认目录
-  scrollOffset: 'header',
-  // cleanUrls: 'without-subfolders',
-  clearUrls: true,
+  ignoreDeadLinks: true,
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/author_48x48.ico' }],
     ['meta', { name: 'theme-color', content: '#42b883' }],
   ],
 
-  markdown: {
-    headers: false,
-    // headers: {
-    //   level: [0, 0],
-    // },
-  },
-
   themeConfig: {
-    // siteTitle: false,
     logo: '/author_120x120.png',
+
+    editLink: {
+      pattern:
+        'https://github.com/Carina957/vitepress-blog/edit/main/docs/:path',
+      text: 'Edit this page on GitHub',
+    },
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/Carina957/vitepress-blog' },
+      { icon: 'discord', link: 'https://discord.com/invite/aYVNktYeEB' },
+      { icon: 'twitter', link: 'https://twitter.com' },
+    ],
+
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: "Copyright © 2023-present Chi's",
+    },
+
+    algolia: {
+      indexName: 'carina957io',
+      appId: '4L9RSE98LX',
+      apiKey: '0e8806e938f2c8c4cbee3aea4e8d17aa',
+    },
 
     nav: [
       {
@@ -36,16 +46,21 @@ module.exports = {
         text: 'FrontEnd',
         items: [
           {
-            text: 'Vue',
-            link: 'https://cn.vuejs.org/',
-          },
-          {
-            text: 'React',
-            link: 'https://beta.reactjs.org/',
-          },
-          {
-            text: 'TypeScript',
-            link: 'https://www.typescriptlang.org/zh/',
+            text: 'Link',
+            items: [
+              {
+                text: 'Vue',
+                link: 'https://cn.vuejs.org/',
+              },
+              {
+                text: 'React',
+                link: 'https://beta.reactjs.org/',
+              },
+              {
+                text: 'TypeScript',
+                link: 'https://www.typescriptlang.org/zh/',
+              },
+            ],
           },
         ],
       },
@@ -164,70 +179,6 @@ module.exports = {
             { text: 'Share', link: '/notes/others/share' },
           ],
         },
-      ],
-    },
-
-    i18n: {
-      search: '搜索',
-      menu: '菜单',
-      toc: '本页目录',
-      appearance: '外观',
-      previous: '上一篇',
-      next: '下一篇',
-      pageNotFound: '页面未找到',
-      returnToTop: '返回顶部',
-      deadLink: {
-        before: '你打开了一个不存在的链接：',
-        after: '。',
-      },
-      deadLinkReport: {
-        before: '不介意的话请提交到',
-        link: '这里',
-        after: '，我们会跟进修复。',
-      },
-      // ariaDarkMode: '切换深色模式',
-      // ariaSkipToContent: '直接跳到内容',
-      // ariaToC: '当前页面的目录',
-      // ariaMainNav: '主导航',
-      // ariaMobileNav: '移动版导航',
-      // ariaSidebarNav: '侧边栏导航',
-    },
-
-    editLink: {
-      pattern:
-        'https://github.com/Carina957/vitepress-blog/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页',
-      // text: 'Edit this page on GitHub',
-    },
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/Carina957/vitepress-blog' },
-      { icon: 'twitter', link: 'https://twitter.com' },
-      { icon: 'discord', link: 'https://discord.com/invite/aYVNktYeEB' },
-    ],
-
-    docFooter: {
-      prev: '上一篇',
-      next: '下一篇',
-    },
-
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: "Copyright © 2023-present Chi's",
-    },
-
-    algolia: {
-      indexName: 'carina957io',
-      appId: '4L9RSE98LX',
-      apiKey: '0e8806e938f2c8c4cbee3aea4e8d17aa',
-    },
-
-    localeLinks: {
-      text: '简体中文',
-      items: [
-        { text: 'English', link: 'https://carina957.github.io' },
-        { text: '日本語', link: 'https://carina957.github.io' },
-        { text: 'Español', link: 'https://carina957.github.io' },
       ],
     },
   },

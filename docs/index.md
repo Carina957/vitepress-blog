@@ -1,6 +1,6 @@
 ---
 layout: home
-
+sidebar: false
 title: Chi's
 titleTemplate: Record life and codes.
 
