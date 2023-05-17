@@ -8,12 +8,16 @@ specifiers:
   prettier: ^2.8.8
   rimraf: ^5.0.0
   typescript: ^5.0.4
+  vite: ^4.3.6
   vitepress: 1.0.0-alpha.65
+  vue: ^3.3.2
 
 dependencies:
   '@docsearch/css': 3.3.4
   '@docsearch/js': 3.3.4
+  vite: 4.3.6
   vitepress: 1.0.0-alpha.65
+  vue: 3.3.2
 
 devDependencies:
   '@antfu/eslint-config': 0.38.6_3qfatcekpgbllh6uk5ivyhkbxq
