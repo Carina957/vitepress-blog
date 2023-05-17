@@ -1,6 +1,6 @@
 ---
 layout: home
-sidebar: false
+
 title: Chi's
 titleTemplate: Record life and codes.
 
@@ -8,6 +8,9 @@ hero:
   name: Chi's
   text: Record life and codes.
   tagline: Freedom, Paranoid, For loneliness.
+  image:
+    src: /logo-with-shadow.svg
+    alt: Vite
   actions:
     - theme: brand
       text: Get Started
