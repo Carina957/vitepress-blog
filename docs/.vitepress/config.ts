@@ -1,13 +1,22 @@
-module.exports = {
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
   title: "Chi's",
   lang: 'zh-CN',
   description: 'Record life and codes.',
-  ignoreDeadLinks: true,
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/author_48x48.ico' }],
     ['meta', { name: 'theme-color', content: '#42b883' }],
   ],
+
+  locales: {
+    root: { label: 'English' },
+    zh: { label: '简体中文', link: 'https://cn.vitejs.dev' },
+    ja: { label: '日本語', link: 'https://ja.vitejs.dev' },
+    es: { label: 'Español', link: 'https://es.vitejs.dev' },
+    pt: { label: 'Português', link: 'https://pt.vitejs.dev' },
+  },
 
   themeConfig: {
     logo: '/author_120x120.png',
@@ -182,4 +191,4 @@ module.exports = {
       ],
     },
   },
-}
+})
