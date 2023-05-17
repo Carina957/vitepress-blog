@@ -298,6 +298,24 @@ window.open(
 )
 ```
 
+### demo
+
+<DemoContainer>
+  <p class="demo-source-link">
+    <a
+      href="https://github.com/Carina957/vitepress-blog/blob/main/docs/guide/javascript/components/window-open-demo.vue"
+      target="_blank"
+    >source</a>
+  </p>
+
+  <Demo />
+</DemoContainer>
+
+<script setup>
+import Demo from './components/window-open-demo.vue'
+import DemoContainer from '../../.vitepress/theme/components/DemoContainer.vue'
+</script>
+
 ### Reference
 
 - [Window.open() | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/open)
