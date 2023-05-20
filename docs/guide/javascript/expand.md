@@ -322,4 +322,4 @@ import DemoContainer from '../../.vitepress/theme/components/DemoContainer.vue'
 
 - [Window.open() | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/open)
 
-<!-- 您可以点击 <button onClick="window.open('https://www.google.com', 'MY_GOOGLE', 'top=150,left=150,width=300,height=150,scrollbars=no,menubar=no,status=no')">Try</button> -->
+## Svg
