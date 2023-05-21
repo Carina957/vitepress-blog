@@ -313,7 +313,7 @@ window.open(
   <Demo />
 </DemoContainer>
 
-<script setup>
+<script setup lang="ts">
 import Demo from './components/window-open-demo.vue'
 import DemoContainer from '../../.vitepress/theme/components/DemoContainer.vue'
 </script>
