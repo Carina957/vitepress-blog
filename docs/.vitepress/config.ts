@@ -44,158 +44,168 @@ export default defineConfig({
       apiKey: '0e8806e938f2c8c4cbee3aea4e8d17aa',
     },
 
-    nav: [
-      {
-        text: 'Guide',
-        link: '/guide/',
-        activeMatch: '/guide/',
-      },
-      { text: 'Notes', link: '/notes/', activeMatch: '/notes/' },
-      {
-        text: 'FrontEnd',
-        items: [
-          {
-            text: 'Link',
-            items: [
-              {
-                text: 'Vue',
-                link: 'https://cn.vuejs.org/',
-              },
-              {
-                text: 'React',
-                link: 'https://beta.reactjs.org/',
-              },
-              {
-                text: 'TypeScript',
-                link: 'https://www.typescriptlang.org/zh/',
-              },
-            ],
-          },
-        ],
-      },
-    ],
+    nav: nav(),
 
     sidebar: {
-      '/guide': [
+      '/guide': sidebarGuide(),
+      '/notes': sidebarNotes(),
+    },
+  },
+})
+
+function nav() {
+  return [
+    {
+      text: 'Guide',
+      link: '/guide/',
+      activeMatch: '/guide/',
+    },
+    { text: 'Notes', link: '/notes/', activeMatch: '/notes/' },
+    {
+      text: 'FrontEnd',
+      items: [
         {
-          text: 'Getting Started', // Getting Started
-          collapsed: true,
-          items: [{ text: 'Introduction', link: '/guide/' }], // Introduction
-        },
-        {
-          text: 'Git',
-          collapsed: false,
+          text: 'Link',
           items: [
-            { text: 'basic', link: '/guide/git/basic' },
-            { text: 'commit', link: '/guide/git/commit' },
-          ],
-        },
-        {
-          text: 'JavaScript',
-          collapsed: false,
-          items: [
-            { text: 'basic', link: '/guide/javascript/basic' },
-            { text: 'expand', link: '/guide/javascript/expand' },
-            { text: 'utils', link: '/guide/javascript/utils' },
-          ],
-        },
-        {
-          text: 'TypeScript',
-          collapsed: false,
-          items: [
-            { text: 'basic', link: '/guide/typescript/basic' },
-            { text: 'utils', link: '/guide/typescript/utils' },
-          ],
-        },
-        {
-          text: 'Vue',
-          collapsed: false,
-          items: [
-            { text: 'basic', link: '/guide/vue/basic' },
-            { text: 'expand', link: '/guide/vue/expand' },
-            { text: 'components', link: '/guide/vue/components' },
-            { text: 'directives', link: '/guide/vue/directives' },
-          ],
-        },
-        {
-          text: 'Nuxt',
-          collapsed: false,
-          items: [
-            { text: 'basic', link: '/guide/nuxt/basic' },
-          ],
-        },
-        {
-          text: 'React',
-          collapsed: false,
-          items: [
-            { text: 'basic', link: '/guide/react/basic' },
-            { text: 'expand', link: '/guide/react/expand' },
-          ],
-        },
-        {
-          text: 'Webpack',
-          collapsed: false,
-          items: [{ text: 'basic', link: '/guide/webpack/basic' }],
-        },
-        {
-          text: 'Node',
-          collapsed: false,
-          items: [{ text: 'basic', link: '/guide/node/basic' }],
-        },
-        {
-          text: 'CSS',
-          collapsed: false,
-          items: [{ text: 'basic', link: '/guide/css/basic' }],
-        },
-        {
-          text: 'Vscode',
-          collapsed: false,
-          items: [{ text: 'config', link: 'guide/vscode/config' }],
-        },
-        {
-          text: 'Markdown',
-          collapsed: false,
-          items: [{ text: 'Basic', link: 'guide/markdown/Basic' }],
-        },
-        {
-          text: 'InterView',
-          collapsed: false,
-          items: [
-            { text: 'interview', link: '/guide/interview/index' },
-            { text: 'algorithm', link: '/guide/interview/algorithm' },
             {
-              text: 'Enter the URL to see what happens to the page?',
-              link: '/guide/interview/enter-url-happens',
+              text: 'Vue',
+              link: 'https://cn.vuejs.org/',
             },
-          ],
-        },
-      ],
-      '/notes': [
-        {
-          text: 'travel',
-          collapsed: false,
-          items: [{ text: 'cycling', link: '/notes/travel/cycling' }],
-        },
-        {
-          text: 'read',
-          collapsed: false,
-          items: [
-            { text: 'dragon-raja', link: '/notes/read/dragon-raja' },
             {
-              text: 'excerpt',
-              link: '/notes/read/excerpt',
+              text: 'React',
+              link: 'https://beta.reactjs.org/',
             },
-          ],
-        },
-        {
-          text: 'others',
-          collapsed: false,
-          items: [
-            { text: 'Reproduction', link: '/notes/others/reproduction' },
-            { text: 'Share', link: '/notes/others/share' },
+            {
+              text: 'TypeScript',
+              link: 'https://www.typescriptlang.org/zh/',
+            },
           ],
         },
       ],
     },
-  },
-})
+  ]
+}
+
+function sidebarGuide() {
+  return [
+    {
+      text: 'Getting Started', // Getting Started
+      collapsed: true,
+      items: [{ text: 'Introduction', link: '/guide/' }], // Introduction
+    },
+    {
+      text: 'Git',
+      collapsed: false,
+      items: [
+        { text: 'basic', link: '/guide/git/basic' },
+        { text: 'commit', link: '/guide/git/commit' },
+      ],
+    },
+    {
+      text: 'JavaScript',
+      collapsed: false,
+      items: [
+        { text: 'basic', link: '/guide/javascript/basic' },
+        { text: 'expand', link: '/guide/javascript/expand' },
+        { text: 'utils', link: '/guide/javascript/utils' },
+      ],
+    },
+    {
+      text: 'TypeScript',
+      collapsed: false,
+      items: [
+        { text: 'basic', link: '/guide/typescript/basic' },
+        { text: 'utils', link: '/guide/typescript/utils' },
+      ],
+    },
+    {
+      text: 'Vue',
+      collapsed: false,
+      items: [
+        { text: 'basic', link: '/guide/vue/basic' },
+        { text: 'expand', link: '/guide/vue/expand' },
+        { text: 'components', link: '/guide/vue/components' },
+        { text: 'directives', link: '/guide/vue/directives' },
+      ],
+    },
+    {
+      text: 'Nuxt',
+      collapsed: false,
+      items: [{ text: 'basic', link: '/guide/nuxt/basic' }],
+    },
+    {
+      text: 'React',
+      collapsed: false,
+      items: [
+        { text: 'basic', link: '/guide/react/basic' },
+        { text: 'expand', link: '/guide/react/expand' },
+      ],
+    },
+    {
+      text: 'Webpack',
+      collapsed: false,
+      items: [{ text: 'basic', link: '/guide/webpack/basic' }],
+    },
+    {
+      text: 'Node',
+      collapsed: false,
+      items: [{ text: 'basic', link: '/guide/node/basic' }],
+    },
+    {
+      text: 'CSS',
+      collapsed: false,
+      items: [{ text: 'basic', link: '/guide/css/basic' }],
+    },
+    {
+      text: 'Vscode',
+      collapsed: false,
+      items: [{ text: 'config', link: 'guide/vscode/config' }],
+    },
+    {
+      text: 'Markdown',
+      collapsed: false,
+      items: [{ text: 'Basic', link: 'guide/markdown/Basic' }],
+    },
+    {
+      text: 'InterView',
+      collapsed: false,
+      items: [
+        { text: 'interview', link: '/guide/interview/index' },
+        { text: 'algorithm', link: '/guide/interview/algorithm' },
+        {
+          text: 'Enter the URL to see what happens to the page?',
+          link: '/guide/interview/enter-url-happens',
+        },
+      ],
+    },
+  ]
+}
+
+function sidebarNotes() {
+  return [
+    {
+      text: 'travel',
+      collapsed: false,
+      items: [{ text: 'cycling', link: '/notes/travel/cycling' }],
+    },
+    {
+      text: 'read',
+      collapsed: false,
+      items: [
+        { text: 'dragon-raja', link: '/notes/read/dragon-raja' },
+        {
+          text: 'excerpt',
+          link: '/notes/read/excerpt',
+        },
+      ],
+    },
+    {
+      text: 'others',
+      collapsed: false,
+      items: [
+        { text: 'Reproduction', link: '/notes/others/reproduction' },
+        { text: 'Share', link: '/notes/others/share' },
+      ],
+    },
+  ]
+}
