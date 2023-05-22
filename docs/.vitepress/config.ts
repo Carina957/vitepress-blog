@@ -118,6 +118,13 @@ export default defineConfig({
           ],
         },
         {
+          text: 'Nuxt',
+          collapsed: false,
+          items: [
+            { text: 'basic', link: '/guide/nuxt/basic' },
+          ],
+        },
+        {
           text: 'React',
           collapsed: false,
           items: [
@@ -137,7 +144,7 @@ export default defineConfig({
         },
         {
           text: 'CSS',
-          collapsed: true,
+          collapsed: false,
           items: [{ text: 'basic', link: '/guide/css/basic' }],
         },
         {
