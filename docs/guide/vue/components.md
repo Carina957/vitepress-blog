@@ -356,6 +356,7 @@ export default {
     <use :xlink:href="iconName" />
   </svg>
 </template>
+
 <script>
 export default {
   name: 'SvgIcon',
