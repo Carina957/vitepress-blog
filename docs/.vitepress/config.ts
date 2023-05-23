@@ -4,6 +4,7 @@ export default defineConfig({
   title: "Chi's",
   lang: 'zh-CN',
   description: 'Record life and codes.',
+  cleanUrls: true,
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/author_48x48.ico' }],
