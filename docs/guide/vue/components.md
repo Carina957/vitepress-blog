@@ -301,3 +301,160 @@ export default {
 ### Usage
 
 - [USAGE](https://github.com/tangbc/vue-virtual-scroll-list#readme)
+
+## SvgIcon
+
+### 文件目录
+
+```txt
+|-- src
+|--|-- components
+|----|-- SvgIcon
+|------|-- icons
+|--------|-- up.svg
+|--------|-- down.svg
+|------|-- index.vue
+|------|-- index.js
+```
+
+::: warning Notice
+
+注意：`svg` 命名不要不要有中文和其他特殊字符!!!
+
+找到外层有 `fill` 属性的 `g` 标签或者 `path` 标签将 `fill` 属性设置为 `currentColor` ，一般 `svg` 文件都会有多个嵌套的 `g` 标签或者 `path` 标签并且比较靠外层的会有个 `fill` 属性为这个 `svg` 文件的填充色值，如果没有的话就自己找到外层的添加上 `fill="currentColor"`。
+
+:::
+
+::: details Example
+
+```html
+<svg>
+  <path d="M507.1......" p-id="2033" fill="currentColor"></path>
+</svg>
+```
+
+**or**
+
+```html
+<svg>
+  <desc>Created with Sketch</desc>
+  <g id="ola" stroke="none" fill="currentColor">
+    <g>
+      <path d="M6,0 L78...."></path>
+    </g>
+  </g>
+</svg>
+```
+
+:::
+
+### SvgIcon 组件
+
+```vue
+<template>
+  <svg :class="svgClass" aria-hidden="true" v-on="$listeners">
+    <use :xlink:href="iconName" />
+  </svg>
+</template>
+<script>
+export default {
+  name: 'SvgIcon',
+  props: {
+    iconClass: {
+      type: String,
+      required: true,
+    },
+    className: {
+      type: String,
+      default: '',
+    },
+  },
+  computed: {
+    iconName: () => `#icon-${this.iconClass}`,
+    svgClass: () => `svg-icon ${this.className || ''}`,
+  },
+}
+</script>
+
+<style scoped>
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+</style>
+```
+
+### index.js
+
+```js
+import Vue from 'vue'
+import SvgIcon from '@/components/SvgIcon' // svg component
+
+// register globally
+Vue.component('SvgIcon', SvgIcon)
+
+const requireAll = requireContext => requireContext.keys().map(requireContext)
+const req = require.context('./icons', false, /\.svg$/)
+
+requireAll(req)
+```
+
+### webpack 配置
+
+```sh
+npm i svg-sprite-loader
+```
+
+**在 vue.config.js 中增加配置**
+
+```js
+const path = require('path')
+module.exports = {
+  chainWebpack: config => {
+    config.module
+      .rule('svg')
+      .exclude.add(path.resolve('src/components/SvgIcon'))
+      .end()
+    config.module
+      .rule('icons')
+      .test(/\.svg$/)
+      .include.add(path.resolve('src/components/SvgIcon'))
+      .end()
+      .use('svg-sprite-loader')
+      .options({
+        symbolId: 'icon-[name]',
+      })
+      .end()
+  },
+}
+```
+
+### 在 main.js 中引入配置好的组件
+
+```js
+import '@/components/SvgIcon'
+```
+
+### usage
+
+```vue
+<template>
+  <div>
+    <SvgIcon class="my-icon" icon-class="up" />
+  </div>
+</template>
+
+<style>
+.my-class {
+  font-size: 20px;
+  color: #f00;
+}
+</style>
+```
+
+> icon-class 属性值必须为对应 svg 文件的文件名。
+>
+> class 属性为自定义，如需设置图标大小或颜色，则可如上示例自定义 class 通过 font-size 属性修改大小，color 属性修改图标颜色。
