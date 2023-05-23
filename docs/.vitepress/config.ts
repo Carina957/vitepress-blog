@@ -168,7 +168,7 @@ function sidebarGuide() {
     },
     {
       text: 'InterView',
-      collapsed: false,
+      collapsed: true,
       items: [
         { text: 'interview', link: '/guide/interview/index' },
         { text: 'algorithm', link: '/guide/interview/algorithm' },
