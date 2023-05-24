@@ -164,7 +164,7 @@ function findComponentsUpward(context, componentName) {
 export { findComponentsUpward }
 ```
 
-findComponentsUpward 的使用场景较少，一般只用在递归组件里面（后面小节会介绍），因为这个函数是一直向上寻找父级（parent）的，只有递归组件的父级才是自身。事实上，iView 在使用这个方法也都是用在递归组件的场景，比如菜单组件 Menu。由于递归组件在 Vue.js 组件里面并不常用，那自然 findComponentsUpward 也不常用了。
+`findComponentsUpward` 的使用场景较少，一般只用在递归组件里面（后面小节会介绍），因为这个函数是一直向上寻找父级（`parent`）的，只有递归组件的父级才是自身。事实上，`iView` 在使用这个方法也都是用在递归组件的场景，比如菜单组件 Menu。由于递归组件在 Vue.js 组件里面并不常用，那自然 `findComponentsUpward` 也不常用了。
 
 #### 向下找到最近的指定组件——findComponentDownward
 
