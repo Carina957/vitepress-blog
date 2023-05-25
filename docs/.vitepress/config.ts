@@ -21,6 +21,13 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/author_120x120.png',
+    outline: [2, 3],
+    outlineTitle: 'On this page',
+    carbonAds: {
+      code: 'your-carbon-code',
+      placement: 'your-carbon-placement'
+    },
+
 
     editLink: {
       pattern:
