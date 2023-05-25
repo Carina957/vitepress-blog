@@ -43,3 +43,44 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9de6bd17-76f8-4fac-864b-23fbda42ad4b/deploy-status)](https://app.netlify.com/sites/chis-blog/deploys)
 
 ![license](https://img.shields.io/badge/license-MIT-green)
+
+<VPTeamMembers align="center" size="small" :members="members" />
+
+<VPTeamPage>
+  <VPTeamPageTitle>
+    <template #title>Our Team</template>
+    <template #lead>...</template>
+  </VPTeamPageTitle>
+  <VPTeamMembers align="center" size="small" :members="members" />
+  <VPTeamPageSection>
+    <template #title>Partners</template>
+    <template #lead>...</template>
+    <template #members>
+      <VPTeamMembers align="center" size="small" :members="members" />
+    </template>
+  </VPTeamPageSection>
+</VPTeamPage>
+
+<script setup>
+import {
+  VPTeamPage,
+  VPTeamMembers,
+  VPTeamPageTitle,
+  VPTeamPageSection
+} from 'vitepress/theme'
+
+const members = [
+  {
+    avatar: 'https://github.com/Carina957.png',
+    name: 'Chi\'s xu',
+    title: 'Creator',
+    org: 'Chi\'s',
+    orgLink: 'https://chis-blog.netlify.app',
+    desc: 'Record life and codes.',
+    links: [
+      { icon: 'github', link: 'https://github.com/Carina957' },
+      { icon: 'twitter', link: 'https://twitter.com/chis__xx' },
+    ]
+  },
+]
+</script>
