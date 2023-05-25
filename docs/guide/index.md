@@ -78,6 +78,13 @@ const members = [
     links: [
       { icon: 'github', link: 'https://github.com/Carina957' },
       { icon: 'twitter', link: 'https://twitter.com/chis__xx' },
+      { icon: 'discord', link: 'https://discord.com/invite/aYVNktYeEB' },
+      { icon: 'facebook', link: 'https://www.facebook.com' },
+      { icon: 'instagram', link: 'https://www.instagram.com' },
+      { icon: 'youtube', link: 'https://www.youtube.com' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com' },
+      { icon: 'slack', link: 'https://slack.com' },
+      { icon: 'mastodon', link: 'https://mastodon.social' },
     ]
   },
 ]
