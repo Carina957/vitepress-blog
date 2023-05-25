@@ -10,6 +10,10 @@
 
 ![wechat](https://img.shields.io/badge/-CHIS___xx-%23323031?style=flat&logo=wechat)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9de6bd17-76f8-4fac-864b-23fbda42ad4b/deploy-status)](https://app.netlify.com/sites/chis-blog/deploys)
+
+![license](https://img.shields.io/badge/license-MIT-green)
+
 <b>Languages and Tools</b>
 
 ![HTML5](https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff)
@@ -37,12 +41,6 @@
 ![vite](https://img.shields.io/badge/-Vite-%23bcc0ff?style=flat&logo=vite)
 
 ![unocss](https://img.shields.io/badge/-Unocss-%23ccc?style=flat&logo=unocss&cacheSeconds=3600)
-
-<b>About</b>
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9de6bd17-76f8-4fac-864b-23fbda42ad4b/deploy-status)](https://app.netlify.com/sites/chis-blog/deploys)
-
-![license](https://img.shields.io/badge/license-MIT-green)
 
 <VPTeamMembers align="center" size="small" :members="members" />
 
