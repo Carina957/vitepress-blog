@@ -1,5 +1,4 @@
-.vp-doc > *,
-.Layout > * {
+.vp-doc > * {
   --stagger: 0;
   --delay: 150ms;
   --start: 0ms;
@@ -7,76 +6,26 @@
   animation-delay: calc(var(--start) + var(--stagger) * var(--delay));
 }
 
-.vp-doc > *:nth-child(1),
-.Layout > *:nth-child(1) {
-  --stagger: 1;
-}
-.vp-doc > *:nth-child(2),
-.Layout > *:nth-child(2) {
-  --stagger: 2;
-}
-.vp-doc > *:nth-child(3),
-.Layout > *:nth-child(3) {
-  --stagger: 3;
-}
-.vp-doc > *:nth-child(4),
-.Layout > *:nth-child(4) {
-  --stagger: 4;
-}
-.vp-doc > *:nth-child(5),
-.Layout > *:nth-child(5) {
-  --stagger: 5;
-}
-.vp-doc > *:nth-child(6),
-.Layout > *:nth-child(6) {
-  --stagger: 6;
-}
-.vp-doc > *:nth-child(7),
-.Layout > *:nth-child(7) {
-  --stagger: 7;
-}
-.vp-doc > *:nth-child(8),
-.Layout > *:nth-child(8) {
-  --stagger: 8;
-}
-.vp-doc > *:nth-child(9),
-.Layout > *:nth-child(9) {
-  --stagger: 9;
-}
-.vp-doc > *:nth-child(10),
-.Layout > *:nth-child(10) {
-  --stagger: 10;
-}
-.vp-doc > *:nth-child(11) {
-  --stagger: 11;
-}
-.vp-doc > *:nth-child(12) {
-  --stagger: 12;
-}
-.vp-doc > *:nth-child(13) {
-  --stagger: 13;
-}
-.vp-doc > *:nth-child(14) {
-  --stagger: 14;
-}
-.vp-doc > *:nth-child(15) {
-  --stagger: 15;
-}
-.vp-doc > *:nth-child(16) {
-  --stagger: 16;
-}
-.vp-doc > *:nth-child(17) {
-  --stagger: 17;
-}
-.vp-doc > *:nth-child(18) {
-  --stagger: 18;
-}
-.vp-doc > *:nth-child(19) {
-  --stagger: 19;
-}
-.vp-doc > *:nth-child(20) {
-  --stagger: 20;
-}
+.vp-doc > *:nth-child(1) { --stagger: 1; }
+.vp-doc > *:nth-child(2) { --stagger: 2; }
+.vp-doc > *:nth-child(3) { --stagger: 3; }
+.vp-doc > *:nth-child(4) { --stagger: 4; }
+.vp-doc > *:nth-child(5) { --stagger: 5; }
+.vp-doc > *:nth-child(6) { --stagger: 6; }
+.vp-doc > *:nth-child(7) { --stagger: 7; }
+.vp-doc > *:nth-child(8) { --stagger: 8; }
+.vp-doc > *:nth-child(9) { --stagger: 9; }
+.vp-doc > *:nth-child(10) { --stagger: 10; }
+.vp-doc > *:nth-child(11) { --stagger: 11; }
+.vp-doc > *:nth-child(12) { --stagger: 12; }
+.vp-doc > *:nth-child(13) { --stagger: 13; }
+.vp-doc > *:nth-child(14) { --stagger: 14; }
+.vp-doc > *:nth-child(15) { --stagger: 15; }
+.vp-doc > *:nth-child(16) { --stagger: 16; }
+.vp-doc > *:nth-child(17) { --stagger: 17; }
+.vp-doc > *:nth-child(18) { --stagger: 18; }
+.vp-doc > *:nth-child(19) { --stagger: 19; }
+.vp-doc > *:nth-child(20) { --stagger: 20; }
 
 @keyframes enter {
   0% {
