@@ -306,6 +306,8 @@ export const isSet = o => {
 
 ## Permission
 
+具体用法见 [vue/directives](/guide/vue/directives#permission)
+
 ```js
 import store from '@/store'
 

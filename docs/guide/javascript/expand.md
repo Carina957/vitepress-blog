@@ -317,5 +317,3 @@ import DemoContainer from '../../.vitepress/theme/components/DemoContainer.vue'
 ### Reference
 
 - [Window.open() | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/open)
-
-## Svg
