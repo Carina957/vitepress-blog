@@ -1,7 +1,3 @@
----
-outline: deep
----
-
 # 基础
 
 ## 数据类型
@@ -163,4 +159,19 @@ outline: deep
     "tslint-config-prettier"
   ]
 }
+```
+
+## decodeURI 与 decodeURIComponent 的区别
+
+使用 `encodeURI()`编码后的结果是除了空格之外的其他字符都原封不动，只有空格被替换成了%20。而 `encodeURIComponent()`方法则会使用对应的编码替换所有非字母数字字符。这也正是可以对整个 `URI` 使用 `encodeURI()`，而只能对附加在现有 `URI` 后面的字符串使用 `encodeURIComponent()`的原因所在。一般来说,我们使用 `encodeURIComponent()`方法的时候要比使用 `encodeURI()`更多，因为在实践中更常见的是对查询字符串参数而不是对基础 `URL` 进行编码.
+
+```js
+encodeURI(
+  'https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML'
+)
+// 'https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML'
+encodeURIComponent(
+  'https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML'
+)
+// 'https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FLearn%2FHTML%2FIntroduction_to_HTML%2FThe_head_metadata_in_HTML'
 ```
