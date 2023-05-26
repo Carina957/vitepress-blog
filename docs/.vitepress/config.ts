@@ -25,9 +25,8 @@ export default defineConfig({
     outlineTitle: 'On this page',
     carbonAds: {
       code: 'your-carbon-code',
-      placement: 'your-carbon-placement'
+      placement: 'your-carbon-placement',
     },
-
 
     editLink: {
       pattern:
@@ -216,16 +215,19 @@ function sidebarNotes() {
     {
       text: 'collection',
       collapsed: false,
-      items: [
-        { text: 'article', link: '/notes/collection/article' }
-      ]
+      items: [{ text: 'article', link: '/notes/collection/article' }],
     },
     {
       text: 'others',
       collapsed: false,
       items: [
-        { text: 'Reproduction', link: '/notes/others/reproduction' },
-        { text: 'Share', link: '/notes/others/share' },
+        {
+          text: 'Share',
+          items: [
+            { text: 'Reproduction', link: '/notes/others/reproduction' },
+            { text: 'ComponentShare', link: '/notes/others/share' },
+          ],
+        }
       ],
     },
   ]
