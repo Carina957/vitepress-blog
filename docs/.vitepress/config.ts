@@ -214,6 +214,13 @@ function sidebarNotes() {
       ],
     },
     {
+      text: 'collection',
+      collapsed: false,
+      items: [
+        { text: 'article', link: '/notes/collection/article' }
+      ]
+    },
+    {
       text: 'others',
       collapsed: false,
       items: [
