@@ -225,9 +225,9 @@ function sidebarNotes() {
           text: 'Share',
           items: [
             { text: 'Reproduction', link: '/notes/others/reproduction' },
-            { text: 'ComponentShare', link: '/notes/others/share' },
+            { text: 'ComponentsShare', link: '/notes/others/share' },
           ],
-        }
+        },
       ],
     },
   ]
