@@ -1,5 +1,58 @@
 # 拓展
 
+## vFor 迭代对象
+
+:::tip TIP
+[vue2 官网](https://v2.cn.vuejs.org/v2/guide/list.html#%E7%94%A8-v-for-%E6%8A%8A%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E5%AF%B9%E5%BA%94%E4%B8%BA%E4%B8%80%E7%BB%84%E5%85%83%E7%B4%A0) 中写道
+
+> 你也可以用 `of` 替代 `in` 作为分隔符，因为它更接近 `JavaScript` 迭代器的语法
+
+因此，在 `vue template` 中，`of` 与 `in` 具有相同的效果
+:::
+
+```html
+<div v-for="(value, name, index) in object">
+  {{ index }}. {{ name }}: {{ value }}
+</div>
+```
+
+<DemoContainer>
+  <p class="demo-source-link">
+    <a
+      href="https://github.com/Carina957/vitepress-blog/blob/main/docs/guide/javascript/components/vFor-demo.vue"
+      target="_blank"
+    >source</a>
+  </p>
+
+  <Demo />
+</DemoContainer>
+
+<script setup>
+import Demo from './components/vFor-demo.vue'
+import DemoContainer from '../../.vitepress/theme/components/DemoContainer.vue'
+</script>
+
+## vue/cli Prettier.config.js
+
+```js
+module.exports = {
+  printWidth: 80,
+  tabWidth: 2,
+  useTabs: false,
+  semi: false,
+  singleQuote: true,
+  arrowParens: 'avoid',
+  quoteProps: 'as-needed',
+  jsxSingleQuote: false,
+  trailingComma: 'es5',
+  bracketSpacing: true,
+  htmlWhitespaceSensitivity: 'ignore', // ignore css
+  vueIndentScriptAndStyle: false,
+  endOfLine: 'lf',
+  bracketSameLine: false,
+}
+```
+
 ## 组件的通信
 
 ### 派发与广播 —— 自行实现 `dispatch` 和 `broadcast` 方法
@@ -223,27 +276,6 @@ function findBrothersComponents(context, componentName, exceptMe = true) {
 export { findBrothersComponents }
 ```
 
-## vue/cli Prettier.config.js
-
-```js
-module.exports = {
-  printWidth: 80,
-  tabWidth: 2,
-  useTabs: false,
-  semi: false,
-  singleQuote: true,
-  arrowParens: 'avoid',
-  quoteProps: 'as-needed',
-  jsxSingleQuote: false,
-  trailingComma: 'es5',
-  bracketSpacing: true,
-  htmlWhitespaceSensitivity: 'ignore', // ignore css
-  vueIndentScriptAndStyle: false,
-  endOfLine: 'lf',
-  bracketSameLine: false,
-}
-```
-
-## 参考
+### 参考
 
 - [Vue.js 组件精讲](https://juejin.cn/book/6844733759942557704)

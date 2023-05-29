@@ -318,7 +318,7 @@ import DemoContainer from '../../.vitepress/theme/components/DemoContainer.vue'
 
 - [Window.open() | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/open)
 
-### 优雅的捕获 async 错误
+## 优雅的捕获 async 错误
 
 ```js
 // 统一封装函数
