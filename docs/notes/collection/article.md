@@ -2,6 +2,7 @@
 
 - [“一把梭：REST API 全用 POST”](https://coolshell.cn/articles/22173.html)——[陈皓](https://coolshell.cn/articles/author/haoel)
 - [你不知道的 `Chrome` 调试技巧](https://juejin.cn/book/6844733783166418958)
+- [AIFE 周刊](https://aifeweekly.zhubai.love)
 
 ## Juejin Booklet
 
