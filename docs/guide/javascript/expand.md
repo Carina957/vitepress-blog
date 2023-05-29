@@ -317,3 +317,28 @@ import DemoContainer from '../../.vitepress/theme/components/DemoContainer.vue'
 ### Reference
 
 - [Window.open() | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/open)
+
+### 优雅的捕获 async 错误
+
+```js
+// 统一封装函数
+const unity = promise =>
+  promise.then(
+    res => [null, res],
+    err => [err]
+  )
+
+async function ademo() {
+  let [err, res] = await unity(
+    new Promise((resolve, reject) => reject('error'))
+  )
+
+  console.log(/res/, res)
+  if (err !== null) {
+    console.error(/error/, err)
+    return false
+  }
+}
+
+ademo()
+```
