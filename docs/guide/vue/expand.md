@@ -279,3 +279,19 @@ export { findBrothersComponents }
 ### 参考
 
 - [Vue.js 组件精讲](https://juejin.cn/book/6844733759942557704)
+
+## props vModel 的处理方式
+
+```vue
+<script>
+export default {
+  model: { prop: 'obj', event: 'change' },
+  props: { obj: { type: Object, default: () => ({}) } },
+  methods: {
+    syncInfo() {
+      this.$emit('change', { ...this.obj, ...this.objCopy })
+    },
+  },
+}
+</script>
+```
