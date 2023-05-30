@@ -19,7 +19,7 @@
 <DemoContainer>
   <p class="demo-source-link">
     <a
-      href="https://github.com/Carina957/vitepress-blog/blob/main/docs/guide/javascript/components/vFor-demo.vue"
+      href="https://github.com/Carina957/vitepress-blog/blob/main/docs/guide/vue/components/vFor-demo.vue"
       target="_blank"
     >source</a>
   </p>
