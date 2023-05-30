@@ -1,5 +1,5 @@
 ---
-outline: deep
+outline: [2, 3]
 ---
 
 # 组件
@@ -459,3 +459,125 @@ import '@/components/SvgIcon'
 > icon-class 属性值必须为对应 svg 文件的文件名。
 >
 > class 属性为自定义，如需设置图标大小或颜色，则可如上示例自定义 class 通过 font-size 属性修改大小，color 属性修改图标颜色。
+
+## Dialog
+
+基于 [Element UI](https://element.eleme.cn/#/zh-CN/component/dialog) 的二次封装
+
+```vue
+<template>
+  <div>
+    <el-dialog
+      :visible.sync="dialogVisiable"
+      :append-to-body="appendToBody"
+      :modal-append-to-body="modalAppendToBody"
+      :title="title"
+      :width="width"
+      :custom-class="customClass"
+      :fullscreen="fullscreen"
+      :top="top"
+      :lock-scroll="lockScroll"
+      :modal="modal"
+      :center="center"
+      :destroy-on-close="destoryOnClose"
+      :close-on-click-modal="closeOnClickModal"
+      :close-on-press-escape="closeOnPressEscape"
+      :show-close="showClose"
+      :before-close="beforeClose"
+    >
+      <slot name="title" />
+      <slot />
+      <span slot="footer">
+        <slot name="footer" />
+      </span>
+    </el-dialog>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Dialog',
+  props: {
+    title: {
+      type: String,
+      default: '提示',
+    },
+    width: {
+      type: String,
+      default: '30%',
+    },
+    customClass: {
+      type: String,
+      default: 'wisdom-dialog--borderRadius',
+    },
+    appendToBody: {
+      type: Boolean,
+      default: false,
+    },
+    modalAppendToBody: {
+      type: Boolean,
+      default: true,
+    },
+    fullscreen: {
+      type: Boolean,
+      default: false,
+    },
+    top: {
+      type: String,
+      default: '15vh',
+    },
+    modal: {
+      type: Boolean,
+      default: true,
+    },
+    lockScroll: {
+      type: Boolean,
+      default: true,
+    },
+    center: {
+      type: Boolean,
+      default: false,
+    },
+    destoryOnClose: {
+      type: Boolean,
+      default: false,
+    },
+    closeOnClickModal: {
+      type: Boolean,
+      default: true,
+    },
+    closeOnPressEscape: {
+      type: Boolean,
+      default: true,
+    },
+    showClose: {
+      type: Boolean,
+      default: true,
+    },
+    beforeClose: {
+      type: Function,
+      default: done => done(),
+    },
+  },
+  data() {
+    return {
+      dialogVisiable: false,
+    }
+  },
+  methods: {
+    open() {
+      this.dialogVisiable = true
+    },
+    close() {
+      this.dialogVisiable = false
+    },
+  },
+}
+</script>
+
+<style>
+.custom-dialog--borderRadius {
+  border-radius: 5px !important;
+}
+</style>
+```
