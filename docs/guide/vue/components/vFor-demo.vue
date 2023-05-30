@@ -9,7 +9,7 @@ const iterateObject = reactive({
 </script>
 
 <template>
-  <p v-for="(m_val, m_key, m_index) in iterateObject" :key="m_key">
-    {{ m_index + 1 }}. {{ m_key }} - {{ m_val }}
+  <p v-for="(value, key, index) in iterateObject" :key="key">
+    {{ index + 1 }}. {{ key }} - {{ value }}
   </p>
 </template>
