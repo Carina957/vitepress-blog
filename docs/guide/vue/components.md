@@ -581,3 +581,36 @@ export default {
 }
 </style>
 ```
+
+## Element Plus 目录结构
+
+```txt
+internal/build
+├── build.config.ts        	# unbuild 配置文件
+├── dist                    # 构建产物
+├── gulpfile.ts             # 构建脚本
+├── package.json
+├── src
+│   ├── build-info.ts       # 构建信息
+│   ├── constants.ts        # 一些常量
+│   ├── index.ts            # 入口文件
+│   ├── plugins             # 插件
+│   │   └── element-plus-alias.ts  # 导入别名
+│   ├── tasks
+│   │   ├── full-bundle.ts  # 构建完整产物
+│   │   ├── helper.ts       # 生成 WebStorm 提示文件
+│   │   ├── index.ts
+│   │   ├── modules.ts      # 构建 bundleless 产物
+│   │   └── types-definitions.ts # 生成 d.ts 文件
+│   ├── type-safe.json      # 「类型安全」列表
+│   └── utils               # 工具函数
+│       ├── gulp.ts
+│       ├── index.ts
+│       ├── log.ts
+│       ├── paths.ts
+│       ├── pkg.ts
+│       ├── process.ts
+│       └── rollup.ts
+├── tsconfig.json
+└── vue-jest-transformer.js
+```
