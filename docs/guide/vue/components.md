@@ -586,7 +586,7 @@ export default {
 
 ```txt
 internal/build
-├── build.config.ts        	# unbuild 配置文件
+├── build.config.ts         # unbuild 配置文件
 ├── dist                    # 构建产物
 ├── gulpfile.ts             # 构建脚本
 ├── package.json

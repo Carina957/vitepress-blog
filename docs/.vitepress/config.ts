@@ -128,6 +128,7 @@ function sidebarGuide() {
       collapsed: false,
       items: [
         { text: 'basic', link: '/guide/typescript/basic' },
+        { text: 'directives', link: '/guide/typescript/directives' },
         { text: 'utils', link: '/guide/typescript/utils' },
       ],
     },
