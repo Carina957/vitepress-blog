@@ -113,7 +113,7 @@ export default ClickOutside
  * Prevent repeated clicks
  * @Example v-repeat-click="()=>{}"
  */
-import { on, once } from '/guide/typescript/utils/domUtils'
+import { on, once } from '/guide/typescript/utils#domUtils'
 import type { Directive, DirectiveBinding } from 'vue'
 
 const repeatDirective: Directive = {
