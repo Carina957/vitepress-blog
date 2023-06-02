@@ -902,10 +902,7 @@ export function setStorage(key, value, deadtime = 0) {
 export function getStorage(key, def = false) {
   const _deadtime = parseInt(uni.getStorageSync(key + DEADTIME_TEXT))
 
-  if (_deadtime && _deadtime < Date.now() / 1000) {
-    if (String(def)) return def
-    else throw new Error('Storage expired:' + key + ' already expired!!!')
-  }
+  if (_deadtime && _deadtime < Date.now() / 1000) return def
 
   return uni.getStorageSync(key) || def
 }
