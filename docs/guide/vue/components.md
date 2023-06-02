@@ -290,6 +290,39 @@ export default {
 }
 ```
 
+## Element Plus 目录结构
+
+```txt
+internal/build
+├── build.config.ts         # unbuild 配置文件
+├── dist                    # 构建产物
+├── gulpfile.ts             # 构建脚本
+├── package.json
+├── src
+│   ├── build-info.ts       # 构建信息
+│   ├── constants.ts        # 一些常量
+│   ├── index.ts            # 入口文件
+│   ├── plugins             # 插件
+│   │   └── element-plus-alias.ts  # 导入别名
+│   ├── tasks
+│   │   ├── full-bundle.ts  # 构建完整产物
+│   │   ├── helper.ts       # 生成 WebStorm 提示文件
+│   │   ├── index.ts
+│   │   ├── modules.ts      # 构建 bundleless 产物
+│   │   └── types-definitions.ts # 生成 d.ts 文件
+│   ├── type-safe.json      # 「类型安全」列表
+│   └── utils               # 工具函数
+│       ├── gulp.ts
+│       ├── index.ts
+│       ├── log.ts
+│       ├── paths.ts
+│       ├── pkg.ts
+│       ├── process.ts
+│       └── rollup.ts
+├── tsconfig.json
+└── vue-jest-transformer.js
+```
+
 ## Virtual List
 
 虚拟列表
@@ -582,35 +615,111 @@ export default {
 </style>
 ```
 
-## Element Plus 目录结构
+## Table
 
-```txt
-internal/build
-├── build.config.ts         # unbuild 配置文件
-├── dist                    # 构建产物
-├── gulpfile.ts             # 构建脚本
-├── package.json
-├── src
-│   ├── build-info.ts       # 构建信息
-│   ├── constants.ts        # 一些常量
-│   ├── index.ts            # 入口文件
-│   ├── plugins             # 插件
-│   │   └── element-plus-alias.ts  # 导入别名
-│   ├── tasks
-│   │   ├── full-bundle.ts  # 构建完整产物
-│   │   ├── helper.ts       # 生成 WebStorm 提示文件
-│   │   ├── index.ts
-│   │   ├── modules.ts      # 构建 bundleless 产物
-│   │   └── types-definitions.ts # 生成 d.ts 文件
-│   ├── type-safe.json      # 「类型安全」列表
-│   └── utils               # 工具函数
-│       ├── gulp.ts
-│       ├── index.ts
-│       ├── log.ts
-│       ├── paths.ts
-│       ├── pkg.ts
-│       ├── process.ts
-│       └── rollup.ts
-├── tsconfig.json
-└── vue-jest-transformer.js
+```vue
+<template>
+  <div>
+    <el-table
+      v-loading="loading"
+      :element-loading-text="loadingText"
+      :data="data"
+      ref="table"
+      :stripe="stripe"
+      :border="border"
+      :max-height="maxHeight"
+      :highlight-current-row="highlightCurrentRow"
+      @selection-change="selectionChange"
+    >
+      <template v-for="col in columns">
+        <el-table-column
+          v-if="col.slot"
+          :key="col.prop + ' ' + col.name"
+          :type="col.type || ''"
+          :prop="col.prop"
+          :label="col.name"
+          :width="col.width"
+          :fiexd="col.fixed || false"
+          :align="col.align || 'center'"
+          :sortable="col.sortable"
+        >
+          <template #default="{ row, column, $index }">
+            <slot
+              :row="row"
+              :column="column"
+              :$index="$index"
+              :name="col.slot"
+            ></slot>
+          </template>
+        </el-table-column>
+        <el-table-column
+          v-else
+          :key="col.prop + ' ' + col.name"
+          :type="col.type || ''"
+          :prop="col.prop"
+          :label="col.name"
+          :width="col.width"
+          :fiexd="col.fixed || false"
+          :align="col.align || 'center'"
+          :sortable="col.sortable"
+        ></el-table-column>
+      </template>
+    </el-table>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'SelfTable',
+  props: {
+    data: {
+      type: Array,
+      required: true,
+    },
+    stripe: {
+      type: Boolean,
+      default: false,
+    },
+    border: {
+      type: Boolean,
+      default: false,
+    },
+    columns: {
+      type: Array,
+      required: true,
+    },
+    loading: {
+      type: Boolean,
+      default: false,
+    },
+    loadingText: {
+      type: String,
+      default: '拼命加载中',
+    },
+    maxHeight: {
+      type: Number || String,
+    },
+    highlightCurrentRow: {
+      type: Boolean,
+      default: true,
+    },
+    selectionChange: {
+      type: Function,
+      default: () => {},
+    },
+    sortable: {
+      type: Boolean || String,
+      default: false,
+    },
+  },
+  methods: {
+    toggleAllSelection() {
+      this.$refs.table.toggleAllSelection()
+    },
+    clearSelection() {
+      this.$refs.table.clearSelection()
+    },
+  },
+}
+</script>
 ```
