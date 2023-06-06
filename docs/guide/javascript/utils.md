@@ -926,6 +926,8 @@ export function clear() {
 
 ## async forEach
 
+支持异步的 `forEach`
+
 ```js
 const asyncForEach = async (array, callback) => {
   for (let index = 0; index < array.length; index++) {
