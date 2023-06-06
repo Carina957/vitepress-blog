@@ -168,7 +168,10 @@ function sidebarGuide() {
     {
       text: 'CSS',
       collapsed: false,
-      items: [{ text: 'basic', link: '/guide/css/basic' }],
+      items: [
+        { text: 'basic', link: '/guide/css/basic' },
+        { text: 'framework', link: '/guide/css/framework' },
+      ],
     },
     {
       text: 'Vscode',
