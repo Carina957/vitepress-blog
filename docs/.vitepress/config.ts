@@ -82,15 +82,23 @@ function nav() {
           items: [
             {
               text: 'Vue',
-              link: 'https://cn.vuejs.org/',
+              link: 'https://cn.vuejs.org',
             },
             {
               text: 'React',
-              link: 'https://beta.reactjs.org/',
+              link: 'https://beta.reactjs.org',
+            },
+            {
+              text: 'Nuxt',
+              link: 'https://www.nuxtjs.cn',
+            },
+            {
+              text: 'Next',
+              link: 'https://nextjs.org',
             },
             {
               text: 'TypeScript',
-              link: 'https://www.typescriptlang.org/zh/',
+              link: 'https://www.typescriptlang.org/zh',
             },
           ],
         },
