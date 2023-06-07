@@ -21,9 +21,9 @@ jobs:
         pnpm run build
 
     - name: Deploy
-      uses: s0/git-publish-subdir-action@develop
+      uses: s0/git-publish-subdir-action@v2.6.0
       env:
         REPO: git@github.com:Carina957/Carina957.github.io.git
-        BRANCH: gh-pages
+        BRANCH: main
         FOLDER: docs/.vitepress/dist
         SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }
