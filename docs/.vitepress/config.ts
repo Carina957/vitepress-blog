@@ -100,6 +100,10 @@ function nav() {
               text: 'TypeScript',
               link: 'https://www.typescriptlang.org/zh',
             },
+            {
+              text: 'Vite',
+              link: 'https://vitejs.dev',
+            },
           ],
         },
       ],
