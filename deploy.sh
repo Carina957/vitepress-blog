@@ -21,7 +21,7 @@ git commit -m 'deploy'
 # git push -f git@github.com:Carina957/Carina957.github.io.git main
 git push -f https://github.com/Carina957/Carina957.github.io.git main
 
-# other branch
+# github pages
 # git push -f git@github.com:Carina957/Carina957.github.io.git main:gh-pages
 
 cd -
