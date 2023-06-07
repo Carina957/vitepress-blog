@@ -15,9 +15,8 @@ cd docs/.vitepress/dist
 git init
 git branch -m main
 git add -A
-git commit -m 'deploy'
+git commit -m 'deploy: Deploy to GitHub Pages'
 
-# 如果你想要部署到 https://<USERNAME>.github.io
 # git push -f git@github.com:Carina957/Carina957.github.io.git main
 git push -f https://github.com/Carina957/Carina957.github.io.git main
 
