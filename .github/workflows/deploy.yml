@@ -12,6 +12,8 @@ jobs:
 
     - name: Setup Node.js
       uses: NullVoxPopuli/action-setup-pnpm@v2.3.0
+      with:
+        no-lockfile: true
 
     - name: pnpm install, build
       run: |
