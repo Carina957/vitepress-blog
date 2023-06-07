@@ -26,4 +26,5 @@ jobs:
         REPO: git@github.com:Carina957/Carina957.github.io.git
         BRANCH: main
         FOLDER: docs/.vitepress/dist
-        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }
+        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+
