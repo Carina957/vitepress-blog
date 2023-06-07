@@ -29,12 +29,12 @@ jobs:
     #     GITHUB_TOKEN: ${{ secrets.DEPLOY_PRIVATE_KEY }}
     #     SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
     - name: Deploy
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
-        with:
-          source-directory: 'docs/.vitepress/dist'
-          destination-github-username: 'Carina957'
-          destination-repository-name: 'Carina957.github.io'
-          user-email: chis_x@foxmail.com
-          target-branch: main
+      uses: cpina/github-action-push-to-another-repository@main
+      env:
+        SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+      with:
+        source-directory: 'docs/.vitepress/dist'
+        destination-github-username: 'Carina957'
+        destination-repository-name: 'Carina957.github.io'
+        user-email: chis_x@foxmail.com
+        target-branch: main
