@@ -10,12 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: NullVoxPopuli/action-setup-pnpm@v2
-      with:
-        node-registry-url: 'https://registry.npmjs.org'
-        node-version: 18
-        cache: 'pnpm'
+    - name: Setup Node.js
+      uses: NullVoxPopuli/action-setup-pnpm@v2.3.0
 
     - name: pnpm install, build
       run: |
