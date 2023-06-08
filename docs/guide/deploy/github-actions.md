@@ -11,7 +11,7 @@ some demos:
 
 ### Github actions ssh deploy key
 
-GitHub Actions 是 GitHub 提供的自动化构建、测试和部署工具，它可以帮助开发者在代码提交后自动进行测试和部署。
+`GitHub Actions` 是 GitHub 提供的自动化构建、测试和部署工具，它可以帮助开发者在代码提交后自动进行测试和部署。
 如果需要在 GitHub Actions 中使用 SSH 部署密钥，可以按照以下步骤进行设置：
 
 [生成 SSH 密钥](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)：在本地计算机上使用 ssh-keygen 命令生成 SSH 密钥对，公钥（id_rsa.pub）和私钥（id_rsa）。注意，私钥不应该被泄露，公钥需要被添加到目标服务器的 [Deploy keys](https://github.com/your_username/your_repo/settings/keys) 文件中。
