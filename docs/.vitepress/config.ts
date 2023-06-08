@@ -193,7 +193,12 @@ function sidebarGuide() {
     {
       text: 'Markdown',
       collapsed: false,
-      items: [{ text: 'Basic', link: 'guide/markdown/Basic' }],
+      items: [{ text: 'Basic', link: 'guide/markdown/basic' }],
+    },
+    {
+      text: 'Deploy',
+      collapsed: false,
+      items: [{ text: 'Github Actions', link: 'guide/deploy/github-actions' }],
     },
     {
       text: 'InterView',
@@ -242,6 +247,7 @@ function sidebarNotes() {
           items: [
             { text: 'Reproduction', link: '/notes/others/reproduction' },
             { text: 'ComponentsShare', link: '/notes/others/share' },
+            { text: 'Notebook', link: '/notes/others/notebook' },
           ],
         },
       ],
