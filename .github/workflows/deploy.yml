@@ -24,6 +24,7 @@ jobs:
       uses: s0/git-publish-subdir-action@develop
       env:
         REPO: git@github.com:Carina957/Carina957.github.io.git
+        MESSAGE: "deploy: from {target-branch}, this updates the content to the commit {sha} that had the message:\n{msg}"
         BRANCH: main
         FOLDER: docs/.vitepress/dist
         SSH_PRIVATE_KEY: ${{secrets.DEPLOY_PRIVATE_KEY}}
