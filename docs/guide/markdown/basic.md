@@ -25,7 +25,7 @@ outline: deep
 | JSON             | json                    | -                     | -           |
 | Perl             | perl, pl, Perl          | shBrushPerl.js        | -           |
 | PHP              | php                     | shBrushPhp.js         | -           |
-| text             | text, plain             | shBrushPlain.js       | 普通文本    |
+| text             | text, txt, plain        | shBrushPlain.js       | 普通文本    |
 | Python           | py, python              | shBrushPython.js      | -           |
 | Ruby             | ruby, rails, ror, rb    | shBrushRuby.js        | -           |
 | SASS&SCSS        | sass, scss              | shBrushSass.js        | -           |

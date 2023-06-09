@@ -153,3 +153,71 @@ git push --force origin main
 # 查看项目的行尾序列
 git ls-files --eol [path]
 ```
+
+## SSH config
+
+### SSH 配置方式
+
+- 命令行选项
+- 用户配置文件 (~/.ssh/config)
+- 系统配置文件 (/etc/ssh/ssh_config)
+
+配置文件可分为多个配置区段，每个配置区段使用 Host 来区分。我们可以在命令行中输入不同的 host 来加载不同的配置段。
+
+对每一个配置项来说，首次获取的参数值将被采用，因此通用的设置应该放到文件的后面，特定 host 相关的配置项应放到文件的前面。
+
+### 常用配置项
+
+- Host
+
+配置项标识了一个配置区段。
+
+**配置项参数值可以使用通配符**：\* 代表 0 ～ n 个非空白字符， ? 代表一个非空白字符，! 表示例外通配。
+
+eg: `Host *`
+
+- HostName
+
+指定远程主机名，可以直接使用数字 IP 地址。如果主机名中包含 `%h` ，则实际使用时会被命令行中的主机名替换。
+
+- IdentityFile
+
+  指定密钥认证使用的私钥文件路径。默认为 `~/.ssh/id_dsa`, `~/.ssh/id_ecdsa`, `~/.ssh/id_ed25519` 或 `~/.ssh/id_rsa` 中的一个。
+
+  文件名称可以使用以下转义符：
+
+  1. '%d' 本地用户目录
+  2. '%u' 本地用户名称
+  3. '%l' 本地主机名
+  4. '%h' 远程主机名
+  5. '%r' 远程用户名
+
+  可以指定多个密钥文件，在连接的过程中会依次尝试这些密钥文件。
+
+- Port
+
+指定远程主机端口号，默认为 22 。
+
+- User
+
+指定登录用户名。
+
+- UserKnownHostsFile
+
+指定一个或多个用户认证主机缓存文件，用来缓存通过认证的远程主机的密钥，多个文件用空格分隔。默认缓存文件为： `~/.ssh/known_hosts`, `~/.ssh/known_hosts2`。
+
+### Demo
+
+```txt
+Host codeup.aliyun.com
+  HostName codeup.aliyun.com
+  Port 22
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/codeup_user_ed25519
+
+Host github.com
+  HostName github.com
+  Port 22
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/github.io_deploy
+```
