@@ -156,6 +156,66 @@ git ls-files --eol [path]
 
 ## SSH config
 
+### [生成新的 SSH 密钥](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
+
+```sh
+$ ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+:::tip Tips: 如果你使用的是不支持 Ed25519 算法的旧系统，请使用以下命令：
+
+```sh
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+:::
+
+### 将 SSH 密钥添加到 ssh-agent
+
+1. 确保 ssh-agent 正在运行。
+
+   ::: details 或者你可以考虑自启动 `ssh-agent`
+
+   在 Git for Windows 上自启动 ssh-agent
+
+   可以在打开 bash 或 Git shell 时自动运行 ssh-agent。 复制以下行并将其粘贴到 Git shell 中的 ~/.profile 或 ~/.bashrc 文件中：
+
+   ```sh
+   env=~/.ssh/agent.env
+
+   agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
+
+   agent_start () {
+       (umask 077; ssh-agent >| "$env")
+       . "$env" >| /dev/null ; }
+
+   agent_load_env
+
+   # agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2=agent not running
+   agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
+
+   if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
+       agent_start
+       ssh-add
+   elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
+       ssh-add
+   fi
+
+   unset env
+   ```
+
+   :::
+
+   ```sh
+   $ eval "$(ssh-agent -s)"
+   ```
+
+2. 将 SSH 私钥添加到 ssh-agent。
+
+   ```sh
+   $ ssh-add ~/.ssh/id_ed25519
+   ```
+
 ### SSH 配置方式
 
 - 命令行选项
@@ -217,7 +277,16 @@ Host codeup.aliyun.com
 
 Host github.com
   HostName github.com
+  User git
+  Port 22
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/chis_office
+
+Host github_io_deploy
+  HostName github.com
+  User git
   Port 22
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/github.io_deploy
+
 ```
