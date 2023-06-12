@@ -1,8 +1,6 @@
----
-outline: deep
----
+# Config
 
-# Vscode
+记录一些 `vscode` 插件的配置
 
 ## Window TODO Highlight
 

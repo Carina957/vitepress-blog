@@ -188,7 +188,10 @@ function sidebarGuide() {
     {
       text: 'Vscode',
       collapsed: false,
-      items: [{ text: 'config', link: 'guide/vscode/config' }],
+      items: [
+        { text: 'basic', link: 'guide/vscode/basic' },
+        { text: 'config', link: 'guide/vscode/config' },
+      ],
     },
     {
       text: 'Markdown',
