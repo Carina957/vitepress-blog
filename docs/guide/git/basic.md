@@ -12,7 +12,7 @@ Git is easy to learn and has a tiny footprint with lightning fast performance. I
 Git 是一个免费的开源分布式版本控制系统，旨在快速高效地处理从小型项目到大型项目的所有内容。 Git 易于学习，占用空间小，性能快如闪电。 它超越了 Subversion、CVS、Perforce 和 ClearCase 等 SCM 工具，具有廉价的本地分支、方便的临时区域和多个工作流等特性。
 :::
 
-## 初始化一个 `git` 仓库
+## Init repo
 
 ```sh
 git init
@@ -24,7 +24,7 @@ git remote add origin git@github.com:xxx
 git push -m origin main
 ```
 
-## 配置账号信息
+## Config info
 
 ```sh
 # 查看全局账号信息
@@ -49,7 +49,7 @@ git config --global --unset https.proxy
 env|grep -i proxy
 ```
 
-## 管理仓库
+## Remote repo
 
 ```sh
 # 查看远程仓库
@@ -62,7 +62,7 @@ git remote rm origin
 git remote add origin git@github.com:xxx
 ```
 
-## 分支
+## Branch
 
 ```sh
 # 修改全局默认分支
