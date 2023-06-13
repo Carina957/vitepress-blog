@@ -251,7 +251,7 @@ function sidebarNotes() {
             { text: 'Reproduction', link: '/notes/others/reproduction' },
             { text: 'ComponentsShare', link: '/notes/others/share' },
             { text: 'Notebook', link: '/notes/others/notebook' },
-            { text: 'Change', link: '/notes/others/changelog' },
+            { text: 'Changelog', link: '/notes/others/changelog' },
           ],
         },
       ],
