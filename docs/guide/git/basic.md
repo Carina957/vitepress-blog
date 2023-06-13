@@ -356,3 +356,7 @@ The syntax for creating an alias is as follows:
 ```sh
 $ git config --global alias.[new-alias] '[original-command]'
 ```
+
+### Reference
+
+- [Git Submodule Guide](https://phoenixnap.com/kb/git-submodule#ftoc-heading-17)
