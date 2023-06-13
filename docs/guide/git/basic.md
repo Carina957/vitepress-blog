@@ -290,3 +290,69 @@ Host github_io_deploy
   IdentityFile ~/.ssh/github.io_deploy
 
 ```
+
+## Submodule
+
+`git submodule` 功能可以让我们在一个仓库中添加另一个仓库作为当前仓库的子仓库。`.submodules` 只是某个仓库某一时刻的一个状态的引用，即某个 `commit` 的引用。
+
+- Add submodule
+
+```sh
+$ git submodule add [submodule_url]
+```
+
+- Init & update submodules
+
+Add `--recursive` suffix to indicate nestde submodules.
+
+::: code-group
+
+```sh [full]
+$ git submodule init && git submodule update
+```
+
+```sh [abb]
+$ git submodule update --init
+```
+
+```sh [nested-sub abb]
+$ git submodule update --init --recursive
+```
+
+```sh [remote]
+$ git submodule update --remote --recursive
+```
+
+:::
+
+- Clone repo, init and update submodules(include nested submodules)
+
+```sh
+$ git clone [repo_name] --recurse-submodules
+```
+
+- Pull repo, include nested submodules
+
+```sh
+$ git pull --recurse-submodules
+```
+
+- Fetch submodules's update
+
+```sh
+$ git submodule update --remote [submodule_name]
+```
+
+### Refenerce
+
+- [Git Submodules](https://pengfeixc.com/blogs/developer-handbook/git-submodules)
+
+## Config
+
+### Using Aliases
+
+The syntax for creating an alias is as follows:
+
+```sh
+$ git config --global alias.[new-alias] '[original-command]'
+```
