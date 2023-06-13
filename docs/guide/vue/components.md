@@ -647,7 +647,7 @@ export default {
             <slot
               :row="row"
               :column="column"
-              :$index="$index"
+              :[$index]="$index"
               :name="col.slot"
             ></slot>
           </template>
