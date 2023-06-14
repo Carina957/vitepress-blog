@@ -134,7 +134,7 @@ git push -f
 git push -u origin master
 ```
 
-## revert
+## Revert
 
 ```sh
 # 修改最后一次提交
@@ -145,6 +145,12 @@ git reflog # 查看历史版本号，找到要恢复的版本号
 git reset --hard [版本号] # 将本地代码回退到指定版本
 git push -f # 将本地代码强制提交，覆盖远程git服务器代码
 git push --force origin main
+```
+
+## Resolve conflict
+
+```sh
+$ git merge origin/[branch_name]
 ```
 
 ## End_of_line
