@@ -146,3 +146,49 @@ export default {
 }
 </script>
 ```
+
+### 刷新路由
+
+::: tip
+`location.href` 修改也会触发路由拦截器。
+:::
+
+```vue
+<template>
+  <div id="app">
+    <router-view v-if="isReload" />
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App',
+  provide() {
+    return {
+      reload: this.reload,
+    }
+  },
+  data() {
+    return {
+      isReload: true,
+    }
+  },
+  methods: {
+    reload() {
+      this.isReload = false
+      this.$nextTick(() => (this.isReload = true))
+    },
+  },
+}
+</script>
+```
+
+Usage:
+
+```vue
+<script>
+export default {
+  inject: ['reload'],
+}
+</script>
+```
