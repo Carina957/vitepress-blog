@@ -2,11 +2,12 @@
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "prettier.jsxSingleQuote": true,
-  "prettier.useEditorConfig": false,
+  "prettier.useEditorConfig": true,
   "prettier.enable": true,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": false
-  }
+    "source.fixAll.eslint": true
+  },
+  "files.eol": "\n"
 }
