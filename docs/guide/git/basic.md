@@ -159,51 +159,65 @@ $ git merge origin/[branch_name]
 
 - Add submodule
 
-```sh
-$ git submodule add [submodule_url]
-```
+  ```sh
+  $ git submodule add [submodule_url]
+  ```
 
 - Init & update submodules
 
-Add `--recursive` suffix to indicate nestde submodules.
+  Add `--recursive` suffix to indicate nestde submodules.
 
-::: code-group
+  ::: code-group
 
-```sh [full]
-$ git submodule init && git submodule update
-```
+  ```sh [full]
+  $ git submodule init && git submodule update
+  ```
 
-```sh [abb]
-$ git submodule update --init
-```
+  ```sh [abb]
+  $ git submodule update --init
+  ```
 
-```sh [nested-sub abb]
-$ git submodule update --init --recursive
-```
+  ```sh [nested-sub abb]
+  $ git submodule update --init --recursive
+  ```
 
-```sh [remote]
-$ git submodule update --remote --recursive
-```
+  ```sh [remote]
+  $ git submodule update --remote --recursive
+  ```
 
-:::
+  :::
 
 - Clone repo, init and update submodules(include nested submodules)
 
-```sh
-$ git clone [repo_name] --recurse-submodules
-```
+  ```sh
+  $ git clone [repo_name] --recurse-submodules
+  ```
 
 - Pull repo, include nested submodules
 
-```sh
-$ git pull --recurse-submodules
-```
+  ```sh
+  $ git pull --recurse-submodules
+  ```
 
 - Fetch submodules's update
 
-```sh
-$ git submodule update --remote [submodule_name]
-```
+  ```sh
+  $ git submodule update --remote [submodule_name]
+  ```
+
+- Unload submodule
+
+  ::: code-group
+
+  ```sh [deinit]
+  $ git submodule deinit [submodule_name] --force
+  ```
+
+  ```sh [rm]
+  $ git rm [submodule_name]
+  ```
+
+  :::
 
 ### Refenerce
 
