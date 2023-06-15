@@ -122,8 +122,18 @@ function sidebarGuide() {
       text: 'Git',
       collapsed: false,
       items: [
-        { text: 'basic', link: '/guide/git/basic' },
+        {
+          text: 'basic',
+          link: '/guide/git/basic',
+        },
         { text: 'commit', link: '/guide/git/commit' },
+        {
+          text: 'article',
+          items: [
+            { text: 'End_of_line', link: '/guide/git/article/end-of-line' },
+            { text: 'SSH_config', link: '/guide/git/article/ssh-config' },
+          ],
+        },
       ],
     },
     {
