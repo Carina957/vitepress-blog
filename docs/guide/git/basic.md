@@ -199,7 +199,7 @@ $ git merge origin/[branch_name]
   $ git pull --recurse-submodules
   ```
 
-- Fetch submodules's update
+- Fetch submodules update
 
   ```sh
   $ git submodule update --remote [submodule_name]
