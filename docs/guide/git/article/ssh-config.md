@@ -8,7 +8,7 @@
 $ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
-:::tip Tips: 如果你使用的是不支持 Ed25519 算法的旧系统，请使用以下命令：
+:::tip Tips: 如果你使用的是不支持 `Ed25519` 算法的旧系统，请使用以下命令：
 
 ```sh
 $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
