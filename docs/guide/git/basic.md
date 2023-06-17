@@ -83,23 +83,27 @@ git branch
 # 列出所有远程分支
 git branch -r
 
+# 新建一个分支，并与指定的远程分支建立追踪关系
+git branch --track feature/todo_13 origin/main
+
 # 新建一个分支，但是依然停留在当前分支
 git branch dev
+
+# 删除分支
+git branch -d feature/todo_12
+
+# 强制删除分支 表示 `--delete --force`
+git branch -D feature/todo_12
+
+# 建立分支的追踪关系(本地有分支，远程没有)
+
+git branch --set-upstream-to=origin/develop
 
 # 新建一个分支，并切换到该分支
 git checkout -b Fixbug/TJS-123
 
 # 以远程分支为基础新建一个分支，并切换到该分支
 git checkout -b feature/todo_12 origin/main
-
-# 新建一个分支，并与指定的远程分支建立追踪关系
-git branch --track feature/todo_13 origin/main
-
-# 建立分支的追踪关系(本地有分支，远程没有)
-git push --set-upstream origin feature/todo_11
-
-# 推送本地分支到远程
-git push origin feature/todo_13:feature/todo_13
 
 # 建立分支的追踪关系(本地没有有分支，远程有)
 git checkout --track origin/branch_name
@@ -110,28 +114,42 @@ git checkout develop
 # 切换到上一个分支
 git checkout -
 
-# 合并指定分支到当前分支
-git merge feature/todo_14
+# 建立分支的追踪关系(本地有分支，远程没有)
+git push --set-upstream origin feature/todo_11
 
-# 删除分支
-git branch -d feature/todo_12
-
-# 强制删除分支 表示 `--delete --force`
-git branch -D feature/todo_12
+# 推送本地分支到远程
+git push origin feature/todo_13:feature/todo_13
 
 # 删除远程分支
 git push origin --delete feature/todo_12
 git push origin :feature/todo_12
 git branch -dr origin/feature/todo_12
 
+# 推送到远程服务器并关联本地分支
+git push -u origin master
+
+# 拉取
+
+git pull
+git pull origin develop
+
+# 拉取不相关历史的分支
+
+git pull origin [branch_name] --allow-unrelated-histories
+
+# 拉取仓库最新状态
+
+git fetch
+
+# 合并指定分支到当前分支
+git merge feature/todo_14
+git merge origin/develop
+
 # 回滚项目版本
 git reset --hard d12kansdk
 
 # 强制推送
 git push -f
-
-# 推送到远程服务器并关联本地分支
-git push -u origin master
 ```
 
 ## Revert
