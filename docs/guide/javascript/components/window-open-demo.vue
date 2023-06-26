@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script setup>
 const open = () => {
   window.open(
     'https://www.google.com',
