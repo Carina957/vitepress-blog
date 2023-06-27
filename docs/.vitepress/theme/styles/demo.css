@@ -8,7 +8,8 @@
   transition: background-color 0.5s;
 }
 
-.demo-source-link {
+.demo-source-link,
+.demo-copy {
   color: var(--vp-c-text-2) !important;
   position: absolute;
   top: 0;
