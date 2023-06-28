@@ -5,11 +5,15 @@ interface PoemsProps {
   content?: string[]
 }
 
-const { title, author, content } = withDefaults(defineProps<PoemsProps>(), {
-  title: '',
-  author: '',
-  content: () => [],
-})
+const { title, author, content } =
+  (defineProps<PoemsProps>(),
+  {
+    title: '',
+    author: '',
+    content: () => [],
+  })
+
+const copy = () => {}
 </script>
 
 <template>

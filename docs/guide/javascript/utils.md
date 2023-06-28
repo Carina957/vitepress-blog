@@ -6,7 +6,7 @@ outline: deep
 
 ## debounce
 
-```js
+```js{3-6,8}
 /**
  * 防抖
  * @param {function} callback

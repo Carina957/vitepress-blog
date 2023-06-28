@@ -18,6 +18,8 @@
   "dependencies": {
     "@docsearch/css": "^3.3.4",
     "@docsearch/js": "^3.3.4",
+    "@vueuse/core": "^10.2.0",
+    "unocss": "^0.53.4",
     "vite": "^4.3.6",
     "vitepress": "1.0.0-alpha.65",
     "vue": "^3.3.2"
