@@ -11,6 +11,9 @@ dependencies:
   '@docsearch/js':
     specifier: ^3.3.4
     version: 3.3.4
+  '@types/node':
+    specifier: ^20.3.2
+    version: 20.3.2
   '@vueuse/core':
     specifier: ^10.2.0
     version: 10.2.0(vue@3.3.2)
@@ -19,10 +22,10 @@ dependencies:
     version: 0.53.4(postcss@8.4.23)(vite@4.3.6)
   vite:
     specifier: ^4.3.6
-    version: 4.3.6
+    version: 4.3.6(@types/node@20.3.2)
   vitepress:
     specifier: 1.0.0-alpha.65
-    version: 1.0.0-alpha.65
+    version: 1.0.0-alpha.65(@types/node@20.3.2)
   vue:
     specifier: ^3.3.2
     version: 3.3.2
@@ -733,6 +736,10 @@ packages:
       '@types/unist': 2.0.6
     dev: true
 
+  /@types/node@20.3.2:
+    resolution: {integrity: sha512-vOBLVQeCQfIcF/2Y7eKFTqrMnizK5lRNQ7ykML/5RuwVXVWxYkgwS7xbt4B6fKCUPgbSL5FSsjHQpaGQP/dQmw==}
+    dev: false
+
   /@types/normalize-package-data@2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
@@ -1067,7 +1074,7 @@ packages:
       chokidar: 3.5.3
       fast-glob: 3.2.12
       magic-string: 0.30.0
-      vite: 4.3.6
+      vite: 4.3.6(@types/node@20.3.2)
     transitivePeerDependencies:
       - rollup
     dev: false
@@ -1079,7 +1086,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.3.6
+      vite: 4.3.6(@types/node@20.3.2)
       vue: 3.3.2
     dev: false
 
@@ -3597,7 +3604,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite@4.3.6:
+  /vite@4.3.6(@types/node@20.3.2):
     resolution: {integrity: sha512-cqIyLSbA6gornMS659AXTVKF7cvSHMdKmJJwQ9DXq3lwsT1uZSdktuBRlpHQ8VnOWx0QHtjDwxPpGtyo9Fh/Qg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3622,6 +3629,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.3.2
       esbuild: 0.17.19
       postcss: 8.4.23
       rollup: 3.21.8
@@ -3629,7 +3637,7 @@ packages:
       fsevents: 2.3.2
     dev: false
 
-  /vitepress@1.0.0-alpha.65:
+  /vitepress@1.0.0-alpha.65(@types/node@20.3.2):
     resolution: {integrity: sha512-iGWC0AQC6WrfRZTJf5+TiGG4o8PLhqIJNyai8NVxZCY9YpmMJhddvQeqqjJdQniF/LQK/hQ5nQZ9HgSZDGRPGQ==}
     hasBin: true
     dependencies:
@@ -3640,7 +3648,7 @@ packages:
       '@vueuse/core': 9.13.0(vue@3.3.2)
       body-scroll-lock: 4.0.0-beta.0
       shiki: 0.14.2
-      vite: 4.3.6
+      vite: 4.3.6(@types/node@20.3.2)
       vue: 3.3.2
     transitivePeerDependencies:
       - '@algolia/client-search'

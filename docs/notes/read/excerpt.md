@@ -25,21 +25,18 @@ outline: deep
 
 - 芦叶满汀洲，寒沙带浅流。二十年重过南楼。柳下系船犹未稳，能几日，又中秋。黄鹤断矶头，故人曾到否？旧江山浑是新愁。欲买桂花同载酒，终不似，少年游。
 
-<DemoContainer>
-  <p class="demo-source-link">
-    <a
-      href="https://github.com/Carina957/vitepress-blog/blob/main/docs/guide/javascript/components/demo1.vue"
-      target="_blank"
-    >source</a>
-  </p>
-
-  <!-- TODO: Added a component for displaying poems with a copy function.  -->
-  <Demo1 />
-</DemoContainer>
+<PoemsContainer title="唐多令·芦叶满汀洲" author="宋·刘过" :content="content" />
 
 <script setup>
-import DemoContainer from '../../.vitepress/theme/components/DemoContainer.vue'
-import Demo1 from './components/demo1.vue'
+import PoemsContainer from '../../.vitepress/theme/components/PoemsContainer.vue'
+import { reactive } from 'vue'
+
+const content = reactive([
+  '芦叶满汀洲，寒沙带浅流。二十年重过南楼。',
+  '柳下系船犹未稳，能几日，又中秋。',
+  '黄鹤断矶头，故人曾到否？旧江山浑是新愁。',
+  '欲买桂花同载酒，终不似，少年游。'
+])
 </script>
 
 ## Source

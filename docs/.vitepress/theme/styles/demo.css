@@ -8,8 +8,7 @@
   transition: background-color 0.5s;
 }
 
-.demo-source-link,
-.demo-copy {
+.demo-source-link {
   color: var(--vp-c-text-2) !important;
   position: absolute;
   top: 0;
@@ -17,6 +16,20 @@
   font-size: 12px;
   font-weight: 500;
   transition: color 0.5s;
+}
+
+.demo-copy {
+  color: var(--vp-c-brand) !important;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: color 0.5s;
+}
+.demo-copy:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .note {
