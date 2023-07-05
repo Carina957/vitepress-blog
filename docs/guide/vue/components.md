@@ -726,4 +726,4 @@ export default {
 
 ## [Crud](https://github.com/Carina957/vue-crud/tree/main/Crud)
 
-vue create read update delete components
+[`README`](https://github.com/Carina957/vue-crud#readme.md)
