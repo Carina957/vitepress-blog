@@ -723,3 +723,7 @@ export default {
 }
 </script>
 ```
+
+## [Crud](https://github.com/Carina957/vue-crud/tree/main/Crud)
+
+vue create read update delete components
