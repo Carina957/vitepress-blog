@@ -342,3 +342,82 @@ async function ademo() {
 
 ademo()
 ```
+
+## Horizontal Scroll
+
+JS 横向滚动
+
+**Init**
+
+```vue
+<template>
+  <div class="horizontal-scroll-container"></div>
+</template>
+
+<script>
+export default {
+  name: 'HorizontalScrollDemo',
+  data() {
+    return {
+      horizontalScrollEl: null,
+    }
+  },
+  updated() {
+    // 初始化横向滚动
+    this.initHorizontalScroll()
+  },
+  methods: {
+    initHorizontalScroll() {
+      this.horizontalScrollEl = document.querySelector(
+        '.horizontal-scroll-container'
+      )
+
+      // Adapt Google Chrome and Firefox browser
+      this.horizontalScrollEl.addEventListener(
+        navigator.userAgent.indexOf('Firefox') >= 0
+          ? 'DOMMouseScroll'
+          : 'mousewheel',
+        this.handleHorizontalScroll,
+        false
+      )
+    },
+    handleHorizontalScroll(event) {
+      if (event.preventDefault) {
+        event.preventDefault()
+      } else {
+        event.returnValue = false
+      }
+
+      // 获取滚动方向
+      const detail = event.wheelDelta || event.detail
+      // 定义滚动方向
+      const moveForwardStep = 1
+      const moveBackStep = -1
+      // 滚动速度
+      const scroll_speed = 60
+      // 滚动距离
+      let step = 0
+
+      // 判断滚动方向
+      if (navigator.userAgent.indexOf('Firefox') >= 0) {
+        // 火狐浏览器和谷歌的值正好相反
+        if (detail > 0) {
+          step = moveForwardStep * scroll_speed
+        } else {
+          step = moveBackStep * scroll_speed
+        }
+      } else {
+        if (detail < 0) {
+          step = moveForwardStep * scroll_speed
+        } else {
+          step = moveBackStep * scroll_speed
+        }
+      }
+
+      // 对需要滚动的元素进行滚动操作
+      this.horizontalScrollEl.scrollLeft += step
+    },
+  },
+}
+</script>
+```
