@@ -4,26 +4,98 @@ outline: deep
 
 # Excerpt
 
-## Good sentence
+## Good sentences(25)
 
-- 人这一生，恰似钟摆，要么在欲求不满的痛苦中挣扎，要么在欲望满足的无聊中迷失。—— 叔本华
-- 人生天地间，忽如远行客，能寻慷慨赴死伴侣，生亦何欢，死亦何苦？
-- 玉可碎，而不可改其白。竹可焚，而不可毁其节。身虽死，名可垂于竹帛也！又何惧哉？
-- 毒物疯长，蝉死八年别，倒在我大雪封山之前。
-- 你患得患失，太在意从前，又太担心将来，昨天，是段历史，明天，是个谜团，而今天，是天赐的礼物，像珍惜礼物那样珍惜今天！
-- 世界上有两个我，一个在文字里，白马春衫慢慢行。一个在生活里，蝇营狗苟兀穷年。
-- 君子不立于危墙之下
-- 君子色而不淫，发乎情，止乎礼。
-- 欲买桂花同载酒，总不似，少年游。
-- 便邀东方齐揽月，春不许，再回头。
+仓央嘉措说：“我以为别人尊重我，是因为我很优秀。慢慢的我明白了，别人尊重我，是因为别人很优秀。”
 
-## Poems
+“我从未如此深刻的感受到，与灵魂相距甚远，而我的存在却如此真实。” ——加缪
 
-- 玉楼冰簟鸳鸯锦，粉融香汗流山枕。帘外辘轳声，敛眉含笑惊。柳阴烟漠漠，低鬓蝉钗落。须作一生拼，尽君今日欢。
-- 相见休言有泪珠，酒阑重得叙欢娱，凤屏鸳枕宿金铺。兰麝细香闻喘息，绮罗纤缕见肌肤，此时还恨薄情无？
-- 你曾热爱的那个人，这一生也不会再见面。你等在这文化的废墟上，已没人觉得你狂野。那些让人敬仰的神殿，只在无知的人心中灵验。我住在属于我的猪圈，这一夜无眠。
+我们的年轻人，受舆论影响，认为女性是下贱的，妓女，婊子，可以任人玩弄，欺凌，蹂躏，羞辱。这简直是大规模的毁灭。在我们余下的生命中，一天 24 小时，都会驱使我们努力工作，使我们在沉默中灭亡。
+所以，为了保护我们的思想不受侵害，能够与侵入我们思想使我们日渐沉默的力量抗衡。我们必须学会阅读，以此来激活自身的想象力，去培养我们自己的意识和信仰。我们需要这些技能，来保卫和维护自己的思想。
+——《超脱》
 
-- 芦叶满汀洲，寒沙带浅流。二十年重过南楼。柳下系船犹未稳，能几日，又中秋。黄鹤断矶头，故人曾到否？旧江山浑是新愁。欲买桂花同载酒，终不似，少年游。
+Our young men, today, are being told that women are whores, bitches, things to be scrolled, beaten, shit on, ashamed. This is a marking holocaust. 24 hours a day, for the rest of our lives, the power that be are hard at work, dumbing us to death.
+So, to defend ourselves and fight against the stimulating of these dumbs into our thought processes. We must learn to read, to stimulate our own imaginations, to cultivate our own consciousness, our own belief systems. We all need these skills, to defend, to preserve our minds.
+—— Detachment
+
+勇敢的人，先享受世界
+
+“不论你做什么事情，一定要尽力去做好，在努力做的过程中，你一定会学到一些东西，这样日积月累下来，你的人生就会发生质变。如果你只是简单应付了事，那么你将可能一无所获，反而让你做事的态度也会变得简单应付了事，而且关键还会浪费时间。你怎样对待生活，生活也会怎样对待你。”
+
+世间万物皆美好，你是往事的遗书,是日落的余情未了,是路人脚下不停生长的风。
+
+没有回应的山谷，不值得纵身一跃。
+没有回应的热情，要懂得适可而止。
+
+人这一生，恰似钟摆，要么在欲求不满的痛苦中挣扎，要么在欲望满足的无聊中迷失。—— 叔本华
+
+人生天地间，忽如远行客，能寻慷慨赴死伴侣，生亦何欢，死亦何苦？
+
+玉可碎，而不可改其白。竹可焚，而不可毁其节。身虽死，名可垂于竹帛也！又何惧哉？
+
+毒物疯长，蝉死八年别，倒在我大雪封山之前。
+
+你患得患失，太在意从前，又太担心将来，昨天，是段历史，明天，是个谜团，而今天，是天赐的礼物，像珍惜礼物那样珍惜今天！
+
+世界上有两个我，一个在文字里，白马春衫慢慢行。一个在生活里，蝇营狗苟兀穷年。
+
+君子不立于危墙之下
+
+君子色而不淫，发乎情，止乎礼。
+
+欲买桂花同载酒，总不似，少年游。便邀东方齐揽月，春不许，再回头。
+
+定在有隙，中在得横；滞在双重，通在单轻；虚在当守，实在必冲。
+
+世间万物皆美好，你是往事的遗书，是日落的余情未了，是路人脚下不停生长的风。
+
+其实每个人有每个人的活法
+不要过度去追捧别人
+也别去诋毁一个奋斗者
+时间总能给我们带来最真实的答案
+
+During the whole of a dull, dark soundless day.
+In the autumn of that year.
+When the clouds hung oppressively low in heaven.
+I have been passing alone on the horse's back.
+Through the Singularly, dreary tract in the country.
+At at length found myself, as the shades of the evening drew on.
+Within the view of melancholy House of Usher.
+I konw not how it was.
+But with the first glimpse of the building,
+A sence of insufferable gloom pervaded my spirit,
+I looked upon some blank scape for domain.
+Upon the bleak walls, upon the white trunks of decayed trees.
+With the utter depression souls.
+There was an iceness.
+A sinking.
+A sickening of the heart.
+
+> 那年的秋天，阴沉而寂寥
+> 沉重的云层低悬于天穹之上
+> 我独自一人策马前行
+> 穿过这片阴沉的，异域般的乡间土地
+> 最终，当夜幕缓缓降临的时候
+> 厄舍府清冷的景色展现在我眼前
+> 我未曾目睹它过往的模样
+> 但仅凭方才的一瞥
+> 某种难以忍受的阴郁便浸透了我的内心
+> 我望着宅邸周围稀疏的景物
+> 围墙荒芜，衰败的树遍体透着白色
+> 我的灵魂失语了
+> 我的心在冷却，下沉
+> 显出疲软的病态
+
+“那年的秋天，阴沉而寂寥，云朵低低压在天际，我独自一人，策马而行，穿过这阴郁的乡土……我未曾目睹它过往的模样……围墙荒芜，衰败的树遍体透着白色，我的灵魂失语了，我的心在冷却、下沉，显出疲软的病态。”
+——爱伦·坡 《厄舍府的倒塌》
+
+## Poems(4)
+
+玉楼冰簟鸳鸯锦，粉融香汗流山枕。帘外辘轳声，敛眉含笑惊。柳阴烟漠漠，低鬓蝉钗落。须作一生拼，尽君今日欢。
+
+相见休言有泪珠，酒阑重得叙欢娱，凤屏鸳枕宿金铺。兰麝细香闻喘息，绮罗纤缕见肌肤，此时还恨薄情无？
+
+你曾热爱的那个人，这一生也不会再见面。你等在这文化的废墟上，已没人觉得你狂野。那些让人敬仰的神殿，只在无知的人心中灵验。我住在属于我的猪圈，这一夜无眠。
 
 <PoemsContainer title="唐多令·芦叶满汀洲" author="宋·刘过" :content="content" />
 
@@ -38,9 +110,3 @@ const content = reactive([
   '欲买桂花同载酒，终不似，少年游。'
 ])
 </script>
-
-## Source
-
-> Partial source.
-
-- [Yidadaa's blog](https://github.com/Yidadaa/Yidadaa.github.io/issues/31)
