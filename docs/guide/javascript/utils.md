@@ -300,6 +300,9 @@ export const isPromise = (o: any) =>
 export const isSet = o => {
   return Object.prototype.toString.call(o).slice(8, -1) === 'Set'
 }
+
+// 是否DOM对象
+export const isDOMElement = o => o!!(o && o.nodeType === 1)
 ```
 
 :::
@@ -934,4 +937,64 @@ const asyncForEach = async (array, callback) => {
     await callback(array[index], index, array)
   }
 }
+```
+
+## measureText
+
+测量文本显示宽度
+
+### Canvas
+
+```js
+function measureText(text, element) {
+  if (!text) {
+    console.error(`[Function measureText]: Need measure text!`)
+    return
+  }
+  if (!element || element.nodeType !== 1) {
+    console.error(`[Function measureText]: Need DOM Element!`)
+    return
+  }
+
+  const canvas = document.createElement('canvas').getContext('2d')
+  canvas.font = (window && window.getComputedStyle(element).font) || ''
+  return canvas.measureText(res).width
+}
+```
+
+### [getComputedStyle](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle)
+
+```js
+window.getComputedStyle(document.querySelector('.pcrtcr_one_left_title'))
+/*
+CSSStyleDeclaration({
+  "0": "accent-color",
+  "1": "align-content",
+  "2": "align-items",
+  "3": "align-self",
+  "4": "alignment-baseline",
+  "5": "animation-composition",
+  ...
+  "n": "width",
+  "x": "inlineSize",
+})
+*/
+```
+
+### [getBoundingClientRect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
+
+```js
+document.querySelector('.pcrtcr_one_left_title').getBoundingClientRect()
+/*
+DOMRect({
+  "x": 406,
+  "y": 150,
+  "width": 663.734375,
+  `"height": 32,`
+  "top": 150,
+  "right": 1069.734375,
+  "bottom": 182,
+  "left": 406
+})
+*/
 ```
