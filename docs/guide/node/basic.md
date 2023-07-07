@@ -261,7 +261,7 @@ $ npm config ls -l
 
 ### --legacy-peer-deps
 
-在 npm v7 中，会默认安装 peerDependencies。然而在很多情况下，这会导致版本冲突，从而中断安装过程。
+在 npm v7 中，会默认安装 `peerDependencies` 。然而在很多情况下，这会导致版本冲突，从而中断安装过程。
 
 `–legacy-peer-deps` 标志是在 v7 中引入的，目的是绕过 `peerDependency` 自动安装；它告诉 npm 忽略项目中引入的各个 modules 之间的相同 modules 但不同版本的问题并继续安装，保证各个引入的依赖之间对自身所使用的不同版本 modules 共存。
 
