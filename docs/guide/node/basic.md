@@ -249,7 +249,7 @@ $ npm config list
 $ npm config ls -l
 ```
 
-### peerDependency
+### peerDependencies
 
 > A peer dependency is a specific version or set of versions of a third-party software library that a module is designed to work with. They’re similar in concept to the relationship between a browser extension and a browser.
 
