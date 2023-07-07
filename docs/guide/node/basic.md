@@ -225,6 +225,10 @@ nvm ls
 
 ## npm
 
+![npm-list](./images/npm-list.png)
+
+![npm-list-info](./images/npm-list-info.png)
+
 ```sh
 # 查看全局安装的模块
 $ npm ls -g --depth 0
@@ -245,11 +249,21 @@ $ npm config list
 $ npm config ls -l
 ```
 
-![npm-list](./images/npm-list.png)
+### peerDependency
 
-![npm-list-info](./images/npm-list-info.png)
+> A peer dependency is a specific version or set of versions of a third-party software library that a module is designed to work with. They’re similar in concept to the relationship between a browser extension and a browser.
+
+避免 `核心依赖库` 依赖的 `模块` 被重复下载的问题，扁平化依赖图。
+
+- 如果用户显式依赖了核心库，则可以忽略各插件的 peerDependencies 声明；
+- 如果用户没有显式依赖核心库，则按照插件 peerDependencies 中声明的版本将库安装到项目根目录中；
+- 当用户依赖的版本、各插件依赖的版本之间不相互兼容，会报错让用户自行修复。
 
 ### --legacy-peer-deps
+
+在 npm v7 中，会默认安装 peerDependencies。然而在很多情况下，这会导致版本冲突，从而中断安装过程。
+
+`–legacy-peer-deps` 标志是在 v7 中引入的，目的是绕过 `peerDependency` 自动安装；它告诉 npm 忽略项目中引入的各个 modules 之间的相同 modules 但不同版本的问题并继续安装，保证各个引入的依赖之间对自身所使用的不同版本 modules 共存。
 
 npm 的 `--legacy-peer-deps` 命令是用于在安装依赖包时启用旧版对等依赖解析算法的选项。
 
