@@ -54,37 +54,37 @@ So, to defend ourselves and fight against the stimulating of these dumbs into ou
 也别去诋毁一个奋斗者
 时间总能给我们带来最真实的答案
 
-During the whole of a dull, dark soundless day.
-In the autumn of that year.
-When the clouds hung oppressively low in heaven.
-I have been passing alone on the horse's back.
-Through the Singularly, dreary tract in the country.
-At at length found myself, as the shades of the evening drew on.
-Within the view of melancholy House of Usher.
-I konw not how it was.
-But with the first glimpse of the building,
-A sence of insufferable gloom pervaded my spirit,
-I looked upon some blank scape for domain.
-Upon the bleak walls, upon the white trunks of decayed trees.
-With the utter depression souls.
-There was an iceness.
-A sinking.
-A sickening of the heart.
+During the whole of a dull, dark soundless day.<br>
+In the autumn of that year.<br>
+When the clouds hung oppressively low in heaven.<br>
+I have been passing alone on the horse's back.<br>
+Through the Singularly, dreary tract in the country.<br>
+At at length found myself, as the shades of the evening drew on.<br>
+Within the view of melancholy House of Usher.<br>
+I konw not how it was.<br>
+But with the first glimpse of the building,<br>
+A sence of insufferable gloom pervaded my spirit,<br>
+I looked upon some blank scape for domain.<br>
+Upon the bleak walls, upon the white trunks of decayed trees.<br>
+With the utter depression souls.<br>
+There was an iceness.<br>
+A sinking.<br>
+A sickening of the heart.<br>
 
-> 那年的秋天，阴沉而寂寥
-> 沉重的云层低悬于天穹之上
-> 我独自一人策马前行
-> 穿过这片阴沉的，异域般的乡间土地
-> 最终，当夜幕缓缓降临的时候
-> 厄舍府清冷的景色展现在我眼前
-> 我未曾目睹它过往的模样
-> 但仅凭方才的一瞥
-> 某种难以忍受的阴郁便浸透了我的内心
-> 我望着宅邸周围稀疏的景物
-> 围墙荒芜，衰败的树遍体透着白色
-> 我的灵魂失语了
-> 我的心在冷却，下沉
-> 显出疲软的病态
+> 那年的秋天，阴沉而寂寥<br>
+> 沉重的云层低悬于天穹之上<br>
+> 我独自一人策马前行<br>
+> 穿过这片阴沉的，异域般的乡间土地<br>
+> 最终，当夜幕缓缓降临的时候<br>
+> 厄舍府清冷的景色展现在我眼前<br>
+> 我未曾目睹它过往的模样<br>
+> 但仅凭方才的一瞥<br>
+> 某种难以忍受的阴郁便浸透了我的内心<br>
+> 我望着宅邸周围稀疏的景物<br>
+> 围墙荒芜，衰败的树遍体透着白色<br>
+> 我的灵魂失语了<br>
+> 我的心在冷却，下沉<br>
+> 显出疲软的病态<br>
 
 “那年的秋天，阴沉而寂寥，云朵低低压在天际，我独自一人，策马而行，穿过这阴郁的乡土……我未曾目睹它过往的模样……围墙荒芜，衰败的树遍体透着白色，我的灵魂失语了，我的心在冷却、下沉，显出疲软的病态。”
 ——爱伦·坡 《厄舍府的倒塌》
