@@ -254,3 +254,35 @@ $ git config --global alias.[new-alias] '[original-command]'
 ### Reference
 
 - [Git Submodule Guide](https://phoenixnap.com/kb/git-submodule#ftoc-heading-17)
+
+## .gitignore
+
+在 `.gitignore` 文件中，可以使用以下通配符：
+
+- \*：匹配任意数量的字符，包括斜杠（/）。
+- ?：匹配任意单个字符，不包括斜杠（/）。
+- \*\*：匹配任意数量的字符，包括斜杠（/）。可以用于匹配多级目录。
+
+例如：
+
+```sh
+# 忽略所有 .log 文件
+*.log
+
+# 忽略所有以 .tmp 结尾的文件
+*/*.tmp
+
+# 忽略所有以 .txt 结尾的文件，但不包括 doc 目录下的 txt 文件
+*.txt
+!doc/*.txt
+
+# 忽略所有 build 目录及其子目录下的文件
+build/
+
+# 忽略所有 .zip 和 .tar.gz 文件
+*.zip
+*.tar.gz
+
+# 忽略所有 src 子目录 libs 目录下的 .js 文件
+src/**/libs/*.js
+```
