@@ -244,6 +244,10 @@ function sidebarNotes() {
           text: 'excerpt',
           link: '/notes/read/excerpt',
         },
+        {
+          text: 'writing',
+          link: '/notes/read/writing',
+        },
       ],
     },
     {
