@@ -60,7 +60,11 @@ MS-DOS 使用 CRLF 的两个字符组合来表示文件中的行尾，现代 Win
 $ git config --global core.autocrlf [true|false|input]
 ```
 
+::: warning Autocrlf false
 注意，false 值会关闭行尾转换，这通常是不可取的，除非是团队中的每个人都使用相同的操作系统。当然，我觉得这种情况很少发生，所以慎用（除非你使用 [`.gitattributes`](/guide/git/article/end-of-line#使用-gitattributes-在-git-中规范行尾) 配置，在这种情况下，它会优先于你的 git 配置）。
+
+当 autocrlf 为 false 时，git 会彻底关闭行尾转换，无论是提交还是检出，慎用！！！
+:::
 
 所以，一般来说我们只有两个选择：autocrlf true 和 autocrlf input。这两者有什么区别？
 
