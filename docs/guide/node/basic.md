@@ -378,3 +378,46 @@ alias c='clear'
 ```sh
 source /d/git/git/etc/profile.d/aliases.sh
 ```
+
+## 发布 npm 包
+
+- 在 [npm 官网](www.npmjs.com) 注册账号
+- 创建 npm 包 [npm docs](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
+
+  ```sh
+  $ npm init
+  ```
+
+- npm package upload to github
+- npm publish
+
+  - 检查 npm 源，如果是淘宝源，则需要改回 npm 源
+
+    ```sh
+    # check npm registry
+    $ npm config get registry
+
+    # npm default registry
+    $ npm config set registry https://registry.npmjs.org
+
+    # taobao registry
+    $ npm config set registry https://registry.npmmirror.com
+    ```
+
+  - npm login (Enter the user name, password and other information according to the terminal prompts.)
+  - npm publish
+
+- update npm package
+
+  The console will return the next version number.
+
+  ```sh
+  # patch：补丁号，修复bug，小变动，如 v1.0.0 -> v1.0.1
+  $ npm version patch
+
+  # minor：次版本号，增加新功能，如 v1.0.0 -> v1.1.0
+  $ npm version minor
+
+  # major：主版本号，不兼容的修改，如 v1.0.0 -> v2.0.0
+  $ npm version major
+  ```
