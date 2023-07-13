@@ -175,6 +175,8 @@ $ git merge origin/[branch_name]
 
 `git submodule` 功能可以让我们在一个仓库中添加另一个仓库作为当前仓库的子仓库。`.submodules` 只是某个仓库某一时刻的一个状态的引用，即某个 `commit` 的引用。
 
+### Commands
+
 - Add submodule
 
   ```sh
@@ -237,13 +239,7 @@ $ git merge origin/[branch_name]
 
   :::
 
-### Refenerce
-
-- [Git Submodules](https://pengfeixc.com/blogs/developer-handbook/git-submodules)
-
-## Config
-
-### Using Aliases
+### Git aliases
 
 The syntax for creating an alias is as follows:
 
@@ -251,8 +247,9 @@ The syntax for creating an alias is as follows:
 $ git config --global alias.[new-alias] '[original-command]'
 ```
 
-### Reference
+### Refenerce
 
+- [Git Submodules](https://pengfeixc.com/blogs/developer-handbook/git-submodules)
 - [Git Submodule Guide](https://phoenixnap.com/kb/git-submodule#ftoc-heading-17)
 
 ## .gitignore
