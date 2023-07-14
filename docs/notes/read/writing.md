@@ -19,4 +19,8 @@
 
 The Help keep right on helping.
 
+You is kind. You is smart. You is important.
+
+> > About `you is` , it was an intentional mistake, because the character was speaking in AAVE (African American Vernacular English), a dialect that isn't always grammatically correct by traditional English rules, but that has its own structure and informal rules.
+>
 > Origin: [The Help(film)](<https://en.wikipedia.org/wiki/The_Help_(film)>)
