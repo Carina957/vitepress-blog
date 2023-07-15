@@ -727,3 +727,88 @@ export default {
 ## [Crud](https://github.com/Carina957/vue-crud/tree/main/Crud)
 
 [`README`](https://github.com/Carina957/vue-crud#readme.md)
+
+## ElAutoTooltip
+
+- desc: 文本超出显示省略号，并且显示 `tooltip`
+- feat: 支持自定义多行显示省略
+- usage:
+  - `<el-auto-tooltip>显示文本</el-auto-tooltip>`
+  - `<el-auto-tooltip text="显示文本"></el-auto-tooltip>`
+  - `<el-auto-tooltip content="显示文本">显示文本</el-auto-tooltip>`
+  - `<el-auto-tooltip :lineNumber="3">显示文本</el-auto-tooltip>`
+
+多行文本文字超过行数限制后显示省略号
+
+[`caniuse`](https://caniuse.com/?search=-webkit-line-clamp): 兼容性(不支持 IE)
+
+```vue
+<script lang="ts" setup>
+import { computed, ref } from 'vue'
+
+interface IProps {
+  // 显示内容
+  text?: string
+  // 显示位置
+  placement?: string
+  // tip 内容
+  content?: string
+  // 要显示的行数
+  lineNumber: number
+}
+
+const prop = withDefaults(defineProps<IProps>(), {
+  placement: 'top',
+  lineNumber: 1,
+})
+
+let showTooltip = ref(true)
+
+const onMouseEnter = ({ target }) =>
+  (showTooltip.value = !(
+    dom.offsetWidth < dom.scrollWidth || dom.offsetHeight < dom.scrollHeight
+  ))
+</script>
+
+<template>
+  <el-tooltip
+    v-bind="$attrs"
+    :disabled="showTooltip"
+    :placement="placement"
+    class="elli-tip-box"
+  >
+    <template #content>
+      <span v-if="content || text">{{ content || text }}</span>
+      <span v-else><slot></slot></span>
+    </template>
+
+    <div
+      :class="lineNumber > 1 ? 'text-ellipsis-multiple' : 'text-ellipsis'"
+      @mouseenter.stop="onMouseEnter"
+    >
+      <slot>{{ text }}</slot>
+    </div>
+  </el-tooltip>
+</template>
+
+<style scoped>
+.text-ellipsis-multiple {
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-line-clamp: v-bind('prop.lineNumber');
+}
+
+.text-ellipsis {
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+</style>
+```

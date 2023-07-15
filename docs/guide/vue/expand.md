@@ -295,3 +295,142 @@ export default {
 }
 </script>
 ```
+
+## Vue 组件中如何引入外部的 js 文件?
+
+### 将 js 下载到本地，import 引入
+
+```js
+import './export_api.js'
+```
+
+### 在 Vue 组件加载完后，手动操作 DOM 插入 js 插件
+
+```js
+export default {
+  mounted() {
+    const script = document.createElement('script')
+    script.type = 'text/javascript'
+    script.src = 'https://export.dhtmlx.com/gantt/api.js'
+    document.body.appendChild(script)
+  },
+}
+```
+
+### 使用 `render` 方法
+
+```vue
+<template>
+  <export-js></export-js>
+</template>
+
+<script>
+export default {
+  components: {
+    'export-js': {
+      render(createElement) {
+        return createElement('script', {
+          attrs: {
+            type: 'text/javascript',
+            src: 'https://export.dhtmlx.com/gantt/api.js',
+          },
+        })
+      },
+    },
+  },
+}
+</script>
+```
+
+### 包装一个 js 插件
+
+使用 `Promise`，js 加载成功，调用 `resolve`，js 加载失败，调用 `reject`。
+
+```js
+function loadJs(src) {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script')
+    script.type = 'text/javascript'
+    script.src = src
+    document.body.appendChild(script)
+
+    script.onload = () => {
+      resolve()
+    }
+    script.onerror = () => {
+      reject()
+    }
+  })
+}
+
+export default loadJs
+```
+
+Usage:
+
+```js
+import loadJs from '@/utils/loadJs.js'
+
+export default {
+  mounted() {
+    loadJs('https://export.dhtmlx.com/gantt/api.js')
+      .then(() => {
+        // when loaded successfully
+      })
+      .catcj(err => {
+        // when loading fails
+      })
+  },
+}
+```
+
+### 封装为组件
+
+```js
+import Vue from 'vue'
+
+Vue.component('remote-script', {
+  render: createElement =>
+    createElement('script', {
+      attrs: {
+        type: 'text/javascript',
+        src: this.src,
+      },
+      on: {
+        load: event => {
+          self.$emit('load', event)
+        },
+        error: event => {
+          self.$emit('error', event)
+        },
+        readystatechange: event => {
+          this.readyState === 'complete' && self.$emit('load', event)
+        },
+      },
+    }),
+  props: {
+    src: {
+      type: String,
+      required: true,
+    },
+  },
+})
+```
+
+**Usage:**
+
+```vue
+<template>
+  <remote-script :src="remote_script_url"></remote-script>
+</template>
+
+<script>
+import '@/utils/remote-script.js'
+
+export default {
+  data: _ => ({
+    remote_script_url: 'https://export.dhtmlx.com/gantt/api.js',
+  }),
+}
+</script>
+```
