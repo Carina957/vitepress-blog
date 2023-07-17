@@ -11,7 +11,7 @@
 
 ## Months abbr
 
-| 月份   | 英文      | 缩写  |
+| Month  | English   | Abbr  |
 | :----- | :-------- | :---- |
 | 一月   | January   | Jan.  |
 | 二月   | February  | Feb.  |
