@@ -783,7 +783,9 @@ const onMouseEnter = ({ target }) =>
     </template>
 
     <div
-      :class="lineNumber > 1 ? 'text-ellipsis-multiple' : 'text-ellipsis'"
+      :class="[
+        { lineNumber > 1 ? 'text-ellipsis-multiple' : 'text-ellipsis' }
+      ]"
       @mouseenter.stop="onMouseEnter"
     >
       <slot>{{ text }}</slot>
