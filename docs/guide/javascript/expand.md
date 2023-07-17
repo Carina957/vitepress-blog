@@ -321,12 +321,9 @@ import DemoContainer from '../../.vitepress/theme/components/DemoContainer.vue'
 ## 优雅的捕获 async 错误
 
 ```js
-// 统一封装函数
-const unity = promise =>
-  promise.then(
-    res => [null, res],
-    err => [err]
-  )
+const asyncWrapper = promise => {
+  return promise.then(res => [null, res]).catch(err => [err])
+}
 
 async function ademo() {
   let [err, res] = await unity(
@@ -335,12 +332,22 @@ async function ademo() {
 
   console.log(/res/, res)
   if (err !== null) {
-    console.error(/error/, err)
+    console.error(/err/, err)
     return false
   }
 }
 
 ademo()
+```
+
+```ts
+function awaitWrapper<T, U = any>(
+  promise: Promise<T>
+): Promise<[U | null, T | null]> {
+  return promise
+    .then<[null, T]>((res: T) => [null, res])
+    .catch<[U, null]>(err => [err, null])
+}
 ```
 
 ## Horizontal Scroll
