@@ -340,6 +340,8 @@ async function ademo() {
 ademo()
 ```
 
+Typescript version:
+
 ```ts
 function asyncWrapper<T, U = any>(
   promise: Promise<T>
