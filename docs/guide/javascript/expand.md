@@ -341,7 +341,7 @@ ademo()
 ```
 
 ```ts
-function awaitWrapper<T, U = any>(
+function asyncWrapper<T, U = any>(
   promise: Promise<T>
 ): Promise<[U | null, T | null]> {
   return promise
