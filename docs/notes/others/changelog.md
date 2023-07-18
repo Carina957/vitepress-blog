@@ -6,8 +6,8 @@ All notable changes to this component will be documented in this file.
 
 **Types of changes**
 
-- ✨ Added for new features.
-- 🎉 Changed for changes in existing functionality.
+- ✨ Added[Feature] for new features.
+- 🎉 Changed[Breaking] for changes in existing functionality.
 - ⭕ Deprecated for soon-to-be removed features.
 - ❌ Removed for now removed features.
 - 🐛 Fixed for any bug fixes.
