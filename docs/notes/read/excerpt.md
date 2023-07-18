@@ -93,6 +93,25 @@ A sickening of the heart.<br>
 
 风光旖旎当是伏笔，世间万物只为衬托你。
 
+> 当你站上高台，<br>
+> 人群欢呼。<br>
+>
+> 免费的生死表演展开，<br>
+> 我看的见你颤抖的身影。<br>
+> 后撤的脚步，<br>
+> 前倾的身体。<br>
+>
+> 你拥抱着自由，<br>
+> 生命失重。<br>
+>
+> 你不知道之后的故事，<br>
+> 风掀起浪来，<br>
+> 又让它很快平复，<br>
+> 人群尽力把你遗忘。<br>
+>
+> 你只是你自己的英雄，<br>
+> 明天还会有人继续上台。<br>
+
 ## Poems(4)
 
 玉楼冰簟鸳鸯锦，粉融香汗流山枕。帘外辘轳声，敛眉含笑惊。柳阴烟漠漠，低鬓蝉钗落。须作一生拼，尽君今日欢。
@@ -103,13 +122,13 @@ A sickening of the heart.<br>
 
 你曾热爱的那个人，这一生也不会再见面。你等在这文化的废墟上，已没人觉得你狂野。那些让人敬仰的神殿，只在无知的人心中灵验。我住在属于我的猪圈，这一夜无眠。
 
-<PoemsContainer title="唐多令·芦叶满汀洲" author="宋·刘过" :content="content" />
+<PoemsContainer title="唐多令·芦叶满汀洲" author="宋·刘过" :content="content1" />
 
 <script setup>
 import PoemsContainer from '../../.vitepress/theme/components/PoemsContainer.vue'
 import { reactive } from 'vue'
 
-const content = reactive([
+const content1 = reactive([
   '芦叶满汀洲，寒沙带浅流。二十年重过南楼。',
   '柳下系船犹未稳，能几日，又中秋。',
   '黄鹤断矶头，故人曾到否？旧江山浑是新愁。',
