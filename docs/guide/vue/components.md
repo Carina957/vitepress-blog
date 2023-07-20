@@ -4,6 +4,31 @@ outline: [2, 3]
 
 # 组件
 
+```html
+<el-dialog v-bind="$attrs" v-on="$listeners"></el-dialog>
+
+...
+
+<script>
+  export default {
+    inheritAttrs: false,
+  }
+</script>
+```
+
+- **v-bind="$attrs"**
+
+  `$attrs` 包含 除 prop 传递的属性、class 和 style 的父组件属性，v-bind 绑定这些属性。可简单记为 `属性穿透` ；
+  以上文“父组件中引用方式”为例，属性 visible 和 title 最终都会绑定到 el-dialog 中，而我们并没有在 child.vue 中声明 visible 和 title。
+
+- **v-on="$listeners"**
+
+  `$listeners` 包含了 (除.native 修饰器的) 父组件事件，v-on 监听这些事件。可简单记为 `事件穿透`。
+
+- **inheritAttrs: false**
+
+  `v-bind="$attrs"` 传递属性后，浏览器查看 html 代码能看见 visible，title 等属性；设置 `inheritAttrs: false` 可以隐藏此类属性。
+
 ## Form
 
 具有数据校验功能的表单组件 —— Form
