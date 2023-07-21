@@ -2,11 +2,12 @@
   // "extends": "@antfu",
   "rules": {
     "func-style": [
-      "warn",
+      2,
       "declaration",
       {
         "allowArrowFunctions": true
       }
     ]
+    // "arrow-parens": [2, "as-needed", { "requireForBlockBody": false }]
   }
 }
