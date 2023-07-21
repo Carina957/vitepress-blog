@@ -320,14 +320,10 @@ export default {
 ### 使用 `render` 方法
 
 ```vue
-<template>
-  <export-js></export-js>
-</template>
-
 <script>
 export default {
   components: {
-    'export-js': {
+    ExportJs: {
       render(createElement) {
         return createElement('script', {
           attrs: {
@@ -340,6 +336,10 @@ export default {
   },
 }
 </script>
+
+<template>
+  <ExportJs />
+</template>
 ```
 
 ### 包装一个 js 插件
@@ -389,7 +389,13 @@ export default {
 ```js
 import Vue from 'vue'
 
-Vue.component('remote-script', {
+Vue.component('RemoteScript', {
+  props: {
+    src: {
+      type: String,
+      required: true,
+    },
+  },
   render: createElement =>
     createElement('script', {
       attrs: {
@@ -408,22 +414,12 @@ Vue.component('remote-script', {
         },
       },
     }),
-  props: {
-    src: {
-      type: String,
-      required: true,
-    },
-  },
 })
 ```
 
 **Usage:**
 
 ```vue
-<template>
-  <remote-script :src="remote_script_url"></remote-script>
-</template>
-
 <script>
 import '@/utils/remote-script.js'
 
@@ -433,4 +429,8 @@ export default {
   }),
 }
 </script>
+
+<template>
+  <remote-script :src="remote_script_url" />
+</template>
 ```

@@ -81,7 +81,7 @@ const arr = [
   },
 ]
 
-arr.forEach(item => {
+arr.forEach((item) => {
   item.name = 'alva'
 })
 
@@ -282,7 +282,7 @@ isType('Array')([1, 2, 3])
 <!-- [git](../git/basic#revert) -->
 
 ```js
-let windowObjectReference = window.open(strUrl, strWindowName, [
+const windowObjectReference = window.open(strUrl, strWindowName, [
   strWindowFeatures,
 ])
 
@@ -321,12 +321,12 @@ import DemoContainer from '../../.vitepress/theme/components/DemoContainer.vue'
 ## 优雅的捕获 async 错误
 
 ```js
-const asyncWrapper = promise => {
+function asyncWrapper(promise) {
   return promise.then(res => [null, res]).catch(err => [err])
 }
 
 async function ademo() {
-  let [err, res] = await unity(
+  const [err, res] = await unity(
     new Promise((resolve, reject) => reject('error'))
   )
 
@@ -359,10 +359,6 @@ JS 横向滚动
 **Init**
 
 ```vue
-<template>
-  <div class="horizontal-scroll-container"></div>
-</template>
-
 <script>
 export default {
   name: 'HorizontalScrollDemo',
@@ -383,7 +379,7 @@ export default {
 
       // Adapt Google Chrome and Firefox browser
       this.horizontalScrollEl.addEventListener(
-        navigator.userAgent.indexOf('Firefox') >= 0
+        navigator.userAgent.includes('Firefox')
           ? 'DOMMouseScroll'
           : 'mousewheel',
         this.handleHorizontalScroll,
@@ -391,11 +387,10 @@ export default {
       )
     },
     handleHorizontalScroll(event) {
-      if (event.preventDefault) {
+      if (event.preventDefault)
         event.preventDefault()
-      } else {
+      else
         event.returnValue = false
-      }
 
       // 获取滚动方向
       const detail = event.wheelDelta || event.detail
@@ -408,19 +403,20 @@ export default {
       let step = 0
 
       // 判断滚动方向
-      if (navigator.userAgent.indexOf('Firefox') >= 0) {
+      if (navigator.userAgent.includes('Firefox')) {
         // 火狐浏览器和谷歌的值正好相反
-        if (detail > 0) {
+        if (detail > 0)
           step = moveForwardStep * scroll_speed
-        } else {
+        else
           step = moveBackStep * scroll_speed
-        }
-      } else {
-        if (detail < 0) {
+
+      }
+      else {
+        if (detail < 0)
           step = moveForwardStep * scroll_speed
-        } else {
+        else
           step = moveBackStep * scroll_speed
-        }
+
       }
 
       // 对需要滚动的元素进行滚动操作
@@ -429,4 +425,8 @@ export default {
   },
 }
 </script>
+
+<template>
+  <div class="horizontal-scroll-container" />
+</template>
 ```

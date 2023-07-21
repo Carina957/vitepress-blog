@@ -179,7 +179,8 @@ const obj = new Proxy(target, handler)
 ```js
 // 创建响应式
 function reactive(target = {}) {
-  if (typeof target !== 'object' || target === 'null') return target // 不是对象或数组直接返回
+  if (typeof target !== 'object' || target === 'null')
+    return target // 不是对象或数组直接返回
 
   // 代理配置
   const proxyConf = {
@@ -195,11 +196,13 @@ function reactive(target = {}) {
     },
     set(target, key, val, receiver) {
       // 重复的数据，不处理
-      if (val === target[key]) return true
+      if (val === target[key])
+        return true
 
       const ownKeys = Reflect.ownKeys(target)
 
-      if (ownKeys.includes(key)) console.log(/set 已有属性/, key) // 监听
+      if (ownKeys.includes(key))
+        console.log(/set 已有属性/, key) // 监听
       else console.log(/新增的属性/, key)
 
       const result = Reflect.set(target, key, val, receiver)

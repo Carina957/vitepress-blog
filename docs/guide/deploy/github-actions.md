@@ -28,7 +28,7 @@ $ ssh-keygen -t ed25519 -C "your_email@example.com"
 name: Build & Deploy
 on:
   push:
-    branches: ['main']
+    branches: [main]
 
 jobs:
   deploy:
@@ -52,12 +52,12 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.2.1
         env:
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
-          ARGS: '-rltgoDzvO --delete'
+          ARGS: -rltgoDzvO --delete
         with:
           server: user@server.com
           port: 22
-          source: 'path/to/local/files'
-          dest: '/path/to/remote/files'
+          source: path/to/local/files
+          dest: /path/to/remote/files
 
       - name: Deploy to another repository
         uses: s0/git-publish-subdir-action@develop

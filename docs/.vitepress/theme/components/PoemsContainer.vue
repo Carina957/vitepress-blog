@@ -13,7 +13,7 @@ const { title, author, content } = withDefaults(defineProps<PoemsProps>(), {
   author: '',
   content: () => [],
 })
-const source = ref(title + ' ' + author + ' ' + content.join(''))
+const source = ref(`${title} ${author} ${content.join('')}`)
 const { copy } = useClipboard({ source })
 </script>
 
@@ -48,7 +48,9 @@ const { copy } = useClipboard({ source })
         textAlign: 'center',
       }"
     >
-      <p v-for="c in content">{{ c }}</p>
+      <p v-for="c in content">
+        {{ c }}
+      </p>
     </div>
   </div>
 </template>

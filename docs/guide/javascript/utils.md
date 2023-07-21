@@ -46,11 +46,12 @@ function debounce(callback, delay = 500, immediate = true) {
  * @returns {function}
  */
 function throttle(callback, delay = 2000) {
-  let flag = false,
-    timer = null
+  let flag = false
+  let timer = null
 
   return (...args) => {
-    if (flag) return
+    if (flag)
+      return
 
     flag = true
     clearTimeout(timer)
@@ -71,15 +72,16 @@ function throttle(callback, delay = 2000) {
  * @returns {boolean}
  */
 function isNumber(n: number): boolean {
-  return !isNaN(parseFloat(n)) && isFinite(n)
+  return !isNaN(Number.parseFloat(n)) && isFinite(n)
 }
 ```
 
 ## isEmptyObj
 
 ```js
-const isEmptyObj1 = obj =>
-  Reflect.ownKeys(obj).length === 0 && obj.constructor === Object
+function isEmptyObj1(obj) {
+  return Reflect.ownKeys(obj).length === 0 && obj.constructor === Object
+}
 ```
 
 ```js
@@ -132,24 +134,24 @@ function toFixed(num, digits = 0) {
   // 获取小数点位置
   const dotIndex = zeroStrNum.indexOf('.')
   // 如果是整数/保留小数位数等于超过当前小数长度，则直接用toFixed返回
-  if (dotIndex === -1 || zeroStrNum.length - (dotIndex + 1) <= digits) {
+  if (dotIndex === -1 || zeroStrNum.length - (dotIndex + 1) <= digits)
     return num.toFixed(digits)
-  }
 
   // 找到需要进行四舍五入的部分
   let numArr = zeroStrNum.match(/\d/g) || []
   numArr = numArr.slice(0, dotIndex + digits + 1)
 
   // 核心处理逻辑
-  if (parseInt(numArr[numArr.length - 1], 10) > 4) {
+  if (Number.parseInt(numArr[numArr.length - 1], 10) > 4) {
     // 如果最后一位大于4，则往前遍历+1
     for (let i = numArr.length - 2; i >= 0; i--) {
-      numArr[i] = String(parseInt(numArr[i], 10) + 1)
+      numArr[i] = String(Number.parseInt(numArr[i], 10) + 1)
       // 判断这位数字 +1 后会不会是 10
       if (numArr[i] === '10') {
         // 10的话处理一下变成 0，再次for循环，相当于给前面一个 +1
         numArr[i] = '0'
-      } else {
+      }
+      else {
         // 小于10的话，就打断循环，进位成功
         break
       }
@@ -162,9 +164,8 @@ function toFixed(num, digits = 0) {
   numArr.pop()
 
   // 如果事负数，添加负号
-  if (isNegativeNum) {
+  if (isNegativeNum)
     numArr.unshift('-')
-  }
 
   return Number(numArr.join('')).toFixed(digits)
 }
@@ -177,7 +178,7 @@ toFixed(1.255, 2) // 1.26
 ### 数据展示
 
 ```js
-const strip = (num, precision = 12) => +parseFloat(num.toPrecision(precision))
+const strip = (num, precision = 12) => +Number.parseFloat(num.toPrecision(precision))
 ```
 
 ### 数据运算
@@ -186,7 +187,7 @@ const strip = (num, precision = 12) => +parseFloat(num.toPrecision(precision))
 function sum(num1, num2) {
   const num1Digits = (num1.toString().split('.')[1] || '').length
   const num2Digits = (num2.toString().split('.')[1] || '').length
-  const baseNum = Math.pow(10, Math.max(num1Digits, num2Digits))
+  const baseNum = 10 ** Math.max(num1Digits, num2Digits)
   return (num1 * baseNum + num2 * baseNum) / baseNum
 }
 ```
@@ -217,9 +218,9 @@ function mergeOptions(root: {}, opts: {}): void {
   const rootClone = { ...root }
 
   for (const k in root) {
-    if (opts.hasOwnProperty(k)) {
+    if (opts.hasOwnProperty(k))
       rootClone[k] = k === 'query' ? { ...rootClone[k], ...opts[k] } : opts[k]
-    }
+
   }
 
   return rootClone
@@ -232,8 +233,9 @@ function mergeOptions(root: {}, opts: {}): void {
 
 ```ts
 // 邮箱
-export const isEmail = (s: string) =>
-  /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/.test(s)
+export function isEmail(s: string) {
+  return /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/.test(s)
+}
 
 // 手机号码
 export const isMobile = (s: string) => /^1[0-9]{10}$/.test(s)
@@ -245,64 +247,77 @@ export const isPhone = (s: string) => /^([0-9]{3,4}-)?[0-9]{7,8}$/.test(s)
 export const isURL = (s: string) => /^http[s]?:\/\/.*/.test(s)
 
 // 是否字符串
-export const isString = (o: any) =>
-  Object.prototype.toString.call(o).slice(8, -1) === 'String'
+export function isString(o: any) {
+  return Object.prototype.toString.call(o).slice(8, -1) === 'String'
+}
 
 // 是否数字
-export const isNumber = (o: any) =>
-  Object.prototype.toString.call(o).slice(8, -1) === 'Number'
+export function isNumber(o: any) {
+  return Object.prototype.toString.call(o).slice(8, -1) === 'Number'
+}
 
 // 是否boolean
-export const isBoolean = (o: any) =>
-  Object.prototype.toString.call(o).slice(8, -1) === 'Boolean'
+export function isBoolean(o: any) {
+  return Object.prototype.toString.call(o).slice(8, -1) === 'Boolean'
+}
 
 // 是否函数
-export const isFunction = (o: any) =>
-  Object.prototype.toString.call(o).slice(8, -1) === 'Function'
+export function isFunction(o: any) {
+  return Object.prototype.toString.call(o).slice(8, -1) === 'Function'
+}
 
 // 是否为null
-export const isNull = (o: any) =>
-  Object.prototype.toString.call(o).slice(8, -1) === 'Null'
+export function isNull(o: any) {
+  return Object.prototype.toString.call(o).slice(8, -1) === 'Null'
+}
 
 // 是否undefined
-export const isUndefined = (o: any) =>
-  Object.prototype.toString.call(o).slice(8, -1) === 'Undefined'
+export function isUndefined(o: any) {
+  return Object.prototype.toString.call(o).slice(8, -1) === 'Undefined'
+}
 
 // 是否对象
-export const isObj = (o: any) =>
-  Object.prototype.toString.call(o).slice(8, -1) === 'Object'
+export function isObj(o: any) {
+  return Object.prototype.toString.call(o).slice(8, -1) === 'Object'
+}
 
 // 是否数组
-export const isArray = (o: any) =>
-  Object.prototype.toString.call(o).slice(8, -1) === 'Array'
+export function isArray(o: any) {
+  return Object.prototype.toString.call(o).slice(8, -1) === 'Array'
+}
 
 // 是否时间
-export const isDate = (o: any) =>
-  Object.prototype.toString.call(o).slice(8, -1) === 'Date'
+export function isDate(o: any) {
+  return Object.prototype.toString.call(o).slice(8, -1) === 'Date'
+}
 
 // 是否正则
-export const isRegExp = (o: any) =>
-  Object.prototype.toString.call(o).slice(8, -1) === 'RegExp'
+export function isRegExp(o: any) {
+  return Object.prototype.toString.call(o).slice(8, -1) === 'RegExp'
+}
 
 // 是否错误对象
-export const isError = (o: any) =>
-  Object.prototype.toString.call(o).slice(8, -1) === 'Error'
+export function isError(o: any) {
+  return Object.prototype.toString.call(o).slice(8, -1) === 'Error'
+}
 
 // 是否Symbol函数
-export const isSymbol = (o: any) =>
-  Object.prototype.toString.call(o).slice(8, -1) === 'Symbol'
+export function isSymbol(o: any) {
+  return Object.prototype.toString.call(o).slice(8, -1) === 'Symbol'
+}
 
 // 是否Promise对象
-export const isPromise = (o: any) =>
-  Object.prototype.toString.call(o).slice(8, -1) === 'Promise'
+export function isPromise(o: any) {
+  return Object.prototype.toString.call(o).slice(8, -1) === 'Promise'
+}
 
 // 是否Set对象
-export const isSet = o => {
+export function isSet(o) {
   return Object.prototype.toString.call(o).slice(8, -1) === 'Set'
 }
 
 // 是否DOM对象
-export const isDOMElement = o => o!!(o && o.nodeType === 1)
+export const isDOMElement = o => o!(o && o.nodeType === 1)
 ```
 
 :::
@@ -320,14 +335,15 @@ import store from '@/store'
  * @returns {Boolean}
  */
 export default function checkPermission(value) {
-  if (value && value instanceof Array && value.length > 0) {
+  if (value && Array.isArray(value) && value.length > 0) {
     const roles = store.getters && store.getters.roles
     const permissionRoles = value
     const hasPermission = roles.some(role => permissionRoles.includes(role))
 
     return hasPermission
-  } else {
-    console.error(`need roles! Like v-permission="['admin','editor']"`)
+  }
+  else {
+    console.error('need roles! Like v-permission="[\'admin\',\'editor\']"')
 
     return false
   }
@@ -338,7 +354,7 @@ export default function checkPermission(value) {
 
 ```js
 const obj = {
-  name: "Chi's",
+  name: 'Chi\'s',
   age: 60,
   hobby: 'ride',
 }
@@ -348,7 +364,7 @@ const params = new URLSearchParams(param).toString()
 
 ```js
 function objToUrl(obj) {
-  let tempArr = []
+  const tempArr = []
   for (const key in obj) {
     if (Object.hasOwnProperty.call(obj, key)) {
       const value = obj[key]
@@ -375,7 +391,7 @@ function urlToObj(str) {
     .replace(/&/g, '","')
     .replace(/=/g, '":"')
 
-  return JSON.parse('{"' + str + '"}')
+  return JSON.parse(`{"${str}"}`)
 }
 ```
 
@@ -384,24 +400,28 @@ function urlToObj(str) {
 清除表单提交
 
 ```js
-const clearFields = queryForm =>
-  Object.keys(queryForm).forEach(field => (queryForm[field] = ''))
+function clearFields(queryForm) {
+  return Object.keys(queryForm).forEach(field => (queryForm[field] = ''))
+}
 
-const _clearFields = queryForm =>
-  Object.assign(
+function _clearFields(queryForm) {
+  return Object.assign(
     queryForm,
     Object.fromEntries(Object.keys(queryForm).map(k => [k, '']))
   )
+}
 ```
 
 ## 数组对象去重
 
 ```js
-const dedupe = (arr, key) => {
-  if (typeof key !== 'string') return arr
-  if (arr.constructor !== Array) return arr
+function dedupe(arr, key) {
+  if (typeof key !== 'string')
+    return arr
+  if (arr.constructor !== Array)
+    return arr
 
-  let hash = {}
+  const hash = {}
   const sortArr = arr.reduce((pre, cur) => {
     hash[cur[key]] ? '' : (hash[cur[key]] = true && pre.push(cur))
     return pre
@@ -413,13 +433,13 @@ const dedupe = (arr, key) => {
 ## 对象过滤空值
 
 ```js
-const filterNullValues = obj => {
+function filterNullValues(obj) {
   for (const key in obj) {
     if (Object.hasOwnProperty.call(obj, key)) {
       if (
-        params[key] === undefined ||
-        params[key] === null ||
-        params[key] === ''
+        params[key] === undefined
+        || params[key] === null
+        || params[key] === ''
       )
         delete params[key]
     }
@@ -448,21 +468,22 @@ class Request {
     const TOKEN = uni.getStorageSync('wisdom-progress-weapp__token')
     TOKEN && (params.header.Authorization = TOKEN)
 
-    isLoading &&
-      uni.showLoading({
+    isLoading
+      && uni.showLoading({
         title: '加载中...',
       })
 
     return new Promise((resolve, reject) => {
       uni.request({
         ...params,
-        success: res => {
+        success: (res) => {
           if (res.statusCode && res.statusCode === 200) {
             resolve(res)
-          } else {
+          }
+          else {
             uni.hideLoading()
             uni.showToast({
-              title: '请求错误: ' + res.errMsg,
+              title: `请求错误: ${res.errMsg}`,
               icon: 'none',
             })
           }
@@ -470,7 +491,7 @@ class Request {
         fail(err) {
           uni.hideLoading()
           uni.showToast({
-            title: '请求错误: ' + err.errMsg,
+            title: `请求错误: ${err.errMsg}`,
             icon: 'none',
           })
           reject(err)
@@ -514,9 +535,11 @@ function versionNumberSort(arr) {
       const s2 = arr2[i]
       i++
 
-      if (s1 === undefined || s2 === undefined) return arr2.length - arr1.length
+      if (s1 === undefined || s2 === undefined)
+        return arr2.length - arr1.length
 
-      if (s1 === s2) continue
+      if (s1 === s2)
+        continue
 
       return s2 - s1
     }
@@ -528,15 +551,15 @@ function versionNumberSort(arr) {
 
 ```js
 // 拖拽功能
-const drag = (el: HTMLElement) => {
-  el.onmousedown = ev => {
+function drag(el: HTMLElement) {
+  el.onmousedown = (ev) => {
     const e = ev || window.event
     const eX = e.clientX
     const eY = e.clientY
     const disX = eX - el.offsetLeft
     const disY = eY - el.offsetTop
 
-    document.onmousemove = ev => {
+    document.onmousemove = (ev) => {
       const e = ev || window.event
       const windowWidth = document.documentElement.clientWidth
       const windowHeight = document.documentElement.clientHeight
@@ -545,12 +568,12 @@ const drag = (el: HTMLElement) => {
 
       l = range(l, 0, windowWidth - el.offsetWidth)
       t = range(t, 0, windowHeight - el.offsetHeight)
-      el.style.left = l + 'px'
-      el.style.top = t + 'px'
+      el.style.left = `${l}px`
+      el.style.top = `${t}px`
     }
   }
 
-  document.onmouseup = _ => {
+  document.onmouseup = (_) => {
     document.onmousemove = null
   }
 }
@@ -846,16 +869,16 @@ export default Date
  * @returns {Object}
  */
 export function deepClone(source) {
-  if (!source && typeof source !== 'object') {
+  if (!source && typeof source !== 'object')
     throw new Error('error arguments', 'deepClone')
-  }
+
   const targetObj = source.constructor === Array ? [] : {}
-  Object.keys(source).forEach(keys => {
-    if (source[keys] && typeof source[keys] === 'object') {
+  Object.keys(source).forEach((keys) => {
+    if (source[keys] && typeof source[keys] === 'object')
       targetObj[keys] = deepClone(source[keys])
-    } else {
+    else
       targetObj[keys] = source[keys]
-    }
+
   })
   return targetObj
 }
@@ -886,12 +909,13 @@ const DEADTIME_TEXT = '_DEADTIME'
  */
 export function setStorage(key, value, deadtime = 0) {
   uni.setStorageSync(key, value)
-  const _deadtime = parseInt(deadtime)
+  const _deadtime = Number.parseInt(deadtime)
 
   if (_deadtime) {
-    const timestamp = Date.now() / 1000 + _deadtime + ''
+    const timestamp = `${Date.now() / 1000 + _deadtime}`
     uni.setStorageSync(key + DEADTIME_TEXT, timestamp)
-  } else {
+  }
+  else {
     uni.removeStorageSync(key + DEADTIME_TEXT)
   }
 }
@@ -903,9 +927,10 @@ export function setStorage(key, value, deadtime = 0) {
  * @returns
  */
 export function getStorage(key, def = false) {
-  const _deadtime = parseInt(uni.getStorageSync(key + DEADTIME_TEXT))
+  const _deadtime = Number.parseInt(uni.getStorageSync(key + DEADTIME_TEXT))
 
-  if (_deadtime && _deadtime < Date.now() / 1000) return def
+  if (_deadtime && _deadtime < Date.now() / 1000)
+    return def
 
   return uni.getStorageSync(key) || def
 }
@@ -932,10 +957,10 @@ export function clear() {
 支持异步的 `forEach`
 
 ```js
-const asyncForEach = async (array, callback) => {
-  for (let index = 0; index < array.length; index++) {
+async function asyncForEach(array, callback) {
+  for (let index = 0; index < array.length; index++)
     await callback(array[index], index, array)
-  }
+
 }
 ```
 
@@ -948,11 +973,11 @@ const asyncForEach = async (array, callback) => {
 ```js
 function measureText(text, element) {
   if (!text) {
-    console.error(`[Function measureText]: Need measure text!`)
+    console.error('[Function measureText]: Need measure text!')
     return
   }
   if (!element || element.nodeType !== 1) {
-    console.error(`[Function measureText]: Need DOM Element!`)
+    console.error('[Function measureText]: Need DOM Element!')
     return
   }
 

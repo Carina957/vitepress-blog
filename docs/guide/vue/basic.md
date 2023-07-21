@@ -71,8 +71,8 @@ export default emitter
 
 ```vue
 <script setup lang="ts">
-import emitter from './eventBus'
 import { message } from 'element-plus'
+import emitter from './eventBus'
 
 const handleMessage = msg => message(msg)
 
@@ -92,10 +92,6 @@ emitter.all.clear() // 取消监听所有事件
 只需要把整个 `app.vue` 实例通过 `provide` 对外提供。
 
 ```vue
-<template>
-  <router-view />
-</template>
-
 <script>
 import request from '@/utils/request'
 
@@ -122,15 +118,13 @@ export default {
   },
 }
 </script>
+
+<template>
+  <router-view />
+</template>
 ```
 
 ```vue
-<template>
-  <div>
-    <span @click="updateUserInfo">{{ app.userInfo }}</span>
-  </div>
-</template>
-
 <script>
 import request from '@/utils/request'
 
@@ -145,6 +139,12 @@ export default {
   },
 }
 </script>
+
+<template>
+  <div>
+    <span @click="updateUserInfo">{{ app.userInfo }}</span>
+  </div>
+</template>
 ```
 
 ### 刷新路由
@@ -154,12 +154,6 @@ export default {
 :::
 
 ```vue
-<template>
-  <div id="app">
-    <router-view v-if="isReload" />
-  </div>
-</template>
-
 <script>
 export default {
   name: 'App',
@@ -181,6 +175,12 @@ export default {
   },
 }
 </script>
+
+<template>
+  <div id="app">
+    <router-view v-if="isReload" />
+  </div>
+</template>
 ```
 
 Usage:

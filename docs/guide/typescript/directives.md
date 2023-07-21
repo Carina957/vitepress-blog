@@ -31,9 +31,8 @@ let startClick: MouseEvent
 if (!isServer) {
   on(document, 'mousedown', (e: MouseEvent) => (startClick = e))
   on(document, 'mouseup', (e: MouseEvent) => {
-    for (const { documentHandler } of nodeList.values()) {
+    for (const { documentHandler } of nodeList.values())
       documentHandler(e, startClick)
-    }
   })
 }
 
@@ -76,9 +75,9 @@ function createDocumentHandler(
       isSelf ||
       isTargetExcluded ||
       isContainedByPopper
-    ) {
+    )
       return
-    }
+
     binding.value()
   }
 }
@@ -122,9 +121,8 @@ const repeatDirective: Directive = {
     let startTime = 0
     const handler = (): void => binding?.value()
     const clear = (): void => {
-      if (Date.now() - startTime < 100) {
-        handler()
-      }
+      if (Date.now() - startTime < 100) handler()
+
       interval && clearInterval(interval)
       interval = null
     }

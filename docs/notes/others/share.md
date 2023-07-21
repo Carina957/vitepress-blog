@@ -60,6 +60,85 @@ outline: deep
 ::: details LiveStreaming.vue
 
 ```vue
+<script>
+import { mapGetters } from 'vuex'
+import { queryByDeviceSerial } from '@/api/mnt/projectVideo'
+import { getDepts } from '@/api/mnt/findAllEquipmentMonitorByTenant'
+
+export default {
+  name: 'LiveStreaming',
+  props: {
+    playIndex: {
+      type: Number,
+      default: 1,
+    },
+  },
+  data() {
+    return {
+      hasVideo: false,
+      devices: [],
+      channel: 'equipmentMonitorChannel',
+      windowStyle: {
+        width: '50px',
+        height: '50px',
+        lineHeight: '50px',
+      },
+    }
+  },
+  computed: {
+    ...mapGetters(['projectName', 'deviceList']),
+  },
+  watch: {
+    projectName: {
+      handler(name) {
+        this.queryVideoId(name)
+      },
+      deep: true,
+      immediate: true,
+    },
+  },
+  methods: {
+    handlePlay(info, window) {
+      this.$emit('transfer-aisle', info, window)
+    },
+    DEVICE_IMG(name, type = 'active') {
+      const DEVICE_DICT = {
+        球机: require(`@/assets/images/video-surveillance/ball-machine_${type}.png`),
+        other: require(`@/assets/images/video-surveillance/monitor_${type}.png`),
+      }
+      for (const d in DEVICE_DICT) {
+        if (name.includes(d)) return DEVICE_DICT[d]
+        else return DEVICE_DICT.other
+      }
+    },
+    fetchDeviceList(projectInfo) {
+      if (projectInfo) {
+        const deviceSerial = projectInfo.deviceSerial
+        queryByDeviceSerial({ deviceSerial })
+          .then(res => {
+            if (res.length) {
+              this.hasVideo = true
+              this.devices = res
+              this.$store.commit('project/SET_DEVICELIST', res)
+              this.$emit('transfer-aisle', res[0])
+            }
+          })
+          .catch(() => {
+            this.devices = []
+            this.hasVideo = false
+            this.$emit('transfer-aisle', 0, 0, false)
+          })
+      }
+    },
+    queryVideoId(projectName) {
+      getDepts({ projectName }).then(
+        res => res.length && this.fetchDeviceList(res[0])
+      )
+    },
+  },
+}
+</script>
+
 <template>
   <div class="live_streaming">
     <ul v-if="hasVideo" class="live_streaming_list list_none m p">
@@ -127,88 +206,6 @@ outline: deep
     </div>
   </div>
 </template>
-
-<script>
-import { queryByDeviceSerial } from '@/api/mnt/projectVideo'
-import { getDepts } from '@/api/mnt/findAllEquipmentMonitorByTenant'
-import { mapGetters } from 'vuex'
-
-export default {
-  name: 'LiveStreaming',
-  props: {
-    playIndex: {
-      type: Number,
-      default: 1,
-    },
-  },
-  data() {
-    return {
-      hasVideo: false,
-      devices: [],
-      channel: 'equipmentMonitorChannel',
-      windowStyle: {
-        width: '50px',
-        height: '50px',
-        lineHeight: '50px',
-      },
-    }
-  },
-  computed: {
-    ...mapGetters(['projectName', 'deviceList']),
-  },
-  watch: {
-    projectName: {
-      handler(name) {
-        this.queryVideoId(name)
-      },
-      deep: true,
-      immediate: true,
-    },
-  },
-  methods: {
-    handlePlay(info, window) {
-      this.$emit('transfer-aisle', info, window)
-    },
-    DEVICE_IMG(name, type = 'active') {
-      const DEVICE_DICT = {
-        球机: require(`@/assets/images/video-surveillance/ball-machine_${type}.png`),
-        other: require(`@/assets/images/video-surveillance/monitor_${type}.png`),
-      }
-      for (const d in DEVICE_DICT) {
-        if (name.includes(d)) {
-          return DEVICE_DICT[d]
-        } else {
-          return DEVICE_DICT['other']
-        }
-      }
-    },
-    fetchDeviceList(projectInfo) {
-      if (projectInfo) {
-        const deviceSerial = projectInfo.deviceSerial
-        queryByDeviceSerial({ deviceSerial })
-          .then(res => {
-            if (res.length) {
-              this.hasVideo = true
-              this.devices = res
-              this.$store.commit('project/SET_DEVICELIST', res)
-              this.$emit('transfer-aisle', res[0])
-            }
-          })
-          .catch(() => {
-            this.devices = []
-            this.hasVideo = false
-            this.$emit('transfer-aisle', 0, 0, false)
-          })
-      }
-    },
-    queryVideoId(projectName) {
-      getDepts({ projectName }).then(
-        res => res.length && this.fetchDeviceList(res[0])
-      )
-    },
-  },
-}
-</script>
 ```
 
 :::
@@ -216,12 +213,6 @@ export default {
 ::: details PlayContainer.vue
 
 ```vue
-<template>
-  <div>
-    <div :id="`play-container_${index}`" class="play_container" />
-  </div>
-</template>
-
 <script>
 export default {
   name: 'PlayContainer',
@@ -233,6 +224,12 @@ export default {
   },
 }
 </script>
+
+<template>
+  <div>
+    <div :id="`play-container_${index}`" class="play_container" />
+  </div>
+</template>
 ```
 
 :::
@@ -398,23 +395,6 @@ export default {
 ::: details Dialog.vue
 
 ```vue
-<template>
-  <div>
-    <el-dialog
-      :visible.sync="dialogVisiable"
-      :append-to-body="isAppendToBody"
-      :title="title"
-      :width="width"
-      custom-class="rounded"
-    >
-      <slot></slot>
-      <span slot="footer">
-        <slot name="footer"></slot>
-      </span>
-    </el-dialog>
-  </div>
-</template>
-
 <script>
 export default {
   name: 'Dialog',
@@ -447,6 +427,23 @@ export default {
   },
 }
 </script>
+
+<template>
+  <div>
+    <el-dialog
+      v-model:visible="dialogVisiable"
+      :append-to-body="isAppendToBody"
+      :title="title"
+      :width="width"
+      custom-class="rounded"
+    >
+      <slot />
+      <span slot="footer">
+        <slot name="footer" />
+      </span>
+    </el-dialog>
+  </div>
+</template>
 ```
 
 :::
@@ -454,57 +451,6 @@ export default {
 ::: details Table.vue
 
 ```vue
-<template>
-  <div>
-    <el-table
-      v-loading="loading"
-      element-loading-text="拼命加载中"
-      :data="data"
-      ref="table"
-      :stripe="stripe"
-      :border="border"
-      :max-height="maxHeight"
-      :highlight-current-row="highlightCurrentRow"
-      @selection-change="selectionChange"
-      class="rounded"
-    >
-      <template v-for="col in columns">
-        <el-table-column
-          v-if="col.slot"
-          :key="col.prop + ' ' + col.name"
-          :type="col.type || ''"
-          :prop="col.prop"
-          :label="col.name"
-          :width="col.width"
-          :fiexd="col.fixed || false"
-          :align="col.align || 'center'"
-          :sortable="col.sortable"
-        >
-          <template #default="{ row, column, $index }">
-            <slot
-              :row="row"
-              :column="column"
-              :$index="$index"
-              :name="col.slot"
-            ></slot>
-          </template>
-        </el-table-column>
-        <el-table-column
-          v-else
-          :key="col.prop + ' ' + col.name"
-          :type="col.type || ''"
-          :prop="col.prop"
-          :label="col.name"
-          :width="col.width"
-          :fiexd="col.fixed || false"
-          :align="col.align || 'center'"
-          :sortable="col.sortable"
-        ></el-table-column>
-      </template>
-    </el-table>
-  </div>
-</template>
-
 <script>
 export default {
   name: 'STable',
@@ -555,6 +501,57 @@ export default {
   },
 }
 </script>
+
+<template>
+  <div>
+    <el-table
+      ref="table"
+      v-loading="loading"
+      element-loading-text="拼命加载中"
+      :data="data"
+      :stripe="stripe"
+      :border="border"
+      :max-height="maxHeight"
+      :highlight-current-row="highlightCurrentRow"
+      class="rounded"
+      @selection-change="selectionChange"
+    >
+      <template v-for="col in columns">
+        <el-table-column
+          v-if="col.slot"
+          :key="`${col.prop} ${col.name}`"
+          :type="col.type || ''"
+          :prop="col.prop"
+          :label="col.name"
+          :width="col.width"
+          :fiexd="col.fixed || false"
+          :align="col.align || 'center'"
+          :sortable="col.sortable"
+        >
+          <template #default="{ row, column, $index }">
+            <slot
+              :row="row"
+              :column="column"
+              :$index="$index"
+              :name="col.slot"
+            />
+          </template>
+        </el-table-column>
+        <el-table-column
+          v-else
+          :key="`${col.prop} ${col.name}`"
+          :type="col.type || ''"
+          :prop="col.prop"
+          :label="col.name"
+          :width="col.width"
+          :fiexd="col.fixed || false"
+          :align="col.align || 'center'"
+          :sortable="col.sortable"
+        />
+      </template>
+    </el-table>
+  </div>
+</template>
 ```
 
 :::
@@ -562,14 +559,6 @@ export default {
 ::: details MineFab.vue
 
 ```vue
-<template>
-  <uni-fab
-    horizontal="right"
-    :popMenu="false"
-    @fabClick="handleFabClick"
-  ></uni-fab>
-</template>
-
 <script>
 import { objToUrl } from '@/common/utils/index.js'
 
@@ -584,6 +573,10 @@ export default {
   },
 }
 </script>
+
+<template>
+  <uni-fab horizontal="right" :pop-menu="false" @fabClick="handleFabClick" />
+</template>
 ```
 
 :::

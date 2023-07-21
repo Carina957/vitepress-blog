@@ -60,7 +60,7 @@
 1. 当访问一个不存的 DOM 节点时
 
    ```js
-   console.log(document.getElementById('#app')) //null
+   console.log(document.getElementById('#app')) // null
    ```
 
 2. Object 的原型链终点
@@ -83,7 +83,7 @@
 2. 对象的属性没有赋值的情况下
 
    ```js
-   let obj = { name: 'alva' }
+   const obj = { name: 'alva' }
    console.log(obj.age) // undefined
    ```
 

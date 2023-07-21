@@ -17,7 +17,7 @@ outline: deep
 ### 递归
 
 ```js
-const permute = arr => {
+function permute(arr) {
   const permArr = []
   const usedChars = []
 
@@ -49,7 +49,7 @@ const permute = arr => {
 ### 回溯
 
 ```js
-const permute = nums => {
+function permute(nums) {
   const permArr = []
 
   const backtrack = path => {
@@ -59,7 +59,8 @@ const permute = nums => {
     }
 
     nums.forEach(n => {
-      if (path.includes(n)) return
+      if (path.includes(n))
+        return
       backtrack(path.concat(n))
     })
   }

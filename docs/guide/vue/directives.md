@@ -13,7 +13,7 @@ export function checkPermission(el, binding) {
   const { value } = binding
   const roles = store.getters && store.getters.roles
 
-  if (value && value instanceof Array) {
+  if (value && Array.isArray(value)) {
     if (value.length > 0) {
       const permissionRoles = value
 
@@ -22,7 +22,7 @@ export function checkPermission(el, binding) {
       if (!hasPermission) el.parentNode && el.parentNode.removeChild(el)
     }
   } else {
-    throw new Error(`Need roles! Like: v-permission="['admin, 'editor]"`)
+    throw new Error('Need roles! Like: v-permission="[\'admin, \'editor]"')
   }
 }
 
@@ -65,8 +65,10 @@ function handleClick(el, binding) {
       if (!ripple) {
         ripple = document.createElement('span')
         ripple.className = 'waves-ripple'
-        ripple.style.height = ripple.style.width =
-          Math.max(rect.width, rect.height) + 'px'
+        ripple.style.height = ripple.style.width = `${Math.max(
+          rect.width,
+          rect.height
+        )}px`
         target.appendChild(ripple)
       } else {
         ripple.className = 'waves-ripple'
@@ -74,22 +76,22 @@ function handleClick(el, binding) {
 
       switch (opts.type) {
         case 'center':
-          ripple.style.top = rect.height / 2 - ripple.offsetHeight / 2 + 'px'
-          ripple.style.left = rect.width / 2 - ripple.offsetWidth / 2 + 'px'
+          ripple.style.top = `${rect.height / 2 - ripple.offsetHeight / 2}px`
+          ripple.style.left = `${rect.width / 2 - ripple.offsetWidth / 2}px`
           break
         default:
-          ripple.style.top =
-            (e.pageY -
+          ripple.style.top = `${
+            e.pageY -
               rect.top -
               ripple.offsetHeight / 2 -
-              document.documentElement.scrollTop || document.body.scrollTop) +
-            'px'
-          ripple.style.left =
-            (e.pageX -
+              document.documentElement.scrollTop || document.body.scrollTop
+          }px`
+          ripple.style.left = `${
+            e.pageX -
               rect.left -
               ripple.offsetWidth / 2 -
-              document.documentElement.scrollLeft || document.body.scrollLeft) +
-            'px'
+              document.documentElement.scrollLeft || document.body.scrollLeft
+          }px`
       }
 
       ripple.style.backgroundColor = opts.color
@@ -169,11 +171,9 @@ export default {
 
     // 获取原有属性 ie dom元素.currentStyle 火狐谷歌 window.getComputedStyle(dom元素, null)
     const getStyle = (function () {
-      if (window.document.currentStyle) {
+      if (window.document.currentStyle)
         return (dom, attr) => dom.currentStyle[attr]
-      } else {
-        return (dom, attr) => getComputedStyle(dom, false)[attr]
-      }
+      else return (dom, attr) => getComputedStyle(dom, false)[attr]
     })()
 
     dialogHeaderEl.onmousedown = e => {
@@ -211,17 +211,11 @@ export default {
         let top = e.clientY - disY
 
         // 边界处理
-        if (-left > minDragDomLeft) {
-          left = -minDragDomLeft
-        } else if (left > maxDragDomLeft) {
-          left = maxDragDomLeft
-        }
+        if (-left > minDragDomLeft) left = -minDragDomLeft
+        else if (left > maxDragDomLeft) left = maxDragDomLeft
 
-        if (-top > minDragDomTop) {
-          top = -minDragDomTop
-        } else if (top > maxDragDomTop) {
-          top = maxDragDomTop
-        }
+        if (-top > minDragDomTop) top = -minDragDomTop
+        else if (top > maxDragDomTop) top = maxDragDomTop
 
         // 移动当前元素
         dragDom.style.cssText += `;left:${left + styL}px;top:${top + styT}px;`
@@ -245,9 +239,8 @@ export default {
 // Inspired by https://github.com/Inndy/vue-clipboard2
 const Clipboard = require('clipboard')
 
-if (!Clipboard) {
+if (!Clipboard)
   throw new Error('you should npm install `clipboard` --save at first ')
-}
 
 export default {
   bind(el, binding) {
@@ -266,11 +259,11 @@ export default {
       })
       clipboard.on('success', e => {
         const callback = el._v_clipboard_success
-        callback && callback(e) // eslint-disable-line
+        callback && callback(e)
       })
       clipboard.on('error', e => {
         const callback = el._v_clipboard_error
-        callback && callback(e) // eslint-disable-line
+        callback && callback(e)
       })
       el._v_clipboard = clipboard
     }
@@ -330,7 +323,7 @@ const install = function (Vue) {
 
 if (window.Vue) {
   window.waves = waves
-  Vue.use(install) // eslint-disable-line
+  Vue.use(install)
 }
 
 waves.install = install
@@ -350,7 +343,7 @@ import normalizeWheel from 'normalize-wheel'
 
 const isFirefox =
   typeof navigator !== 'undefined' &&
-  navigator.userAgent.toLowerCase().indexOf('firefox') > -1
+  navigator.userAgent.toLowerCase().includes('firefox')
 
 const mousewheel = function (element, callback) {
   if (element && element.addEventListener) {

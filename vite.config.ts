@@ -1,6 +1,6 @@
+import { resolve } from 'node:path'
 import UnoCSS from 'unocss/vite'
 import { defineConfig } from 'vite'
-import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [UnoCSS()],

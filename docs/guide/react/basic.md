@@ -99,7 +99,7 @@ render () {
 Effect Hook 可以让你在函数组件中执行副作用操作
 
 ```jsx
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function Example() {
   const [count, setCount] = useState(0)
@@ -124,7 +124,7 @@ useEffect Hook 看做 `componentDidMount` ，`componentDidUpdate` 和 `component
 如果你的 `effect` 返回一个函数，React 将会在执行清除操作时调用它
 
 ```jsx
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function FriendStatus(props) {
   const [isOnline, setIsOnline] = useState(null)
@@ -141,9 +141,9 @@ function FriendStatus(props) {
     }
   })
 
-  if (isOnline === null) {
+  if (isOnline === null)
     return 'Loading...'
-  }
+
   return isOnline ? 'Online' : 'Offline'
 }
 ```
