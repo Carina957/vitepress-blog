@@ -2,7 +2,9 @@
 outline: [2, 3]
 ---
 
-# 组件
+# Components
+
+## Premise
 
 ```html
 <el-dialog v-bind="$attrs" v-on="$listeners"></el-dialog>
