@@ -16,21 +16,21 @@
     "lint:prettier": "prettier --write --loglevel warn \"docs/**/*.{js,json,css,less,scss,vue,html,md}\""
   },
   "dependencies": {
-    "@docsearch/css": "^3.3.4",
-    "@docsearch/js": "^3.3.4",
-    "@types/node": "^20.3.2",
-    "@vueuse/core": "^10.2.0",
-    "unocss": "^0.53.4",
-    "vite": "^4.3.6",
+    "@docsearch/css": "^3.5.1",
+    "@docsearch/js": "^3.5.1",
+    "@types/node": "^20.4.2",
+    "@vueuse/core": "^10.2.1",
+    "unocss": "^0.53.5",
+    "vite": "^4.4.5",
     "vitepress": "1.0.0-alpha.65",
-    "vue": "^3.3.2"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.6",
-    "eslint": "^8.40.0",
+    "@antfu/eslint-config": "^0.39.8",
+    "eslint": "^8.45.0",
     "prettier": "^2.8.8",
-    "rimraf": "^5.0.0",
-    "typescript": "^5.0.4"
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.6"
   },
   "keywords": [
     "vitepress",
