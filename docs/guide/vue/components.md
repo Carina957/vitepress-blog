@@ -6,15 +6,15 @@ outline: [2, 3]
 
 ## Premise
 
-```html
-<el-dialog v-bind="$attrs" v-on="$listeners"></el-dialog>
-
-...
+```vue
+<template>
+  <el-dialog v-bind="$attrs" v-on="$listeners"></el-dialog>
+</template>
 
 <script>
-  export default {
-    inheritAttrs: false,
-  }
+export default {
+  inheritAttrs: false,
+}
 </script>
 ```
 
