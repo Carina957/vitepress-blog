@@ -49,11 +49,6 @@ So, to defend ourselves and fight against the stimulating of these dumbs into ou
 
 世间万物皆美好，你是往事的遗书，是日落的余情未了，是路人脚下不停生长的风。
 
-其实每个人有每个人的活法
-不要过度去追捧别人
-也别去诋毁一个奋斗者
-时间总能给我们带来最真实的答案
-
 During the whole of a dull, dark soundless day.<br>
 In the autumn of that year.<br>
 When the clouds hung oppressively low in heaven.<br>
@@ -117,6 +112,11 @@ A sickening of the heart.<br>
 > 明天还会有人继续上台。<br>
 
 人不得外财不富，马不吃夜草不肥。
+
+> 其实每个人有每个人的活法<br>
+> 不要过度去追捧别人<br>
+> 也别去诋毁一个奋斗者<br>
+> 时间总能给我们带来最真实的答案<br>
 
 允许别人做别人，允许自己做自己。
 
