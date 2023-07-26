@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'Chi\'s',
+  title: "Chi's",
   lang: 'zh-CN',
   description: 'Record life and codes.',
   cleanUrls: true,
@@ -48,7 +48,7 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2023-present Chi\'s',
+      copyright: "Copyright © 2023-present Chi's",
     },
 
     algolia: {
@@ -165,6 +165,11 @@ function sidebarGuide() {
       ],
     },
     {
+      text: 'Node',
+      collapsed: false,
+      items: [{ text: 'basic', link: '/guide/node/basic' }],
+    },
+    {
       text: 'Nuxt',
       collapsed: false,
       items: [{ text: 'basic', link: '/guide/nuxt/basic' }],
@@ -181,11 +186,6 @@ function sidebarGuide() {
       text: 'Webpack',
       collapsed: false,
       items: [{ text: 'basic', link: '/guide/webpack/basic' }],
-    },
-    {
-      text: 'Node',
-      collapsed: false,
-      items: [{ text: 'basic', link: '/guide/node/basic' }],
     },
     {
       text: 'CSS',
