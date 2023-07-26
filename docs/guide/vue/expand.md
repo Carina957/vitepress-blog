@@ -34,6 +34,25 @@ import DemoContainer from '../../.vitepress/theme/components/DemoContainer.vue'
 
 ## vue/cli Prettier.config.js
 
+### package
+
+```json
+{
+  "scripts": {
+    "lint:prettier": "prettier --write --loglevel warn \"docs/**/*.{js,json,css,less,scss,vue,html,md}\""
+  }
+}
+```
+
+### bash
+
+```sh
+npm install prettier -g
+npx prettier --write --loglevel warn docs/**/*.{js,json,css,less,scss,vue,html,md}
+```
+
+### prettier.config.js
+
 ```js
 module.exports = {
   printWidth: 80,
