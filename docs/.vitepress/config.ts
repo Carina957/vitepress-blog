@@ -5,7 +5,7 @@ export default defineConfig({
   lang: 'zh-CN',
   description: 'Record life and codes.',
   cleanUrls: true,
-  base: '/blog',
+  base: '/blog/',
   // srcDir: 'docs',
   outDir: '.vitepress/dist',
   cacheDir: '.vitepress/cache',
