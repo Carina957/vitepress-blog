@@ -32,4 +32,6 @@ features:
   - icon: 🚴‍♂️
     title: A cycling enthusiasts
     details: This year's wish is to ride Qiandao Lake.
+    link: /notes/travel/cycling
+    linkText: Go to
 ---

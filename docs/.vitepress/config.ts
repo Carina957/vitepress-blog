@@ -11,10 +11,7 @@ export default defineConfig({
   cacheDir: '.vitepress/cache',
 
   head: [
-    [
-      'link',
-      { rel: 'icon', type: 'image/svg+xml', href: './author_48x48.ico' },
-    ],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/author_48x48.ico' }],
     ['meta', { name: 'theme-color', content: '#42b883' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     [
@@ -35,7 +32,7 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: './author_120x120.png',
+    logo: '/author_120x120.png',
     outline: [2, 3],
     outlineTitle: 'On this page',
     carbonAds: {
