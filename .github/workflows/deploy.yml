@@ -23,7 +23,7 @@ jobs:
       - name: Deploy to another repository
         uses: s0/git-publish-subdir-action@develop
         env:
-          REPO: git@github.com:Carina957/blog.git
-          BRANCH: gh-pages
+          REPO: git@github.com:Carina957/Carina957.github.io.git
+          BRANCH: main
           FOLDER: docs/.vitepress/dist
           SSH_PRIVATE_KEY: ${{secrets.DEPLOY_PRIVATE_KEY}}

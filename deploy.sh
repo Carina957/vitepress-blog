@@ -17,8 +17,9 @@ git branch -m main
 git add -A
 git commit -m 'deploy: Deploy to GitHub Pages'
 
-# git push -f git@github.com:Carina957/Carina957.github.io.git main
-git push -f git@github.com:Carina957/blog.git gh-pages
+git push -f git@github.com:Carina957/Carina957.github.io.git main
+
+# git push -f git@github.com:Carina957/blog.git gh-pages
 
 # github pages
 # git push -f git@github.com:Carina957/Carina957.github.io.git main:gh-pages
