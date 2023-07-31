@@ -50,8 +50,7 @@ function throttle(callback, delay = 2000) {
   let timer = null
 
   return (...args) => {
-    if (flag)
-      return
+    if (flag) return
 
     flag = true
     clearTimeout(timer)
@@ -150,8 +149,7 @@ function toFixed(num, digits = 0) {
       if (numArr[i] === '10') {
         // 10的话处理一下变成 0，再次for循环，相当于给前面一个 +1
         numArr[i] = '0'
-      }
-      else {
+      } else {
         // 小于10的话，就打断循环，进位成功
         break
       }
@@ -164,8 +162,7 @@ function toFixed(num, digits = 0) {
   numArr.pop()
 
   // 如果事负数，添加负号
-  if (isNegativeNum)
-    numArr.unshift('-')
+  if (isNegativeNum) numArr.unshift('-')
 
   return Number(numArr.join('')).toFixed(digits)
 }
@@ -178,7 +175,8 @@ toFixed(1.255, 2) // 1.26
 ### 数据展示
 
 ```js
-const strip = (num, precision = 12) => +Number.parseFloat(num.toPrecision(precision))
+const strip = (num, precision = 12) =>
+  +Number.parseFloat(num.toPrecision(precision))
 ```
 
 ### 数据运算
@@ -220,7 +218,6 @@ function mergeOptions(root: {}, opts: {}): void {
   for (const k in root) {
     if (opts.hasOwnProperty(k))
       rootClone[k] = k === 'query' ? { ...rootClone[k], ...opts[k] } : opts[k]
-
   }
 
   return rootClone
@@ -234,7 +231,9 @@ function mergeOptions(root: {}, opts: {}): void {
 ```ts
 // 邮箱
 export function isEmail(s: string) {
-  return /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/.test(s)
+  return /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/.test(
+    s
+  )
 }
 
 // 手机号码
@@ -341,9 +340,8 @@ export default function checkPermission(value) {
     const hasPermission = roles.some(role => permissionRoles.includes(role))
 
     return hasPermission
-  }
-  else {
-    console.error('need roles! Like v-permission="[\'admin\',\'editor\']"')
+  } else {
+    console.error("need roles! Like v-permission=\"['admin','editor']\"")
 
     return false
   }
@@ -354,7 +352,7 @@ export default function checkPermission(value) {
 
 ```js
 const obj = {
-  name: 'Chi\'s',
+  name: "Chi's",
   age: 60,
   hobby: 'ride',
 }
@@ -416,10 +414,8 @@ function _clearFields(queryForm) {
 
 ```js
 function dedupe(arr, key) {
-  if (typeof key !== 'string')
-    return arr
-  if (arr.constructor !== Array)
-    return arr
+  if (typeof key !== 'string') return arr
+  if (arr.constructor !== Array) return arr
 
   const hash = {}
   const sortArr = arr.reduce((pre, cur) => {
@@ -437,9 +433,9 @@ function filterNullValues(obj) {
   for (const key in obj) {
     if (Object.hasOwnProperty.call(obj, key)) {
       if (
-        params[key] === undefined
-        || params[key] === null
-        || params[key] === ''
+        params[key] === undefined ||
+        params[key] === null ||
+        params[key] === ''
       )
         delete params[key]
     }
@@ -468,19 +464,18 @@ class Request {
     const TOKEN = uni.getStorageSync('wisdom-progress-weapp__token')
     TOKEN && (params.header.Authorization = TOKEN)
 
-    isLoading
-      && uni.showLoading({
+    isLoading &&
+      uni.showLoading({
         title: '加载中...',
       })
 
     return new Promise((resolve, reject) => {
       uni.request({
         ...params,
-        success: (res) => {
+        success: res => {
           if (res.statusCode && res.statusCode === 200) {
             resolve(res)
-          }
-          else {
+          } else {
             uni.hideLoading()
             uni.showToast({
               title: `请求错误: ${res.errMsg}`,
@@ -535,11 +530,9 @@ function versionNumberSort(arr) {
       const s2 = arr2[i]
       i++
 
-      if (s1 === undefined || s2 === undefined)
-        return arr2.length - arr1.length
+      if (s1 === undefined || s2 === undefined) return arr2.length - arr1.length
 
-      if (s1 === s2)
-        continue
+      if (s1 === s2) continue
 
       return s2 - s1
     }
@@ -552,14 +545,14 @@ function versionNumberSort(arr) {
 ```js
 // 拖拽功能
 function drag(el: HTMLElement) {
-  el.onmousedown = (ev) => {
+  el.onmousedown = ev => {
     const e = ev || window.event
     const eX = e.clientX
     const eY = e.clientY
     const disX = eX - el.offsetLeft
     const disY = eY - el.offsetTop
 
-    document.onmousemove = (ev) => {
+    document.onmousemove = ev => {
       const e = ev || window.event
       const windowWidth = document.documentElement.clientWidth
       const windowHeight = document.documentElement.clientHeight
@@ -573,7 +566,7 @@ function drag(el: HTMLElement) {
     }
   }
 
-  document.onmouseup = (_) => {
+  document.onmouseup = _ => {
     document.onmousemove = null
   }
 }
@@ -873,14 +866,56 @@ export function deepClone(source) {
     throw new Error('error arguments', 'deepClone')
 
   const targetObj = source.constructor === Array ? [] : {}
-  Object.keys(source).forEach((keys) => {
+  Object.keys(source).forEach(keys => {
     if (source[keys] && typeof source[keys] === 'object')
       targetObj[keys] = deepClone(source[keys])
-    else
-      targetObj[keys] = source[keys]
-
+    else targetObj[keys] = source[keys]
   })
   return targetObj
+}
+```
+
+```js
+// 深拷贝对象
+export function deepClone(obj) {
+  const _toString = Object.prototype.toString
+
+  // null, undefined, non-object, function
+  if (!obj || typeof obj !== 'object') {
+    return obj
+  }
+
+  // DOM Node
+  if (obj.nodeType && 'cloneNode' in obj) {
+    return obj.cloneNode(true)
+  }
+
+  // Date
+  if (_toString.call(obj) === '[object Date]') {
+    return new Date(obj.getTime())
+  }
+
+  // RegExp
+  if (_toString.call(obj) === '[object RegExp]') {
+    const flags = []
+    if (obj.global) flags.push('g')
+    if (obj.multiline) flags.push('m')
+    if (obj.ignoreCase) flags.push('i')
+
+    return new RegExp(obj.source, flags.join(''))
+  }
+
+  const result = Array.isArray(obj)
+    ? []
+    : obj.constructor
+    ? new obj.constructor()
+    : {}
+
+  for (const key in obj) {
+    result[key] = deepClone(obj[key])
+  }
+
+  return result
 }
 ```
 
@@ -914,8 +949,7 @@ export function setStorage(key, value, deadtime = 0) {
   if (_deadtime) {
     const timestamp = `${Date.now() / 1000 + _deadtime}`
     uni.setStorageSync(key + DEADTIME_TEXT, timestamp)
-  }
-  else {
+  } else {
     uni.removeStorageSync(key + DEADTIME_TEXT)
   }
 }
@@ -929,8 +963,7 @@ export function setStorage(key, value, deadtime = 0) {
 export function getStorage(key, def = false) {
   const _deadtime = Number.parseInt(uni.getStorageSync(key + DEADTIME_TEXT))
 
-  if (_deadtime && _deadtime < Date.now() / 1000)
-    return def
+  if (_deadtime && _deadtime < Date.now() / 1000) return def
 
   return uni.getStorageSync(key) || def
 }
@@ -960,7 +993,6 @@ export function clear() {
 async function asyncForEach(array, callback) {
   for (let index = 0; index < array.length; index++)
     await callback(array[index], index, array)
-
 }
 ```
 
