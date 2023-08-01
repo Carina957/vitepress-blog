@@ -321,7 +321,8 @@ import DemoContainer from '../../.vitepress/theme/components/DemoContainer.vue'
 ## 优雅的捕获 async 错误
 
 ```js
-function asyncWrapper(promise) {
+// asyncWrapper
+function unity(promise) {
   return promise.then(res => [null, res]).catch(err => [err])
 }
 
