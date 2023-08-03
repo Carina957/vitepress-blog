@@ -83,6 +83,9 @@ git branch
 # 列出所有远程分支
 git branch -r
 
+# 查看本地分支与远程分支的映射关系
+git branch -vv
+
 # 新建一个分支，并与指定的远程分支建立追踪关系
 git branch --track feature/todo_13 origin/main
 
@@ -95,9 +98,27 @@ git branch -d feature/todo_12
 # 强制删除分支 表示 `--delete --force`
 git branch -D feature/todo_12
 
+# 拉取远程分支并创建本地分支(采用此种方法建立的本地分支会和远程分支建立映射关系)
+git checkout -b feature/todo-14 origin/feature/todo-14
+
+# 建立当前分支与远程分支的映射关系
+git branch -u origin/main
+
+# 撤销本地分支与远程分支的映射关系
+git branch --unset-upstream
+
 # 建立分支的追踪关系(本地有分支，远程没有)
 
-git branch --set-upstream-to=origin/develop
+git branch --set-upstream-to origin/todo_12
+
+# 建立分支的追踪关系(本地没有分支，远程有)
+git checkout --track origin/branch_name
+
+# 建立分支的追踪关系(本地有分支，远程没有)
+git push --set-upstream origin feature/todo_11
+
+# 推送本地分支到远程
+git push origin feature/todo_13:feature/todo_13
 
 # 新建一个分支，并切换到该分支
 git checkout -b Fixbug/TJS-123
@@ -105,20 +126,11 @@ git checkout -b Fixbug/TJS-123
 # 以远程分支为基础新建一个分支，并切换到该分支
 git checkout -b feature/todo_12 origin/main
 
-# 建立分支的追踪关系(本地没有有分支，远程有)
-git checkout --track origin/branch_name
-
 # 切换到指定分支，并更新工作区
 git checkout develop
 
 # 切换到上一个分支
 git checkout -
-
-# 建立分支的追踪关系(本地有分支，远程没有)
-git push --set-upstream origin feature/todo_11
-
-# 推送本地分支到远程
-git push origin feature/todo_13:feature/todo_13
 
 # 删除远程分支
 git push origin --delete feature/todo_12
