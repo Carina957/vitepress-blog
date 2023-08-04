@@ -225,15 +225,14 @@ nvm ls
 
 ## npm
 
-![npm-list](./images/npm-list.png)
-
-![npm-list-info](./images/npm-list-info.png)
+### Common commands
 
 ```sh
 # 查看全局安装的模块
 $ npm ls -g --depth 0
 
-# 查看全局安装的模块的详细信息(name, description, version number, github address, official website.)
+# 查看全局安装的模块的详细信息
+# (name, description, version number, github address, official website.)
 $ npm ls -l -g --depth 0
 
 # 安装到 `devDependencies` 中
@@ -247,6 +246,27 @@ $ npm config list
 
 # 查看 `npm` 全部配置
 $ npm config ls -l
+
+# 查看脚本安装目录
+$ where node
+```
+
+### Commonly used npm packages
+
+```sh
+├── @adams549659584/nrm@1.2.6
+├── @antfu/ni@0.21.3
+├── @vue/cli@5.0.8
+├── corepack@0.15.1
+├── degit@2.8.4
+├── npm@8.19.3
+├── nrm@1.2.5
+├── pnpm@8.6.0
+├── prettier@3.0.0
+├── rimraf@5.0.0
+├── typescript@5.0.2
+├── vue@3.3.4
+└── yarn@1.22.19
 ```
 
 ### peerDependencies

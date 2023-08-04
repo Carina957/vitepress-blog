@@ -1,23 +1,28 @@
 *::-webkit-scrollbar-track-piece {
-  background: transparent;
+  background-color: transparent;
 }
 
 *::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  transition-property: color, background-color, border-color, outline-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: var(--vp-custom-block-tip-border);
+}
+
+*::-webkit-scrollbar:hover {
   width: 8px;
   height: 8px;
 }
 
-*::-webkit-scrollbar-thumb {
-  background: var(--vp-custom-block-tip-border);
-  border-radius: 20px;
-}
-
 *::-webkit-scrollbar-thumb:hover {
-  background: var(--vp-custom-block-tip-text);
-  border-radius: 20px;
-}
-
-*::-webkit-scrollbar:hover {
-  width: 12px;
-  height: 12px;
+  cursor: pointer;
+  background-color: var(--vp-custom-block-tip-text);
 }
