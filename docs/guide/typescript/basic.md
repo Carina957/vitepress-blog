@@ -2,9 +2,9 @@
 outline: deep
 ---
 
-# 基础
+# Basic
 
-## 定义接口
+## Define
 
 ### interface
 
