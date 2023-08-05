@@ -10,7 +10,7 @@ hero:
   tagline: Freedom, Paranoid, For loneliness.
   image:
     src: /logo-with-shadow.svg
-    alt: Vite
+    alt: Chi's logo with shadow
   actions:
     - theme: brand
       text: Get Started

@@ -6,7 +6,8 @@ import './styles/vars.css'
 import './styles/demo.css'
 import './styles/scrollbar.css'
 import './styles/sliding-enter-animation.css'
-import './styles/medium-zoom.css'
+import './styles/piece-meal.css'
+import './styles/font/index.css'
 
 import mediumZoom from 'medium-zoom'
 
