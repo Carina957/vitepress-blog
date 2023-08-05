@@ -9,6 +9,7 @@
 .VPContent .VPHome .VPHero .name .clip {
   background: var(--vp-home-hero-name-background);
   text-fill-color: var(--vp-home-hero-name-color);
-  background-clip: text;
   color: var(--vp-home-hero-name-color);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
