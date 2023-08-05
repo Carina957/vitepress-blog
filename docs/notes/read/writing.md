@@ -24,3 +24,19 @@ You is kind. You is smart. You is important.
 > About `you is` , it was an intentional mistake, because the character was speaking in AAVE (African American Vernacular English), a dialect that isn't always grammatically correct by traditional English rules, but that has its own structure and informal rules.
 
 > Origin: [The Help(film)](<https://en.wikipedia.org/wiki/The_Help_(film)>)
+
+**3)**
+
+以前在农村养过一段时间大型牲口。
+
+牛这玩意力气大耐力足，能干很重的活但实际，上效率不高，因为它干活慢吞吞的。
+
+马这东西能跑能拉，但是耐力很差，强度大一点做久就要歌菜 驴是好东西，速度和耐力都适中，但是脾气特别倔，一旦发起脾气来真的半天都不动，还撒泼。这么大一个牲口发起疯来可不是开玩笑。
+
+猪浑身都是宝，但要宰了才能吃肉剥皮，它干不了，吃住条件一差就不长膘还容易生病。
+
+拿吃来说吧，想要牲口长得好，吃的不能少，比如喂牛，带路的老农民一早就带我去割草，还叮嘱哪些可以吃哪些不行，并非什么草都行，太湿的也不行，一般是早上十点左右，早上的草鲜嫩且露水基本没了，最适合喂牛等知识。当初让我大开眼界。住就更别说了，打扫猪圈牛栏的酸爽谁做谁知道。 几天下来我累得头昏眼花觉得养牲口真不容易。
+
+有一次我精疲力尽我想，能不能进化出这么一种牲口：条件要求低、吃得少，住得差，得了病自己能给自己治，能主动给我创造财富(长膘快)，能干活，效率高，少休息甚至不休息，良顺脾气好，最好智商低点。如果真的有那真是地球上进化得最高级的牲口啊。可惜我在农村时间不长见识有限没见过。
+
+直到我在潭头看到了自己的倒影...

@@ -243,32 +243,36 @@ function sidebarGuide() {
 function sidebarNotes() {
   return [
     {
-      text: 'travel',
+      text: 'Travel',
       collapsed: false,
-      items: [{ text: 'cycling', link: '/notes/travel/cycling' }],
+      items: [{ text: 'Cycling', link: '/notes/travel/cycling' }],
     },
     {
-      text: 'read',
+      text: 'Read',
       collapsed: false,
       items: [
-        { text: 'dragon-raja', link: '/notes/read/dragon-raja' },
+        { text: 'Dragon Raja', link: '/notes/read/dragon-raja' },
         {
-          text: 'excerpt',
+          text: 'Excerpt',
           link: '/notes/read/excerpt',
         },
         {
-          text: 'writing',
+          text: 'Writing',
           link: '/notes/read/writing',
+        },
+        {
+          text: 'Notebook',
+          link: '/notes/read/notebook',
         },
       ],
     },
     {
-      text: 'collection',
+      text: 'Collection',
       collapsed: false,
-      items: [{ text: 'article', link: '/notes/collection/article' }],
+      items: [{ text: 'Article', link: '/notes/collection/article' }],
     },
     {
-      text: 'others',
+      text: 'Others',
       collapsed: false,
       items: [
         {
@@ -276,9 +280,11 @@ function sidebarNotes() {
           items: [
             { text: 'Reproduction', link: '/notes/others/reproduction' },
             { text: 'ComponentsShare', link: '/notes/others/share' },
-            { text: 'Notebook', link: '/notes/others/notebook' },
-            { text: 'Changelog', link: '/notes/others/changelog' },
           ],
+        },
+        {
+          text: 'Changelog',
+          items: [{ text: 'Demo', link: '/notes/others/changelog' }],
         },
       ],
     },
