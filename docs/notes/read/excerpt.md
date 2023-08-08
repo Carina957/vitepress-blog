@@ -11,8 +11,7 @@ outline: deep
 “我从未如此深刻的感受到，与灵魂相距甚远，而我的存在却如此真实。” ——加缪
 
 我们的年轻人，受舆论影响，认为女性是下贱的，妓女，婊子，可以任人玩弄，欺凌，蹂躏，羞辱。这简直是大规模的毁灭。在我们余下的生命中，一天 24 小时，都会驱使我们努力工作，使我们在沉默中灭亡。
-所以，为了保护我们的思想不受侵害，能够与侵入我们思想使我们日渐沉默的力量抗衡。我们必须学会阅读，以此来激活自身的想象力，去培养我们自己的意识和信仰。我们需要这些技能，来保卫和维护自己的思想。
-——《超脱》
+所以，为了保护我们的思想不受侵害，能够与侵入我们思想使我们日渐沉默的力量抗衡。我们必须学会阅读，以此来激活自身的想象力，去培养我们自己的意识和信仰。我们需要这些技能，来保卫和维护自己的思想。————《超脱》
 
 Our young men, today, are being told that women are whores, bitches, things to be scrolled, beaten, shit on, ashamed. This is a marking holocaust. 24 hours a day, for the rest of our lives, the power that be are hard at work, dumbing us to death.
 So, to defend ourselves and fight against the stimulating of these dumbs into our thought processes. We must learn to read, to stimulate our own imaginations, to cultivate our own consciousness, our own belief systems. We all need these skills, to defend, to preserve our minds.
