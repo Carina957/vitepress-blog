@@ -17,7 +17,7 @@ Our young men, today, are being told that women are whores, bitches, things to b
 So, to defend ourselves and fight against the stimulating of these dumbs into our thought processes. We must learn to read, to stimulate our own imaginations, to cultivate our own consciousness, our own belief systems. We all need these skills, to defend, to preserve our minds.
 —— Detachment
 
-勇敢的人，先享受世界
+勇敢的人，先享受世界。
 
 “不论你做什么事情，一定要尽力去做好，在努力做的过程中，你一定会学到一些东西，这样日积月累下来，你的人生就会发生质变。如果你只是简单应付了事，那么你将可能一无所获，反而让你做事的态度也会变得简单应付了事，而且关键还会浪费时间。你怎样对待生活，生活也会怎样对待你。”
 
