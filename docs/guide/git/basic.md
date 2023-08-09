@@ -116,6 +116,7 @@ git checkout --track origin/branch_name
 
 # 建立分支的追踪关系(本地有分支，远程没有)
 git push --set-upstream origin feature/todo_11
+git push -u origin feature/todo_11
 
 # 推送本地分支到远程
 git push origin feature/todo_13:feature/todo_13
