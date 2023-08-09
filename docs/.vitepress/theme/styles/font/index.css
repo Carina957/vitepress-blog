@@ -1,9 +1,19 @@
 @font-face {
   font-family: 'Noto Serif SC';
-  src: url('NotoSerifSC-Regular.otf');
+  src: url('./NotoSerifSC-Regular.otf');
 }
 
 @font-face {
   font-family: 'Noto Sans Mono';
-  src: url('NotoSansMono-Regular.ttf');
+  src: url('./NotoSansMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: RobotoMono;
+  src: url('./RobotoMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('./Roboto-Regular.ttf');
 }
