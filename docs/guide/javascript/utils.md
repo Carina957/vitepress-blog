@@ -237,8 +237,8 @@ export function isEmail(s: string) {
 }
 
 // 是否必填
-export const isRequire = (s: any) => /^.+$/.test(s)
-export const isRequire = (s: any) => /[^\s]/.test(s)
+export const isRequire = (s: string) => /^.+$/.test(s)
+export const isRequire = (s: string) => /[^\s]/.test(s)
 
 // 手机号码
 export const isMobile = (s: string) => /^1[0-9]{10}$/.test(s)
