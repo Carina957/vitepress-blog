@@ -230,11 +230,8 @@ function mergeOptions(root: {}, opts: {}): void {
 
 ```ts
 // 邮箱
-export function isEmail(s: string) {
-  return /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/.test(
-    s
-  )
-}
+export const isEmail = (s: string) =>
+  /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/.test(s)
 
 // 是否必填
 export const isRequire = (s: string) => /^.+$/.test(s)
