@@ -4,7 +4,7 @@ outline: deep
 
 # Excerpt
 
-## Good sentences(25)
+## Good sentences(32)
 
 仓央嘉措说：“我以为别人尊重我，是因为我很优秀。慢慢的我明白了，别人尊重我，是因为别人很优秀。”
 
