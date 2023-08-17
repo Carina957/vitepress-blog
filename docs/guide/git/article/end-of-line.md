@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # End_of_line
 
 查看项目的行尾序列
@@ -68,7 +72,7 @@ $ git config --global core.autocrlf [true|false|input]
 
 所以，一般来说我们只有两个选择：autocrlf true 和 autocrlf input。这两者有什么区别？
 
-### autocrlf true
+#### autocrlf true
 
 当 autocrlf 为 true 时（git 默认行为），文件将使用 git 在本地检出为 CRLF，但是每当你提交文件时，CRLF 的所有实例都将替换为 LF。基本上，此设置可确保你的代码库在所有文件的最终版本中始终使用 LF，但在获取时在本地使用 CRLF。这是 Windows 开发人员的推荐设置，因为 CRLF 是 Windows 的本机行结尾。
 
@@ -81,17 +85,17 @@ The file will have its original line endings in your working directory.
 
 这并不是说出现问题， Git 只是警告你，根据此设置的预期行为，你的 CRLF 行结尾将在提交时规范化为 LF。
 
-### autocrlf input
+#### autocrlf input
 
 使用 autocrlf input，文件在提交时转换为 LF，但在获取时不会转换为任何内容。因此名称为“输入”——你得到是你最初输入的内容。如果一个文件最初被 Windows 开发人员意外提交为 CRLF，你会在本地看到它是 CRLF（如果你修改它，你会强制它变成 LF）。如果文件最初是作为 LF 添加的，您会看到它是 LF。这通常是一件好事，因为这意味着你将始终在代码库中获得 LF 行结尾（假设你从一开始就使用它）。
 
 input 和 ​​true 之间的唯一区别是输入不会在本地获取时处理行尾。这是 Mac/Linux 开发人员的推荐设置，因为这些操作系统默认使用 LF。
 
-## 使用 `.gitattributes` 在 Git 中规范行尾
+### 使用 `.gitattributes` 在 Git 中规范行尾
 
 在你的 repo 的根目录创建一个 `.gitattributes` 文件来一劳永逸地行尾不一致的问题。 Git 会读取此文件并在您本地获取或提交文件时应用其规则，确保无论每个开发人员如何在本地配置 git 或他们使用什么操作系统，都强制执行行尾约定。
 
-### 一个简单的 .gitattributes 配置
+#### 一个简单的 .gitattributes 配置
 
 这是一个 .gitattributes 文件，应该涵盖大多数用例：
 
@@ -138,7 +142,7 @@ The file will have its original line endings in your working directory.
 
 但是 git 实际上并没有更改文件的本地文件（即其工作树中的那些）的行尾。因此，警告消息的最后一点表示刚刚重新规范化的文件仍会继续在本地使用 CRLF。
 
-## 在 Git 中验证任何文件的行尾
+### 在 Git 中验证任何文件的行尾
 
 如果想在所有这些步骤之后仔细检查 Git 索引中的文件是否使用正确的行结尾，可以运行以下命令：
 
@@ -161,7 +165,7 @@ i/lf    w/crlf  attr/text=auto eol=lf   file.txt
 
 或者，你可以在将代码推送到远程后，通过在 Windows 机器上重新克隆您的存储库来仔细检查 git 是否正确规范了您的行尾。你应该看到文件的索引和工作树副本都使用 LF 而不是 CRLF（假设 LF 是您选择规范化行尾的方式）。
 
-## .editorconfig 文件
+### .editorconfig 文件
 
 从技术上讲，一个 `.gitattributes` 文件是你执行代码库远程副本上显示的行尾所需的全部内容。但是，正如我们在上面看到的，你可能仍然会在本地看到你创建的文件的 CRLF 行结尾，因为 `.gitattributes` 不会告诉 git 更改文件的工作副本。
 
@@ -187,7 +191,7 @@ trim_trailing_whitespace = false
 
 除了一堆其他设置之外，你还可以指定应用于通过此文本编辑器创建的任何新文件的行尾。这样，如果使用 VS Code 在 Windows 上创建一个新文件，你将始终在工作树中看到行结尾为 LF。
 
-## Reference
+### Reference
 
 - [一文搞懂 CRLF 和 LF - mdnice 墨滴](https://mdnice.com/writing/5dcb6caf12db4dcb8a05bfe55dcb044d)
 - [CRLF vs. LF: Normalizing Line Endings in Git | Aleksandr Hovhannisyan](https://www.aleksandrhovhannisyan.com/blog/crlf-vs-lf-normalizing-line-endings-in-git)
