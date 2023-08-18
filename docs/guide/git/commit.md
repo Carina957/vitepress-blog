@@ -12,7 +12,7 @@ outline: deep
 - refactor: A code change that neither fixes a bug nor adds a feature(代码重构，没有新增功能或修复 bug)
 - perf: A code change that improves performance(优化相关，如提升性能、用户体验等)
 - test: Adding missing tests or correcting existing tests(测试用例，包括单元测试、集成测试)
-- build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)(影响构建系统或外部依赖关系的更改（示例范围：gulp、broccoli、npm）)
+- build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)(影响构建系统或外部依赖关系的更改(示例范围：gulp、broccoli、npm))
 - chore: Other changes that don't modify src or test files(其他不修改 src 或测试文件的更改)
 - improvement: An improvement to a current feature(对当前特性的改进)
 - style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)(不影响代码含义的更改(空格、格式、缺少分号等))
