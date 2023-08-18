@@ -15,7 +15,7 @@ outline: deep
 - build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)(影响构建系统或外部依赖关系的更改（示例范围：gulp、broccoli、npm）)
 - chore: Other changes that don't modify src or test files(其他不修改 src 或测试文件的更改)
 - improvement: An improvement to a current feature(对当前特性的改进)
-- style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)(不影响代码含义的更改（空格、格式、缺少分号等）)
+- style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)(不影响代码含义的更改(空格、格式、缺少分号等))
 - ci: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)(对 ci 配置文件和脚本的更改)
 - revert: Reverts a previous commit(还原以前的提交)
 
