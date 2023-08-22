@@ -141,6 +141,8 @@ A sickening of the heart.<br>
 
 你曾热爱的那个人，这一生也不会再见面。你等在这文化的废墟上，已没人觉得你狂野。那些让人敬仰的神殿，只在无知的人心中灵验。我住在属于我的猪圈，这一夜无眠。
 
+天公一怒湘妃泪，落成檐下半盅茗。前路不知犹何在，疾风骤雨望君行。
+
 <PoemsContainer title="唐多令·芦叶满汀洲" author="宋·刘过" :content="content1" />
 
 <script setup>
