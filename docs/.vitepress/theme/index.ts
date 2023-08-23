@@ -2,12 +2,12 @@ import { nextTick, watch, onMounted } from 'vue'
 import { useRoute } from 'vitepress'
 
 import Theme from 'vitepress/theme'
+import './styles/font/index.css'
 import './styles/vars.css'
 import './styles/demo.css'
 import './styles/scrollbar.css'
 import './styles/sliding-enter-animation.css'
 import './styles/piece-meal.css'
-import './styles/font/index.css'
 
 import mediumZoom from 'medium-zoom'
 
