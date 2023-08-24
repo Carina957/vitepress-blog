@@ -1059,6 +1059,8 @@ DOMRect({
 
 ## Arrify
 
+_Convert a value to an array_
+
 ```js
 export default function arrify(value) {
   if (value === null || value === undefined) {
