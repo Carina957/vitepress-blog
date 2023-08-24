@@ -1056,3 +1056,30 @@ DOMRect({
 })
 */
 ```
+
+## Arrify
+
+```js
+export default function arrify(value) {
+  if (value === null || value === undefined) {
+    return []
+  }
+
+  if (Array.isArray(value)) {
+    return value
+  }
+
+  if (typeof value === 'string') {
+    return [value]
+  }
+
+  if (
+    typeof value[Symbol.iterator] === 'function' &&
+    typeof value.next === 'function'
+  ) {
+    return [...value]
+  }
+
+  return [value]
+}
+```
