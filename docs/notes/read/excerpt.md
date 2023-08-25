@@ -147,6 +147,8 @@ A sickening of the heart.<br>
 
 <PoemsContainer title="唐多令·芦叶满汀洲" author="宋·刘过" :content="content1" />
 
+<PoemsContainer title="谒金门·风乍起" author="五代·冯延巳" :content="content2" />
+
 <script setup>
 import PoemsContainer from '../../.vitepress/theme/components/PoemsContainer.vue'
 import { reactive } from 'vue'
@@ -156,5 +158,12 @@ const content1 = reactive([
   '柳下系船犹未稳，能几日，又中秋。',
   '黄鹤断矶头，故人曾到否？旧江山浑是新愁。',
   '欲买桂花同载酒，终不似，少年游。'
+])
+
+cosnt content2 = reactive([
+  '风乍起，吹皱一池春水。',
+  '闲引鸳鸯香径里，手挼红杏蕊。',
+  '斗鸭阑干独倚，碧玉搔头斜坠。',
+  '终日望君君不至，举头闻鹊喜。'
 ])
 </script>
