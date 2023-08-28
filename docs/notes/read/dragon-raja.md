@@ -30,5 +30,3 @@ outline: deep
 ## Info
 
 [龙族\_(江南)](<https://zh.wikipedia.org/wiki/%E9%BE%99%E6%97%8F_(%E6%B1%9F%E5%8D%97)>)
-
-## After reading
