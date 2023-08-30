@@ -235,10 +235,13 @@ $ npm ls -g --depth 0
 # (name, description, version number, github address, official website.)
 $ npm ls -l -g --depth 0
 
-# 安装到 `devDependencies` 中
+# 强制固定版本号(--save-extra)
+$ npm install dayjs -E
+
+# 安装到 `dependencies` 中(--save)
 $ npm i dayjs -S
 
-# 安装到 `dependencies` 中
+# 安装到 `devDependencies` 中(--dev)
 $ npm i dayjs -D
 
 # 查看 `npm` 配置
