@@ -190,10 +190,10 @@ $ git merge origin/[branch_name]
 
 ### Commands
 
-- Check submodule
+- Check the status of the submodules
 
   ```sh
-  git submodule status
+  $ git submodule status
   ```
 
 - Add submodule
