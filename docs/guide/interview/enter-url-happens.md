@@ -18,7 +18,7 @@ DNS 解析是一个递归的过程
 1. 输入 `www.google.com` 网址后，首先在本地的域名服务器中查找
 2. 没找到去根域名服务器(.)查找
 3. 没有再去顶级域名服务器(.com)查找
-4. 如上类推，直到找到为止 (. -> .com -> google.com. -> www.google.com.)
+4. 如上类推，直到找到为止 (. -> .com -> google.com. -> <www.google.com>.)
 
 ### DNS 缓存
 
