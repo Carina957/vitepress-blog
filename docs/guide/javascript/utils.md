@@ -1085,3 +1085,32 @@ export default function arrify(value) {
   return [value]
 }
 ```
+
+## 随机字符串
+
+1. ```js
+   const randomStr = (n = 4) =>
+     Math.random()
+       .toString(36)
+       .slice(2, 2 + n)
+   ```
+
+2. ```js
+   const CHARSTR =
+     'abcdefghjklmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ!@#$%?0123456789' // 65
+
+   /**
+    * @desc 获取指定长度的随机字符串
+    * @param {number} len
+    * @returns {string} 「randomStr」
+    */
+   export default function getRandomStr(len = 15) {
+     let randomStr = ''
+     for (let i = 0; i < len; i++) {
+       randomStr += CHARSTR[Math.floor(Math.random() * (i < 4 ? 39 : 65))]
+       /* Or */
+       // randomStr += CHARSTR.charAt(Math.floor(Math.random() * (i < 4 ? 39 : 65)))
+     }
+     return randomStr
+   }
+   ```

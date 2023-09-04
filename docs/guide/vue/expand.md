@@ -24,13 +24,21 @@
     >source</a>
   </p>
 
-  <Demo />
+  <VForDemo />
 </DemoContainer>
 
 <script setup>
-import Demo from './components/vFor-demo.vue'
+import VForDemo from './components/vFor-demo.vue'
 import DemoContainer from '../../.vitepress/theme/components/DemoContainer.vue'
 </script>
+
+## 利用 `hash` 传递信息
+
+```js
+this.$router.push({
+  hash: '#preview',
+})
+```
 
 ## vue/cli Prettier.config.js
 
