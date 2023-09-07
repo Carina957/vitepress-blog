@@ -269,7 +269,13 @@ function sidebarNotes() {
     {
       text: 'Collection',
       collapsed: false,
-      items: [{ text: 'Article', link: '/notes/collection/article' }],
+      items: [
+        { text: 'Article', link: '/notes/collection/article' },
+        {
+          text: 'Keyboard Shortcuts',
+          link: '/notes/collection/keyboard-shortcuts',
+        },
+      ],
     },
     {
       text: 'Others',
