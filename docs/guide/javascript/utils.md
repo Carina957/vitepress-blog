@@ -316,6 +316,12 @@ export function isSet(o) {
   return Object.prototype.toString.call(o).slice(8, -1) === 'Set'
 }
 
+// 是否 Vue 对象
+import Vue from 'vue'
+export function isVue(o) {
+  return o instanceof Vue
+}
+
 // 是否DOM对象
 export const isDOMElement = o => o!(o && o.nodeType === 1)
 ```
