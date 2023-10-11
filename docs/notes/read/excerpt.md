@@ -155,6 +155,9 @@ outline: deep
 <p align=center>2.</p>
 <PoemsContainer title="谒金门·风乍起" author="五代·冯延巳" :content="content2" />
 
+<p align=center>3.</p>
+<PoemsContainer title="一剪梅" author="唐寅" :content="content3" />
+
 <script setup>
 import PoemsContainer from '../../.vitepress/theme/components/PoemsContainer.vue'
 import { reactive } from 'vue'
@@ -169,5 +172,10 @@ const content1 = reactive([
 const content2 = reactive([
   '风乍起，吹皱一池春水。闲引鸳鸯香径里，手挼红杏蕊。',
   '斗鸭阑干独倚，碧玉搔头斜坠。终日望君君不至，举头闻鹊喜。',
+])
+
+const content3 = reactive([
+  '雨打梨花深闭门，忘了青春，误了青春。赏心乐事共谁论？花下销魂，月下销魂。',
+  '愁聚眉峰尽日颦，千点啼痕，万点啼痕。晓看天色暮看云，行也思君，坐也思君。'
 ])
 </script>

@@ -29,7 +29,7 @@ const { copy } = useClipboard({ source })
         textAlign: 'center',
       }"
     >
-      {{ title }}
+      《{{ title }}》
     </p>
 
     <p
