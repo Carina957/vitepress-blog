@@ -156,7 +156,7 @@ outline: deep
 <PoemsContainer title="谒金门·风乍起" author="五代·冯延巳" :content="content2" />
 
 <p align=center>3.</p>
-<PoemsContainer title="一剪梅" author="唐寅" :content="content3" />
+<PoemsContainer title="一剪梅" author="明·唐寅" :content="content3" />
 
 <script setup>
 import PoemsContainer from '../../.vitepress/theme/components/PoemsContainer.vue'
