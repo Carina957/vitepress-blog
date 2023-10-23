@@ -165,6 +165,9 @@ outline: deep
 <p align=center>3.</p>
 <PoemsContainer title="一剪梅" author="明·唐寅" :content="content3" />
 
+<p align=center>4.</p>
+<PoemsContainer title="雨霖铃·寒蝉凄切" author="宋·柳永" :content="content4" />
+
 <script setup>
 import PoemsContainer from '../../.vitepress/theme/components/PoemsContainer.vue'
 import { reactive } from 'vue'
@@ -184,5 +187,10 @@ const content2 = reactive([
 const content3 = reactive([
   '雨打梨花深闭门，忘了青春，误了青春。赏心乐事共谁论？花下销魂，月下销魂。',
   '愁聚眉峰尽日颦，千点啼痕，万点啼痕。晓看天色暮看云，行也思君，坐也思君。'
+])
+
+const content4 = reactive([
+  '寒蝉凄切，对长亭晚，骤雨初歇。都门帐饮无绪，留恋处，兰舟催发。执手相看泪眼，竟无语凝噎。念去去，千里烟波，暮霭沉沉楚天阔。',
+  '多情自古伤离别，更那堪，冷落清秋节！今宵酒醒何处？杨柳岸，晓风残月。此去经年，应是良辰好景虚设。便纵有千种风情，更与何人说？'
 ])
 </script>
