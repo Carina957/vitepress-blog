@@ -264,6 +264,10 @@ function sidebarNotes() {
           text: 'Notebook',
           link: '/notes/read/notebook',
         },
+        {
+          text: 'Poetry',
+          link: '/notes/read/poetry',
+        },
       ],
     },
     {
