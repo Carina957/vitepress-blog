@@ -171,6 +171,9 @@ outline: deep
 <p align=center>4.</p>
 <PoemsContainer title="雨霖铃·寒蝉凄切" author="宋·柳永" :content="content4" />
 
+<p align=center>5.</p>
+<PoemsContainer title="虞美人·寄公度" author="宋·舒亶" :content="content4" />
+
 <script setup>
 import PoemsContainer from '../../.vitepress/theme/components/PoemsContainer.vue'
 import { reactive } from 'vue'
@@ -197,5 +200,10 @@ const content4 = reactive([
   '执手相看泪眼，竟无语凝噎。念去去，千里烟波，暮霭沉沉楚天阔。',
   '多情自古伤离别，更那堪，冷落清秋节！今宵酒醒何处？杨柳岸，晓风残月。',
   '此去经年，应是良辰好景虚设。便纵有千种风情，更与何人说？'
+])
+
+const content4 = reactive([
+  '芙蓉落尽天涵水，日暮沧波起。背飞双燕贴云寒，独向小楼东畔、倚阑看。',
+  '浮生只合尊前老，雪满长安道。故人早晚上高台，赠我江南春色、一枝梅。'
 ])
 </script>
