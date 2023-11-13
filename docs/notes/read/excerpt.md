@@ -172,7 +172,10 @@ outline: deep
 <PoemsContainer title="雨霖铃·寒蝉凄切" author="宋·柳永" :content="content4" />
 
 <p align=center>5.</p>
-<PoemsContainer title="虞美人·寄公度" author="宋·舒亶" :content="content4" />
+<PoemsContainer title="虞美人·寄公度" author="宋·舒亶" :content="content5" />
+
+<p align=center>6.</p>
+<PoemsContainer title="峨眉山月歌" author="唐·李白" :content="content6" />
 
 <script setup>
 import PoemsContainer from '../../.vitepress/theme/components/PoemsContainer.vue'
@@ -202,8 +205,13 @@ const content4 = reactive([
   '此去经年，应是良辰好景虚设。便纵有千种风情，更与何人说？'
 ])
 
-const content4 = reactive([
+const content5 = reactive([
   '芙蓉落尽天涵水，日暮沧波起。背飞双燕贴云寒，独向小楼东畔、倚阑看。',
   '浮生只合尊前老，雪满长安道。故人早晚上高台，赠我江南春色、一枝梅。'
+])
+
+const content6 = reactive([
+  '峨眉山月半轮秋，影入平羌江水流。',
+  '夜发清溪向三峡，思君不见下渝州。'
 ])
 </script>
