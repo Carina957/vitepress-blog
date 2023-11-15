@@ -125,3 +125,30 @@ BFC（Block Formatting Context）块级格式化上下文，是 Web 页面中盒
 ```
 
 ## [normalize.css](https://necolas.github.io/normalize.css/8.0.1/normalize.css)
+
+## 清除浮动
+
+```css
+.clearfix::after,
+.clearfix::before {
+  content: '';
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+```
+
+## 高度塌陷
+
+1. 设置元素浮动
+2. 将元素设置为行内块元素：`display:inline-block`
+3. 设置 `overflow` 为非 `visible` 的值：`overflow: hidden`
+4. 在结尾处添加空 `div` 标签 `clear:both`
+5. 给父元素设置伪元素选择器，并设置清除浮动的样式：`box::after{display:block;clear:both;content:"";}`
+6. 父级 `div` 定义 `height`
