@@ -179,6 +179,9 @@ outline: deep
 <p align=center>6.</p>
 <PoemsContainer title="峨眉山月歌" author="唐·李白" :content="content6" />
 
+<p align=center>7.</p>
+<PoemsContainer title="一剪梅·红藕香残玉簟秋" author="宋·李清照" :content="content7" />
+
 <script setup>
 import PoemsContainer from '../../.vitepress/theme/components/PoemsContainer.vue'
 import { reactive } from 'vue'
@@ -215,5 +218,10 @@ const content5 = reactive([
 const content6 = reactive([
   '峨眉山月半轮秋，影入平羌江水流。',
   '夜发清溪向三峡，思君不见下渝州。'
+])
+
+const content7 = reactive([
+  '红藕香残玉簟秋。轻解罗裳，独上兰舟。云中谁寄锦书来？雁字回时，月满西楼。',
+  '花自飘零水自流。一种相思，两处闲愁。此情无计可消除，才下眉头，却上心头。',
 ])
 </script>
