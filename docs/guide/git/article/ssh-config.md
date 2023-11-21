@@ -112,6 +112,12 @@ eg: `Host *`
 
 指定一个或多个用户认证主机缓存文件，用来缓存通过认证的远程主机的密钥，多个文件用空格分隔。默认缓存文件为： `~/.ssh/known_hosts`, `~/.ssh/known_hosts2`。
 
+## 检查 SSH 密钥是否生效
+
+```git
+ssh -T git@github.com
+```
+
 ## Demo
 
 ```txt
