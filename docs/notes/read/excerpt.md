@@ -189,6 +189,9 @@ outline: deep
 <p align=center>8.</p>
 <PoemsContainer title="鹧鸪天·桂花" author="宋·李清照" :content="content8" />
 
+<p align=center>9.</p>
+<PoemsContainer title="清平乐·年年雪里" author="宋·李清照" :content="content9" />
+
 <script setup>
 import PoemsContainer from '../../.vitepress/theme/components/PoemsContainer.vue'
 import { reactive } from 'vue'
@@ -235,5 +238,10 @@ const content7 = reactive([
 const content8 = reactive([
   '暗淡轻黄体性柔，情疏迹远只香留。何须浅碧深红色，自是花中第一流。',
   '梅定妒，菊应羞，画阑开处冠中秋。骚人可煞无情思，何事当年不见收。(阑 通：栏)',
+])
+
+const content9 = reactive([
+  '年年雪里，常插梅花醉。挼尽梅花无好意，赢得满衣清泪。',
+  '今年海角天涯，萧萧两鬓生华。看取晚来风势，故应难看梅花。',
 ])
 </script>
