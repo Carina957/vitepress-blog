@@ -1120,3 +1120,13 @@ export default function arrify(value) {
      return randomStr
    }
    ```
+
+## 生成指定范围内的数组
+
+```js
+const arrayRange = (start, stop, step) =>
+  Array.from(
+    { length: (stop - start) / step + 1 },
+    (value, index) => start + index * step
+  )
+```
