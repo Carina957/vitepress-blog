@@ -5,12 +5,14 @@ import { useClipboard } from '@vueuse/core'
 interface PoemsProps {
   title?: string
   author?: string
+  comment?: string
   content?: string[]
 }
 
 const { title, author, content } = withDefaults(defineProps<PoemsProps>(), {
   title: '',
   author: '',
+  comment: '',
   content: () => [],
 })
 const source = ref(`${title} ${author} ${content.join('')}`)
@@ -26,7 +28,6 @@ const { copy } = useClipboard({ source })
       :style="{
         fontSize: '20px',
         fontWeight: 'bold',
-        textAlign: 'center',
       }"
     >
       《{{ title }}》
@@ -36,21 +37,24 @@ const { copy } = useClipboard({ source })
       v-if="author"
       :style="{
         fontSize: '14px',
-        textAlign: 'center',
       }"
     >
       {{ author }}
     </p>
 
-    <div
-      v-if="content.length"
-      :style="{
-        textAlign: 'center',
-      }"
-    >
+    <div v-if="content.length">
       <p v-for="c in content">
         {{ c }}
       </p>
     </div>
+
+    <p
+      :style="{
+        color: '#ccc',
+        fontSize: '12px',
+      }"
+    >
+      {{ comment }}
+    </p>
   </div>
 </template>
