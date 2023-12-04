@@ -153,6 +153,7 @@ outline: deep
 88. 悲观者往往正确，乐观者往往成功。
 89. 世界，即非世界，是名世界。
 90. 君可愿白衣饮茶，清风瘦马，再唱一曲六月雨下。
+91. 若非群玉山头见，会向瑶台月下逢。
 
 ## Ancient poems
 
@@ -174,6 +175,12 @@ import PoemsContainer from '../../.vitepress/theme/components/PoemsContainer.vue
 import ancient_poems from './excerpt.ts'
 </script>
 
-<template v-for="(ant,idx) in ancient_poems">
-  <PoemsContainer :title="ant.title" :author="ant.author" :content="ant.content" :comment="ant.comment" />
+<template v-for="(item,idx) in ancient_poems">
+  <PoemsContainer
+    :key="idx"
+    :title="item.title"
+    :author="item.author"
+    :content="item.content"
+    :comment="item.comment"
+  />
 </template>
