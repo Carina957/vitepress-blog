@@ -175,9 +175,8 @@ import PoemsContainer from '../../.vitepress/theme/components/PoemsContainer.vue
 import ancient_poems from './excerpt.ts'
 </script>
 
-<template v-for="(item,idx) in ancient_poems">
+<template v-for="(item,idx) in ancient_poems" :key="idx">
   <PoemsContainer
-    :key="idx"
     :title="item.title"
     :author="item.author"
     :content="item.content"
