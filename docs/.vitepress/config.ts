@@ -213,6 +213,7 @@ function sidebarGuide() {
       items: [
         { text: 'basic', link: 'guide/vscode/basic' },
         { text: 'config', link: 'guide/vscode/config' },
+        { text: 'extensions', link: 'guide/vscode/extensions' },
       ],
     },
     {
