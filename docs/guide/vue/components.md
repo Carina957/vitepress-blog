@@ -528,15 +528,22 @@ import '@/components/SvgIcon'
 <script>
 export default {
   name: 'BaseDialog',
-  inheritAttrs: false,
   props: {
     title: {
       type: String,
       default: '提示',
     },
+    width: {
+      type: String,
+      default: '30%',
+    },
     customClass: {
       type: String,
       default: '',
+    },
+    footer: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
@@ -549,28 +556,39 @@ export default {
       this.dialogVisiable = true
     },
     close() {
+      this.$emit('before-close')
       this.dialogVisiable = false
+    },
+    beforeClose(done) {
+      this.$emit('before-close')
+      done()
     },
   },
 }
 </script>
 
 <template>
-  <el-dialog
-    :title="title"
-    :visible.sync="dialogVisiable"
-    :custom-class="'el-custom-dialog__borderRadius ' + customClass"
-    v-bind="$attrs"
-    v-on="$listeners"
-  >
-    <slot name="title" />
-
-    <slot />
-
-    <span slot="footer">
-      <slot name="footer" />
-    </span>
-  </el-dialog>
+  <div>
+    <el-dialog
+      :visible.sync="dialogVisiable"
+      :title="title"
+      :width="width"
+      :before-close="beforeClose"
+      :custom-class="'wisdom-custom-dialog__borderRadius ' + customClass"
+      v-bind="$attrs"
+      v-on="$listeners"
+    >
+      <slot name="title" />
+      <slot />
+      <span slot="footer">
+        <template v-if="footer">
+          <el-button @click="close">取 消</el-button>
+          <el-button type="primary" @click="$emit('submit')">提 交</el-button>
+        </template>
+        <slot v-else name="footer" />
+      </span>
+    </el-dialog>
+  </div>
 </template>
 
 <style lang="scss">
