@@ -7,13 +7,3 @@
   font-family: 'Noto Sans Mono';
   src: url('./NotoSansMono-Regular.ttf');
 }
-
-@font-face {
-  font-family: RobotoMono;
-  src: url('./RobotoMono-Regular.ttf');
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url('./Roboto-Regular.ttf');
-}
