@@ -40,3 +40,7 @@ outline: deep
 | matlab           | matlab                  | shBrushMatlab.js      | -           |
 | swift            | swift                   | shBrushSwift.js       | -           |
 | GO               | go, golang              | shBrushGo.js          | -           |
+
+## Math
+
+$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
