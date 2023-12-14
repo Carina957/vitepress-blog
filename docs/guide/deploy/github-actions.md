@@ -1,6 +1,6 @@
-## Push to the branch on another repo on github
+# Push to the branch on another repo on github
 
-### New workflows
+## New workflows
 
 You can choice a workflows, also there are many templates to choose from, or you can set up a yourself workflows.
 
@@ -9,7 +9,7 @@ some demos:
 ![github-actions-workflows](./images/github-actions-workflows.png)
 ![yourself-workflows](./images/yourself-workflows.png)
 
-### Github actions ssh deploy key
+## Github actions ssh deploy key
 
 `GitHub Actions` 是 GitHub 提供的自动化构建、测试和部署工具，它可以帮助开发者在代码提交后自动进行测试和部署。
 如果需要在 `GitHub Actions` 中使用 `SSH` 部署密钥，可以按照以下步骤进行设置：
@@ -68,7 +68,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{secrets.DEPLOY_PRIVATE_KEY}}
 ```
 
-### Other recommended repo
+## Other recommended repo
 
 - [push-git-subdirectory-as-branch](https://github.com/marketplace/actions/push-git-subdirectory-as-branch)
 - [push-a-file-to-another-repository](https://github.com/marketplace/actions/push-a-file-to-another-repository)
