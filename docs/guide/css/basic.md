@@ -124,6 +124,20 @@ BFC（Block Formatting Context）块级格式化上下文，是 Web 页面中盒
 }
 ```
 
+## 文字三行显示省略号
+
+```css
+.three-lint-text-ellipsis {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+```
+
 ## [normalize.css](https://necolas.github.io/normalize.css/8.0.1/normalize.css)
 
 ## 清除浮动
