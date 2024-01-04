@@ -1130,3 +1130,95 @@ const arrayRange = (start, stop, step) =>
     (value, index) => start + index * step
   )
 ```
+
+## 计算两个点(经纬度)的距离
+
+```js
+function getGreatCircleDistance(lat1, lng1, lat2, lng2) {
+  var EARTH_RADIUS = 6378137.0
+  var PI = Math.PI
+
+  function getRad(d) {
+    return (d * PI) / 180.0
+  }
+  var radLat1 = getRad(lat1)
+  var radLat2 = getRad(lat2)
+
+  var a = radLat1 - radLat2
+  var b = getRad(lng1) - getRad(lng2)
+
+  var s =
+    2 *
+    Math.asin(
+      Math.sqrt(
+        Math.pow(Math.sin(a / 2), 2) +
+          Math.cos(radLat1) * Math.cos(radLat2) * Math.pow(Math.sin(b / 2), 2)
+      )
+    )
+  s = s * EARTH_RADIUS
+  s = Math.round(s * 10000) / 10000.0
+
+  return s // 米/m
+}
+```
+
+## 判断某个点是否在某个区域(经纬度)内
+
+```js
+/**
+ * 预处理判断 某个点是否在某个区域
+ * @param {*} lng
+ * @param {*} lat
+ * @param {*} points such as '120.133446,30.271645||120.133153,30.271669||120.133138,30.271595||'
+ */
+function preceedPointInArea(lng, lat, points) {
+  var parking_gps = points
+  var gpsStringArray = parking_gps.split('||')
+  var polygon = []
+  for (var index in gpsStringArray) {
+    var item = gpsStringArray[index]
+    var point = item.split(',')
+    if (point.length == 2) {
+      point['lng'] = parseFloat(point[0])
+      point['lat'] = parseFloat(point[1])
+      polygon.push(point)
+    }
+  }
+  var flag = isPointInPolygon(polygon, lng, lat)
+
+  return flag
+}
+
+/**
+ * 某个点是否在某个区域
+ */
+function isPointInPolygon(polygon, lng, lat) {
+  var numberOfPoints = polygon.length
+  var polygonLats = []
+  var polygonLngs = []
+  for (var i = 0; i < numberOfPoints; i++) {
+    polygonLats.push(polygon[i]['lat'])
+    polygonLngs.push(polygon[i]['lng'])
+  }
+
+  var polygonContainsPoint = false
+  for (
+    var node = 0, altNode = numberOfPoints - 1;
+    node < numberOfPoints;
+    altNode = node++
+  ) {
+    if (
+      polygonLngs[node] > lng != polygonLngs[altNode] > lng &&
+      lat <
+        ((polygonLats[altNode] - polygonLats[node]) *
+          (lng - polygonLngs[node])) /
+          (polygonLngs[altNode] - polygonLngs[node]) +
+          polygonLats[node]
+    ) {
+      polygonContainsPoint = !polygonContainsPoint
+    }
+  }
+
+  return polygonContainsPoint
+}
+```
