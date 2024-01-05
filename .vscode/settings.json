@@ -4,7 +4,7 @@
   "prettier.jsxSingleQuote": true,
   "prettier.useEditorConfig": true,
   "prettier.enable": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.formatOnPaste": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
