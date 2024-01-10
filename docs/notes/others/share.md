@@ -55,7 +55,7 @@ outline: deep
 
 页面结构：
 
-![项目目录](https://raw.githubusercontent.com/Carina957/PicGoCDN/main/path.png)
+![项目目录](https://cdn.jsdelivr.net/gh/Carina957/PicGoCDN@67cada356fcd86f71677831a42c6207bc3020270/images/other/path.png)
 
 ::: details LiveStreaming.vue
 
