@@ -272,6 +272,11 @@ function sidebarNotes() {
       ],
     },
     {
+      text: 'Summary',
+      collapsed: false,
+      items: [{ text: '二零二三', link: '/notes/summary/2023' }],
+    },
+    {
       text: 'Collection',
       collapsed: false,
       items: [

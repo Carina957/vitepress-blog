@@ -124,6 +124,20 @@ BFC（Block Formatting Context）块级格式化上下文，是 Web 页面中盒
 }
 ```
 
+## 文字三行显示省略号
+
+```css
+.three-lint-text-ellipsis {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+```
+
 ## [normalize.css](https://necolas.github.io/normalize.css/8.0.1/normalize.css)
 
 ## 清除浮动
@@ -152,3 +166,41 @@ BFC（Block Formatting Context）块级格式化上下文，是 Web 页面中盒
 4. 在结尾处添加空 `div` 标签 `clear:both`
 5. 给父元素设置伪元素选择器，并设置清除浮动的样式：`box::after{display:block;clear:both;content:"";}`
 6. 父级 `div` 定义 `height`
+
+## 文字左右对齐
+
+使用 `::after` 实现文字左右对齐
+
+> Preview: <https://jsbin.com/xunajox/1/edit?html,output>
+
+<DemoContainer>
+  <p class="demo-source-link">
+    <a
+      href="https://github.com/Carina957/vitepress-blog/blob/main/docs/guide/css/components/text-horizontal-align.vue"
+      target="_blank"
+    >source</a>
+  </p>
+
+  <Demo />
+</DemoContainer>
+
+```css
+.text-horizontal-align {
+  display: inline-block;
+  width: 5em;
+  text-align: justify;
+  overflow: hidden;
+  height: 1.2em;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+}
+```
+
+<script setup lang="ts">
+import Demo from './components/text-horizontal-align.vue'
+import DemoContainer from '../../.vitepress/theme/components/DemoContainer.vue'
+</script>

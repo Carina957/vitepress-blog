@@ -8,10 +8,8 @@ outline: deep
 
 1. 仓央嘉措说：“我以为别人尊重我，是因为我很优秀。慢慢的我明白了，别人尊重我，是因为别人很优秀。”
 2. “我从未如此深刻的感受到，与灵魂相距甚远，而我的存在却如此真实。” ——加缪
-3. 我们的年轻人，受舆论影响，认为女性是下贱的，妓女，婊子，可以任人玩弄，欺凌，蹂躏，羞辱。这简直是大规模的毁灭。在我们余下的生命中，一天 24 小时，都会驱使我们努力工作，使我们在沉默中灭亡。
-   所以，为了保护我们的思想不受侵害，能够与侵入我们思想使我们日渐沉默的力量抗衡。我们必须学会阅读，以此来激活自身的想象力，去培养我们自己的意识和信仰。我们需要这些技能，来保卫和维护自己的思想。————《超脱》
-4. Our young men, today, are being told that women are whores, bitches, things to be scrolled, beaten, shit on, ashamed. This is a marking holocaust. 24 hours a day, for the rest of our lives, the power that be are hard at work, dumbing us to death. So, to defend ourselves and fight against the stimulating of these dumbs into our thought processes. We must learn to read, to stimulate our own imaginations, to cultivate our own consciousness, our own belief systems. We all need these skills, to defend, to preserve our minds.
-   —— Detachment
+3. 我们的年轻人，受舆论影响，认为女性是下贱的，妓女，婊子，可以任人玩弄，欺凌，蹂躏，羞辱。这简直是大规模的毁灭。在我们余下的生命中，一天 24 小时，都会驱使我们努力工作，使我们在沉默中灭亡。所以，为了保护我们的思想不受侵害，能够与侵入我们思想使我们日渐沉默的力量抗衡。我们必须学会阅读，以此来激活自身的想象力，去培养我们自己的意识和信仰。我们需要这些技能，来保卫和维护自己的思想。————《超脱》
+4. Our young men, today, are being told that women are whores, bitches, things to be scrolled, beaten, shit on, ashamed. This is a marking holocaust. 24 hours a day, for the rest of our lives, the power that be are hard at work, dumbing us to death. So, to defend ourselves and fight against the stimulating of these dumbs into our thought processes. We must learn to read, to stimulate our own imaginations, to cultivate our own consciousness, our own belief systems. We all need these skills, to defend, to preserve our minds.  —— Detachment
 5. 勇敢的人，先享受世界。
 6. “不论你做什么事情，一定要尽力去做好，在努力做的过程中，你一定会学到一些东西，这样日积月累下来，你的人生就会发生质变。如果你只是简单应付了事，那么你将可能一无所获，反而让你做事的态度也会变得简单应付了事，而且关键还会浪费时间。你怎样对待生活，生活也会怎样对待你。”
 7. 没有回应的山谷，不值得纵身一跃。没有回应的热情，要懂得适可而止。
@@ -163,7 +161,37 @@ outline: deep
 98. 不管你跟谁你结婚，结婚以后，你总会发现你娶的不是原来的人，而是换了另外一个。——《围城》钱钟书
 99. 对精神世界的过度探索会陷入虚无主义
 100. 当我沉默的时候，我觉得很充实，当我开口说话的时候就感到了空虚。
-101. 事以密成，言/语以泄败。
+101. 事物总存在两个以上的说法，不同的说法都标榜自己掌握了世界真实。可真实永远都是一位处女，所有的理论到头来都是自鸣得意的手淫。——《河边的错误》余华
+102. 人最有魅力的时候，就是对周围的人和事物都不在乎的时候。
+103. 当我们努力使自己变得比现在更好的时候，我们周围的一切也会变得更好。
+104. 上帝不许诺光荣与福乐，但上帝保佑你的希望。人不可以逃避苦难，亦不可以放弃希望——恰是在这样的意义上，上帝存在。命运并不受贿，但希望与你同在，这才是信者的真意，是信者的路。——《病隙碎笔》/十 史铁生
+105. 花开堪折直需折，莫待无花空折枝。
+106. 学历虽是敲门砖，亦是我下不来的高台，更是孔乙己脱不下的长衫。
+107. 照顾好健康和情绪，这场人生，你就赢了一大半。其余的，老天自有安排。
+108. 敬过往，爱当下，向未来。
+109. 屏蔽力是一个人最顶级的能力，任何消耗你的人和事，多看一眼都是你的不对。
+110. > 一望无际的梦里，用碗里的米垒墙。<br>
+      > 乌云写满咒语，遮住众生疲惫的骨头。<br>
+      > 狐狸在山坡念念有词，灶台上的年兽反复冬眠。<br>
+      > 晨昏线割开大地的指纹，<br>
+      > 水草缠住风，冻结梦境的递归。<br>
+      > 胸口的鸟群，绕过十万个太阳，<br>
+      > 带走被浇灭的闪电，带走云层潮汐，<br>
+      > 带走神明的悄悄话，带走落地生根的锚，<br>
+      > 带走氧化的情歌，带走山野恩仇，<br>
+      > 带走金银财宝，带走痴心妄想，<br>
+      > 带走梦游的脚步，带走飞蛾扑不灭的火，<br>
+      > 带着所有人的名字，带走彩虹的化石。<br>
+      > ——《宇宙探索编辑部》孙一通
+111. 季节变迁，日历轻翻，雪映小寒。人间向暖，惟愿君安。
+112. 看电影是一件私密的事儿，就像一千个人心中有一千个哈姆雷特。
+113. 我将房门反锁，于是尘世的孤独便都有了孤独。
+114. 荒诞是创造力的源泉，因为它打破了常规。
+115. 『主观幸福感』<br>
+一个人有了主观的幸福感，就不会被社会评价所捆绑，因为他们关注主观感受，重视自己内心世界的体验，所谓“可怜”只是世俗贴给他们的标签。这些人压根不在乎，他们有自己的生活节奏，有自己幸福的尺度。这也是当我们评判一些人过的很可怜，可当事人并没有意识到自己可怜的原因。那种坚不可摧的意志或者根本不需要什么意志去支撑的幸福生活是自然流露出来的。他们和我们所理解追求的幸福完全不同。生活对于这样的人而言，处处是幸福。那些人才是真正独立的人，反观我们这些，被社会输入代码、自以为比谁谁过的好、每天仍有很多不必要的烦恼的人，才是真的可怜。
+116. 绿水悠悠天杳杳，浮生岂得长年少。
+117. 刻在光阴诗卷里，杏花消息雨声中。
+118. 事以密成，言/语以泄败。
 
 ## Ancient poems
 
