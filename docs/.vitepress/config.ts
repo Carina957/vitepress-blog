@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import Unocss from 'unocss/vite'
 
 export default defineConfig({
   title: "Chi's",
@@ -76,6 +77,11 @@ export default defineConfig({
       '/notes': sidebarNotes(),
     },
   },
+  vite: {
+    plugins: [
+      Unocss()
+    ]
+  } as any
 })
 
 function nav() {

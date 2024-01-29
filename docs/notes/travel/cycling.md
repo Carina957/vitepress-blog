@@ -10,17 +10,17 @@ outlint: deep
 
 某天好看的落日，留下了一张照片。
 
-![日常骑行-1](../images/cycling-10.jpg)
+<image width="75%" class="m-auto" src="../images/cycling-10.jpg" />
 
 ## 杨公堤骑行
 
-![杨公堤骑行-1](../images/cycling-3.jpg)
-![杨公堤骑行-2](../images/cycling-4.jpg)
-![杨公堤骑行-3](../images/cycling-5.jpg)
-![杨公堤骑行-4](../images/cycling-6.jpg)
-![杨公堤骑行-5](../images/cycling-7.jpg)
-![杨公堤骑行-6](../images/cycling-8.jpg)
-![杨公堤骑行-7](../images/cycling-9.jpg)
+<image width="75%" class="ma" src="../images/cycling-3.jpg" />
+<image width="75%" class="m-auto" src="../images/cycling-4.jpg" />
+<image width="75%" class="m-auto" src="../images/cycling-5.jpg" />
+<image width="75%" class="m-auto" src="../images/cycling-6.jpg" />
+<image width="75%" class="m-auto" src="../images/cycling-7.jpg" />
+<image width="75%" class="m-auto" src="../images/cycling-8.jpg" />
+<image width="75%" class="m-auto" src="../images/cycling-9.jpg" />
 
 ## 南苕溪骑行
 

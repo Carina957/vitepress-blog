@@ -24,6 +24,18 @@ git remote add origin git@github.com:xxx
 git push -m origin main
 ```
 
+## Clone repo
+
+```sh
+git clone https://github.com/Carina957/vitepress-blog.git
+
+# or logined
+git clone git@github.com:Carina957/vitepress-blog.git
+
+# or no commits clone(more fast)
+degit Carina957/vitepress-blog#main my-vitepress-blog
+```
+
 ## Config info
 
 ```sh

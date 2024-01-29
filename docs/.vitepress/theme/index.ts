@@ -1,8 +1,10 @@
 import { nextTick, watch, onMounted } from 'vue'
 import { useRoute } from 'vitepress'
+import 'uno.css'
 
 import Theme from 'vitepress/theme'
 import './styles/font/index.css'
+import './styles/base.css'
 import './styles/vars.css'
 import './styles/demo.css'
 import './styles/scrollbar.css'
