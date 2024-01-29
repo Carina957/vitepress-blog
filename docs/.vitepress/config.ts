@@ -41,6 +41,10 @@ export default defineConfig({
       placement: 'your-carbon-placement',
     },
 
+    search: {
+      provider: 'local',
+    },
+
     editLink: {
       pattern:
         'https://github.com/Carina957/vitepress-blog/edit/main/docs/:path',

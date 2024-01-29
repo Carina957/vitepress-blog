@@ -28,7 +28,7 @@
     "medium-zoom": "^1.0.8",
     "unocss": "^0.53.5",
     "vite": "^4.4.5",
-    "vitepress": "1.0.0-alpha.65",
+    "vitepress": "1.0.0-alpha.72",
     "vue": "^3.3.4"
   },
   "devDependencies": {
