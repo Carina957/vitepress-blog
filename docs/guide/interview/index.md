@@ -111,8 +111,8 @@ doSomeInstancuing.prop = 'some value'
 
 ### vue2 和 vue3 双向数据绑定原理发生了改变
 
-- vue2 的双向数据绑定是利用了 es5 的一个 `API Object.definepropert()` 对数据进行劫持结合发布订阅模式来实现的。
-- vue3 中使用了 es6 的 `proxy API` 对数据进行处理。相比与 vue2 ，使用 `proxy API` 优势有：
+- vue2 的双向数据绑定是利用了 es5 的 `Object.definePropert()` 对数据进行劫持结合发布订阅模式来实现的。
+- vue3 中使用了 es6 的 `proxy` 对数据进行处理。相比与 vue2 ，使用 `proxy` 优势有：
   1. defineProperty 只能监听某个属性，不能对全对象进行监听；可以省去 for in 、闭包等内容来提升效率（直接绑定整个对象即可）；
   2. 可以监听数组，不用再去单独的对数组做特异性操作，vue3 可以检测到数组内部数据的变化。
 
