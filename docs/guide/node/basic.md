@@ -144,7 +144,8 @@ source .bash_profile
 
 ```sh
 volta -v # 查看 `volta` 版本
-volta install node@14.15
+
+volta install node@14 # 下载指定的 node 版本
 volta install yarn@latest
 volta instal pnpm
 ```
@@ -223,7 +224,7 @@ See options for more detailed reports by running `volta list --help`.
 
 :::
 
-## nvm
+## nvm(过时的node版本管理器)
 
 ```sh
 # 查看远程服务器上所有的可用版本
@@ -236,6 +237,18 @@ nvm install 18.15.0
 nvm use 18.15.0
 
 nvm ls
+```
+
+## nrm(yrm)
+
+npm/yarn 下载源管理器
+
+```sh
+nrm ls # 查看下载源列表
+
+nrm test # 测试下载源速度
+
+nrm use # 使用下载源
 ```
 
 ## npm
