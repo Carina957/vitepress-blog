@@ -114,7 +114,9 @@ export NI_CONFIG_FILE="$HOME/.config/ni/nirc"
 
 <br>
 
-## volta
+## [volta](https://volta.sh)
+
+### 安装方式
 
 ::: code-group
 
@@ -128,10 +130,23 @@ $ brew install volta
 
 :::
 
-然后，添加 `volta` 到环境变量：
+### 添加 `volta` 环境变量
 
 ```sh
+# MAC .bash_profile or .zshrc
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
 source .bash_profile
+```
+
+### (Un)Install
+
+```sh
+volta -v # 查看 `volta` 版本
+volta install node@14.15
+volta install yarn@latest
+volta instal pnpm
 ```
 
 之后，你就可以正常使用 `volta`
@@ -172,7 +187,7 @@ SUBCOMMANDS:
 
 :::
 
-::: details 当你在终端运行 `volta pin node@16`:
+::: details 当你在终端运行 `volta pin node@16` (固定当前项目 `node` 版本):
 
 ```sh
 success: pinned node@16.19.1 (with npm@8.19.3) in package.json
