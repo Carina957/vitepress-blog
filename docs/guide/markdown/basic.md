@@ -44,3 +44,18 @@ outline: deep
 ## Math
 
 $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
+
+## GitHub 风格的警报
+
+:::tip Tips 别名
+有助于用户更顺利达成目标的建议性信息。
+:::
+:::details
+折叠信息。
+:::
+:::danger
+行为可能带来的负面影响。
+:::
+:::warning
+因为可能存在风险，所以需要用户立即关注的关键内容。
+:::
