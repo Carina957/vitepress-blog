@@ -30,16 +30,7 @@ const { copy } = useClipboard({ source })
         fontWeight: 'bold',
       }"
     >
-      《{{ title }}》
-    </p>
-
-    <p
-      v-if="author"
-      :style="{
-        fontSize: '14px',
-      }"
-    >
-      {{ author }}
+      《{{ title }}》<span v-if="author" :style="{ fontSize: '14px' }">{{ author }}</span>
     </p>
 
     <div v-if="content.length">
