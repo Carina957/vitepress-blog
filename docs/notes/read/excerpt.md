@@ -489,6 +489,7 @@ outline: deep
 358. 学问勤中得，萤窗万卷书。
 359. 开始亦是结束的开始
 360. 鱼离水则身枯，心离书则神索。
+361. More and more unfinished memos.
 
 ## Ancient poems
 
