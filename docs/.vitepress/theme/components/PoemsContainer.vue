@@ -9,12 +9,7 @@ interface PoemsProps {
   content?: string[]
 }
 
-const { title, author, content } = withDefaults(defineProps<PoemsProps>(), {
-  title: '',
-  author: '',
-  comment: '',
-  content: () => [],
-})
+const { title, author, content = [] } = defineProps<PoemsProps>()
 const source = ref(`${title} ${author} ${content.join('')}`)
 const { copy } = useClipboard({ source })
 </script>
