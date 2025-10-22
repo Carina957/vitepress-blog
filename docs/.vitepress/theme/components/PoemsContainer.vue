@@ -5,7 +5,6 @@ import { useClipboard } from '@vueuse/core'
 interface PoemsProps {
   title?: string
   author?: string
-  comment?: string
   content?: string[]
 }
 
@@ -33,14 +32,5 @@ const { copy } = useClipboard({ source })
         {{ c }}
       </p>
     </div>
-
-    <p
-      :style="{
-        color: '#ccc',
-        fontSize: '12px',
-      }"
-    >
-      {{ comment }}
-    </p>
   </div>
 </template>
