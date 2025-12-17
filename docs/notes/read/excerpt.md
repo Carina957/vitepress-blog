@@ -650,6 +650,7 @@ outline: deep
 502. 我与春风皆过客，你携秋水澜长河。
 503. 追风赶月莫停留，平芜尽处是春山。
 504. 前路漫漫亦灿灿，往事堪堪亦澜澜。
+505. Land is a ship too big or me. ——海上钢琴师 La leggenda del pianista sull'oceano (1998)
 
 ## Ancient poems
 
