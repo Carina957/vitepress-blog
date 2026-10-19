@@ -819,6 +819,7 @@ outline: deep
 671. 靠近你就靠近了痛苦，远离你就远离了幸福。——《窄门》
 672. 毕竟，明天又是新的一天。——《飘》
 673. 我终于翻过了自负，也接受了平凡。生活总爱问烂问题，但不可能把我问倒。
+674. 这世间暮色四合，黄昏之时无故人。We live in a twilight world. And there are no friends at dusk.
 
 ## Ancient poems
 
